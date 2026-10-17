@@ -1,0 +1,13 @@
+#!name=R-Store | 快手 - KUAISHOU
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/K/快手/kuaishou.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN-SUFFIX, cm.ad.gifshow.com, REJECT
+DOMAIN-SUFFIX, cm.downloader.commercial.kuaishou.com, REJECT
+DOMAIN-SUFFIX, cm.kwad.com, REJECT
+DOMAIN-SUFFIX, e.kuaishou.com, REJECT

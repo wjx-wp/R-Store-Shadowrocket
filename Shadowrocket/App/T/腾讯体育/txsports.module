@@ -1,0 +1,14 @@
+#!name=R-Store | 腾讯体育 - TXSPORTS
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/T/腾讯体育/txsports.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/news\.ssp\.qq\.com\/app - reject
+^https?:\/\/sports3\.gtimg\.com\/community\/20cf93884470434eaf38b2e77ab7796a\.png - reject
+
+[MITM]
+hostname = %APPEND% news.ssp.qq.com, sports3.gtimg.com

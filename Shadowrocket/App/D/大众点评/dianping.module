@@ -1,0 +1,42 @@
+#!name=R-Store | 大众点评 - DIANPING
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/D/大众点评/dianping.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, dpmtpush.dianping.com, REJECT
+DOMAIN, dxlvs.meituan.com, REJECT
+DOMAIN, dynamicf.sankuai.com, REJECT
+DOMAIN, live-monitor-broker.sankuai.com, REJECT
+DOMAIN, lx0.meituan.com, REJECT
+DOMAIN, r.dianping.com, REJECT
+DOMAIN, tte.meituan.com, REJECT
+DOMAIN-SUFFIX, lx.meituan.net, REJECT
+IP-CIDR, 101.32.16.204/32, REJECT
+IP-CIDR, 103.63.160.80/32, REJECT
+IP-CIDR, 119.29.126.137/32, REJECT
+
+[URL Rewrite]
+^https?:\/\/103\.37\.155\.60\/fetch - reject
+^https?:\/\/awp-assets\.meituan\.net\/hfe\/fep\/\w+\.json - reject
+^https?:\/\/catdot\.dianping\.com\/broker-service\/hijack - reject
+^https?:\/\/catfront\.dianping\.com\/api\/metric\?v=\d&p=rn_gcbu_mrn-joy-poidetail - reject
+^https?:\/\/ddplus\.meituan\.net\/v\d\/mss_\w+\/(?>ehc|titansx|ddblue|edfu)\/ - reject
+^https?:\/\/mapi\.dianping\.com\/adshopping - reject
+^https?:\/\/mapi\.dianping\.com\/mapi\/operating\/(?>indexopsmodules|loadsplashconfig) - reject
+^https?:\/\/mapi\.dianping\.com\/wdrpreload\/userprediction - reject
+^https?:\/\/p\.meituan\.com\/api\/privacy\/config - reject
+^https?:\/\/s3plus\.meituan\.net\/ocean-blk-index\/index\/blk_conf - reject
+^https?:\/\/www\.dpfile\.com\/app\/fecommonservice-lottie\/ugc-write-done\/media - reject
+^https?:\/\/www\.dpfile\.com\/picasso\/picasso-qa\/src\/AnswerList\/AnswerList-bundle - reject
+^https?:\/\/www\.dpfile\.com\/sc\/indexpromotion - reject
+
+[Map Local]
+^https?:\/\/mapi\.dianping\.com\/mapi\/intelliindex data-type=text data="{}" status-code=200
+^https?:\/\/rms\.meituan\.com\/api\/v\d\/rmsmina\/c\/queryWechatAdvertisement data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% *.dianping.com, awp-assets.meituan.net, ddplus.meituan.net, img.meituan.net, p.meituan.com, rms.meituan.com, s3plus.meituan.net, www.dpfile.com

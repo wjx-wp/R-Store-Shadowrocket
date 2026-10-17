@@ -1,0 +1,19 @@
+#!name=R-Store | 云闪付 - 95516
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/Y/云闪付/unionpay.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, ads.cup.com.cn, REJECT
+DOMAIN, analytics.95516.com, REJECT
+DOMAIN, switch.cup.com.cn, REJECT
+DOMAIN, tysdk.95516.com, REJECT
+
+[URL Rewrite]
+^https?:\/\/wallet\.95516\.com(:10533)?\/s\/wl\/icon\/large\/1 - reject
+
+[MITM]
+hostname = %APPEND% wallet.95516.com

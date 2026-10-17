@@ -1,0 +1,13 @@
+#!name=R-Store | 蘑菇租房 - MGZF
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/M/蘑菇租房/mgzf.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/api\.mgzf\.com\/renter-operation\/home\/startHomePage - reject
+
+[MITM]
+hostname = %APPEND% api.mgzf.com

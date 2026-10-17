@@ -1,0 +1,17 @@
+#!name=R-Store | 交通银行 - BANKCOMM
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/J/交通银行/bankcomm.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/download1\.bankcomm\.com\/_cdn\/mobs\/home\/oss\/pub\/file\/file\/public\/config\/pageConfig - reject
+^https?:\/\/download1\.bankcomm\.com\/mobs6-inner\/offline\/static\/releaseConf - reject
+
+[Map Local]
+^https?:\/\/download1\.bankcomm\.com\/chngweb\/CHNRCSP\/media data-type=text data="" status-code=200
+
+[MITM]
+hostname = %APPEND% download1.bankcomm.com

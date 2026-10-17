@@ -1,0 +1,16 @@
+#!name=R-Store | 威锋 - WEIFENG
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/W/威锋/wf.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/api\.wfdata\.club\/v\d\/yesfeng\/(?>infoCenterAd|yesList) - reject
+
+[Map Local]
+^https?:\/\/api\.feng\.com\/v\d\/advertisement\/ data-type=text data="" status-code=200
+
+[MITM]
+hostname = %APPEND% api.feng.com, api.wfdata.club

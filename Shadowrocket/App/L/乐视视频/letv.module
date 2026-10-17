@@ -1,0 +1,14 @@
+#!name=R-Store | 乐视视频 - LETV
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/L/乐视视频/letv.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, ark.letv.com, REJECT
+DOMAIN, emma-414870e223.huodonghezi.com, REJECT
+DOMAIN, g3.letv.com, REJECT
+DOMAIN, n.mark.letv.com, REJECT
+DOMAIN-SUFFIX, webp2p.letv.com, REJECT

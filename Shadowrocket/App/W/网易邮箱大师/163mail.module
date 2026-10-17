@@ -1,0 +1,18 @@
+#!name=R-Store | 网易邮箱大师 - 163MAIL
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/W/网易邮箱大师/163mail.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/appconf\.mail\.163\.com\/mailmaster\/api\/http\/urlConfig\.do$ - reject
+^https?:\/\/client\.mail\.163\.com\/apptrack\/confinfo\/(?>searchMultiAds|showAds) - reject
+^https?:\/\/support\.you\.163\.com\/xhr\/boot\/getBootMedia - reject
+
+[Map Local]
+^https?:\/\/appconf\.mail\.163\.com\/mmad data-type=text data="" status-code=200
+
+[MITM]
+hostname = %APPEND% appconf.mail.163.com, client.mail.163.com, support.you.163.com

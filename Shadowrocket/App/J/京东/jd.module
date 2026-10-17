@@ -1,0 +1,58 @@
+#!name=R-Store | 京东 - JD
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/J/京东/jd.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, dgstatic.jd.com, REJECT
+DOMAIN, discover.300hu.com, REJECT
+DOMAIN, dns.jd.com, REJECT
+DOMAIN, dsp-x.jd.com, REJECT
+DOMAIN, ex.m.jd.com, REJECT
+DOMAIN, im-x.jd.com, REJECT
+DOMAIN, janapi.jd.com, REJECT
+DOMAIN, jdqd.jd.com, REJECT
+DOMAIN, mars.jd.com, REJECT
+DOMAIN, mllog.jd.com, REJECT
+DOMAIN, perf.m.jd.com, REJECT
+DOMAIN, sdkfp.jd.com, REJECT
+DOMAIN, second-floor-pro.pf.jd.com, REJECT
+DOMAIN, waapdg.jd.com, REJECT
+DOMAIN, wqs.jd.com, REJECT
+DOMAIN, xlog.jd.com, REJECT
+DOMAIN-KEYWORD, bdsp.x.jd.com, REJECT
+DOMAIN-KEYWORD, kepler.jd.com, REJECT
+DOMAIN-KEYWORD, keplerapi.jd.com, REJECT
+DOMAIN-KEYWORD, mapi.m.jd.com, REJECT
+DOMAIN-SUFFIX, c-nfa.jd.com, REJECT
+DOMAIN-SUFFIX, cm.jd.com, REJECT
+DOMAIN-SUFFIX, du.jd.com, REJECT
+DOMAIN-SUFFIX, img-x.jd.com, REJECT
+DOMAIN-SUFFIX, jzt.jd.com, REJECT
+IP-CIDR, 101.124.19.122/32, REJECT
+IP-CIDR, 43.160.156.164/32, REJECT
+IP-CIDR, 61.170.65.165/32, REJECT
+IP-CIDR6, 2402:db40:5100:1011::5/128, REJECT
+
+[URL Rewrite]
+^https?:\/\/\w{32}\.jddebug\.com\/diagnose\? - reject
+^https?:\/\/api\.m\.jd\.com\/api\/appPublishUpgrade - reject
+^https?:\/\/api\.m\.jd\.com\/openUpgrade - reject
+^https?:\/\/img\d+\.360buyimg\.com\/jddjadvertise\/ - reject
+^https?:\/\/storage\.360buyimg\.com\/app\.m\.jd\.com\/lottie - reject
+^https?:\/\/storage\.360buyimg\.com\/appcartsoa\/client\/cart_egg_entry - reject
+^https?:\/\/storage\.360buyimg\.com\/dynamicConfig\/binary - reject
+^https?:\/\/storage\.360buyimg\.com\/occupy-home\/ - reject
+^https?:\/\/storage\.360buyimg\.com\/xview - reject
+^https?:\/\/storage\.jd\.com\/mpaas2-public\/product\/\d+\/ - reject
+^https?:\/\/storage\.jd\.com\/ti-pythontask\/JD\/jdt_ - reject
+
+[Map Local]
+^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ data-type=text data="" status-code=200
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(?>searchBoxWord|xview2Config|stationPullService|getWidget|widget|hybrid|jdDiscoveryRedPoint|queryMaterialAdverts|apollo_style|jdaPreDownload|uniformRecommend7) data-type=text data="" status-code=200
+
+[MITM]
+hostname = %APPEND% *.jddebug.com, api.m.jd.com, bdsp-x.jd.com, dsp-x.jd.com, storage.360buyimg.com, storage.jd.com

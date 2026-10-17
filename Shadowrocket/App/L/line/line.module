@@ -1,0 +1,35 @@
+#!name=R-Store | line - LINE
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/L/line/line.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/a\.line\.me\/cs\/v\d\/oa$ - reject
+^https?:\/\/a\.line\.me\/lass\/api\/v\d\/ads$ - reject
+^https?:\/\/a\.line\.me\/oa\/v\d\/e$ - reject
+^https?:\/\/buy\.line\.me\/api\/graphql\?variables - reject
+^https?:\/\/cix\.line-apps\.com\/R4\? - reject
+^https?:\/\/crs-event\.line\.me\/v\d\/imp - reject
+^https?:\/\/gw\.line\.naver\.jp\/ext\/lgfp\/lad\/v1$ - reject
+^https?:\/\/gw\.line\.naver\.jp\/lass\/api\/v1\/ads$ - reject
+^https?:\/\/gw\.line\.naver\.jp\/tr\/event$ - reject
+^https?:\/\/legy\.line-apps\.com\/ext\/lgfp\/lad\/v1$ - reject
+^https?:\/\/legy\.line-apps\.com\/ext\/smartch\/banner\/sch\/v1$ - reject
+^https?:\/\/legy\.line-apps\.com\/tr\/event$ - reject
+^https?:\/\/nelo2-col\.linecorp\.com\/_store$ - reject
+^https?:\/\/obs\.line-scdn\.net\/0h.+\/(o|m)\d+x\d+$ - reject
+^https?:\/\/obs\.line-scdn\.net\/0h.+\/\d+p\.mp4$ - reject
+^https?:\/\/obs\.line-scdn\.net\/0hGH\d - reject
+^https?:\/\/scdn\.line-apps\.com\/appresources\/moretab\/list\.json - reject
+^https?:\/\/scdn\.line-apps\.com\/lan\/document\/pageEvent\/line\/ios\/ - reject
+^https?:\/\/scdn\.line-apps\.com\/lan\/image\/line\/bannerImageEvent\/ - reject
+^https?:\/\/sch\.line\.me\/api\/v\d\/ads$ - reject
+^https?:\/\/static\.line-scdn\.net\/ad-sdk\/ - reject
+^https?:\/\/uts-front\.line-apps\.com\/(?>settings|event)$ - reject
+^https?:\/\/w\.line\.me\/adp\/api\/ad\/v\d\/ - reject
+
+[MITM]
+hostname = %APPEND% a.line.me, ad.line-scdn.net, buy.line.me, cix.line-apps.com, crs-event.line.me, d.line-scdn.net, gw.line.naver.jp, legy.line-apps.com, nelo2-col.linecorp.com, obs.line-scdn.net, scdn.line-apps.com, sch.line.me, static.line-scdn.net, uts-front.line-apps.com, w.line.me

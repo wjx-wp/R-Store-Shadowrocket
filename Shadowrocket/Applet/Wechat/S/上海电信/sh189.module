@@ -1,0 +1,20 @@
+#!name=R-Store | sh189
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/Applet/Wechat/S/上海电信/sh189.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, bigdata-behaviordata.189.cn, REJECT
+
+[URL Rewrite]
+^https?:\/\/m\.sh\.189\.cn\/business-appletapi\/packBinds\/getAadvertisement - reject
+
+[Map Local]
+^https?:\/\/m\.sh\.189\.cn\/business-appletapi\/applet\/query\/(?>items|banners|getAdItemList) data-type=text data="{}" status-code=200
+^https?:\/\/m\.sh\.189\.cn\/business-appletapi\/packageQuery\/(?>getUserAdvertising|getLiveSessionList|getTop|getssplabelinfo|getsspmaterielinfo|sspQueryOperationInfo) data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% m.sh.189.cn

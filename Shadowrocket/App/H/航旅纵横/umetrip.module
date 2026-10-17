@@ -1,0 +1,12 @@
+#!name=R-Store | 航旅纵横 - UMETRIP
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/H/航旅纵横/umetrip.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, analytics.umetrip.com, REJECT
+DOMAIN, sensors.umetrip.com.cn, REJECT
+DOMAIN, startup.umetrip.com, REJECT

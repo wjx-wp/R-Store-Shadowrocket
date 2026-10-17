@@ -1,0 +1,36 @@
+#!name=R-Store | 盒马 - FRESHIPPO
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/H/盒马/freshippo.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+IP-CIDR, 139.95.0.151/32, REJECT
+IP-CIDR, 139.95.4.98/32, REJECT
+IP-CIDR, 203.119.238.164/32, REJECT
+IP-CIDR, 203.119.238.63/32, REJECT
+IP-CIDR, 47.246.103.10/32, REJECT
+IP-CIDR, 47.246.103.9/32, REJECT
+IP-CIDR, 59.82.113.10/32, REJECT
+IP-CIDR, 59.82.113.219/32, REJECT
+IP-CIDR, 59.82.14.1/32, REJECT
+IP-CIDR, 59.82.14.161/32, REJECT
+IP-CIDR, 59.82.34.147/32, REJECT
+IP-CIDR, 59.82.34.255/32, REJECT
+
+[URL Rewrite]
+^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.hippotown\.tabbar\.info - reject
+^https?:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch\?appkey=23230111 - reject
+
+[Map Local]
+^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.alibaba\.emas\.publish\.update\.get data-type=text data="{}" status-code=200
+^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.crm\.platform\.ma\.recommend data-type=text data="{}" status-code=200
+^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.fc\.recommend\.feedscommondservice data-type=text data="{}" status-code=200
+^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.mimir\.recommend(?!\.hgitems) data-type=text data="{}" status-code=200
+^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.render\.querysinglepage data-type=text data="" status-code=200
+^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.sg\.querysinglescene data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% acs-m.freshippo.com, acs.m.taobao.com, amdc.m.taobao.com

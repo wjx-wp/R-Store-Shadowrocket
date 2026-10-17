@@ -1,0 +1,25 @@
+#!name=R-Store | 埋堆堆 - MDD
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/M/埋堆堆/mdd.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, conf-darwin.xycdn.com, REJECT
+DOMAIN, sdk1xyajs.data.kuiniuca.com, REJECT
+DOMAIN, t-dsp.pinduoduo.com, REJECT
+DOMAIN, toblog.ctobsnssdk.com, REJECT
+
+[URL Rewrite]
+^https?:\/\/tower\.ubixioe\.com\/mob\/mediation - reject
+
+[Map Local]
+^https?:\/\/mob\.mddcloud\.com\.cn\/adApi\/advert\/(?>first|third)part\/advertList data-type=text data="{}" status-code=200
+^https?:\/\/mob\.mddcloud\.com\.cn\/api\/(ad|advert)\/ data-type=text data="" status-code=200
+^https?:\/\/mobads-pre-config\.cdn\.bcebos\.com\/preload data-type=text data="" status-code=200
+^https?:\/\/sfo\.mddcloud\.com\.cn\/api\/v\d\/sfo\/popup_displays data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% mob.mddcloud.com.cn, mobads-pre-config.cdn.bcebos.com, sfo.mddcloud.com.cn, tower.ubixioe.com

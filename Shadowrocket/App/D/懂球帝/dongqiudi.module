@@ -1,0 +1,13 @@
+#!name=R-Store | 懂球帝 - DONGQIUDI
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/D/懂球帝/dongqiudi.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/ap\.(dongqiudi|dongdianqiu)\.com\/plat\/v - reject
+
+[MITM]
+hostname = %APPEND% ap.dongdianqiu.com, ap.dongqiudi.com

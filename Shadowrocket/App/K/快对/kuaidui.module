@@ -1,0 +1,16 @@
+#!name=R-Store | 快对 - KUAIDUI
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/K/快对/kuaidui.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Map Local]
+^https?:\/\/apivip\.kuaiduizuoye\.com\/viponline\/scancode\/mycard data-type=text data="{}" status-code=200
+^https?:\/\/c\.kuaiduizuoye\.com\/adx\/impress data-type=text data="{}" status-code=200
+^https?:\/\/www\.kuaiduizuoye\.com\/init\/ad\/ data-type=text data="{}" status-code=200
+^https?:\/\/www\.kuaiduizuoye\.com\/kdapi\/conf\/appbanners data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% apivip.kuaiduizuoye.com, c.kuaiduizuoye.com, www.kuaiduizuoye.com

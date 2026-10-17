@@ -1,0 +1,25 @@
+#!name=R-Store | 百度输入法 - BAIDUINPUT
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/B/百度输入法/baiduinput.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/mime\.baidu\.com\/v\d\/IosStart\/getStartInfo - reject
+^https?:\/\/mime\.baidu\.com\/v\d\/activity\/advertisementnonrealtime - reject
+^https?:\/\/mime\.baidu\.com\/v\d\/hotpatch\/check\?hotpatch - reject
+^https?:\/\/mime\.baidu\.com\/v\d\/start_screen_ads\/list - reject
+^https?:\/\/r6\.mo\.baidu\.com\/res\/file/advertisement\/files\/.+\.jpg - reject
+^https?:\/\/res\.mi\.baidu\.com\/imeres\/ime-res\/advertisement\/files\/.+\.jpg - reject
+
+[Map Local]
+^https?:\/\/mbd\.baidu\.com\/ccs\/v\d\/start\/confsync\?appname=baidu_input data-type=text data="{}" status-code=200
+^https?:\/\/mime\.baidu\.com\/commer\/pocket_api\/enterprise_list data-type=text data="{}" status-code=200
+^https?:\/\/mime\.baidu\.com\/sapi\/v\d\/circle\/joinedlist data-type=text data="{}" status-code=200
+^https?:\/\/mime\.baidu\.com\/sapi\/v\d\/lccorpus\/(?>applist|pannellist) data-type=text data="{}" status-code=200
+^https?:\/\/mime\.baidu\.com\/v\d\/start_screen_ads/list data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% mbd.baidu.com, mime.baidu.com, r6.mo.baidu.com, res.mi.baidu.com

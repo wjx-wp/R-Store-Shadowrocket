@@ -1,0 +1,29 @@
+#!name=R-Store | 哔哩哔哩 - BILIBILI(PINK)
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/B/哔哩哔哩/bilibili.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, ad-api.morefreegame.com, REJECT
+DOMAIN, adtrack.qianwen.com, REJECT
+DOMAIN-KEYWORD, api.sobot.com, REJECT
+DOMAIN-SUFFIX, ad.bilibili.com, REJECT
+DOMAIN-SUFFIX, adcommon.bilibili.com, REJECT
+DOMAIN-SUFFIX, cm.game.bilibili.com, REJECT
+DOMAIN-SUFFIX, track.biligame.bilibili.com, REJECT
+
+[Map Local]
+^https?:\/\/(?>app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.interface\.v\d\.Search\/DefaultWords data-type=text data="{}" status-code=200
+^https?:\/\/api\.bilibili\.com\/pgc\/activity\/deliver data-type=text data="{}" status-code=200
+^https?:\/\/api\.bilibili\.com\/x\/mengqi\/v\d\/resource\? data-type=text data="{}" status-code=200
+^https?:\/\/api\.bilibili\.com\/x\/v2\/dm\/qoe\/show\? data-type=text data="{}" status-code=200
+^https?:\/\/api\.bilibili\.com\/x\/web-interface\/zone\?jsonp data-type=text data="{}" status-code=200
+^https?:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v\d\/ecommerce-user\/get_shopping_info\? data-type=text data="{}" status-code=200
+^https?:\/\/app\.bilibili\.com\/x\/resource\/ip data-type=text data="{}" status-code=200
+^https?:\/\/upos-sz-static\.bilivideo\.com\/ssaxcode\/\w{2}\/\w{2}\/\w{32}-1-SPLASH data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% api.bilibili.com, api.live.bilibili.com, app.bilibili.com, grpc.biliapi.net, upos-sz-static.bilivideo.com

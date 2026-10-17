@@ -1,0 +1,27 @@
+#!name=R-Store | 咪咕视频 - MIGUVIDEO
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/M/咪咕视频/miguvideo.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, ggadoffline.miguvideo.com, REJECT
+DOMAIN, ggc.cmvideo.cn, REJECT
+DOMAIN, ggic03.miguvideo.com, REJECT
+DOMAIN, ggmk.miguvideo.com, REJECT
+DOMAIN, ggv.cmvideo.cn, REJECT
+DOMAIN, ggx.cmvideo.cn, REJECT
+DOMAIN, ggx03.miguvideo.com, REJECT
+DOMAIN-SUFFIX, ad.cmvideo.cn, REJECT
+
+[Map Local]
+^https?:\/\/app-sc\.miguvideo\.com\/app-management\/v\d\/staticcache\/settings\/miguvideo\/SHARE_PIC data-type=text data="{}" status-code=200
+^https?:\/\/common-sc\.miguvideo\.com\/videoActivity\/activityList\/ data-type=text data="{}" status-code=200
+^https?:\/\/ggic\d+.miguvideo\.com\/ad\/ data-type=text data="{}" status-code=200
+^https?:\/\/public-deliver\d\.miguvideo\.com\/deliver\/site\/batchMatch\/mergeSpot\/miguvideo\/ data-type=text data="{}" status-code=200
+^https?:\/\/recommend-dy\.miguvideo\.com\/recommend-dynamic\/dataSource\/v\d\/recommend\/merge data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% app-sc.miguvideo.com, common-sc.miguvideo.com, ggc.miguvideo.com, recommend-dy.miguvideo.com

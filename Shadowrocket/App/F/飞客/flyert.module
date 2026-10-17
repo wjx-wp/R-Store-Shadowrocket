@@ -1,0 +1,14 @@
+#!name=R-Store | 飞客 - FLYERT
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/F/飞客/flyert.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Map Local]
+^https?:\/\/www\.flyert(rip)?\.com(\.cn)?\/.*\.php\?module=advis data-type=text data="{}" status-code=200
+^https?:\/\/www\.flyert(rip)?\.com(\.cn)?\/.*\.php\?module=basicdata&type=appinfo data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% www.flyert.com, www.flyert.com.cn, www.flyertrip.com, www.flyertrip.com.cn

@@ -1,0 +1,25 @@
+#!name=R-Store | 驾校一点通 - JXEDT
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/J/驾校一点通/jxedt.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, richmanapi.jxedt.com, REJECT
+DOMAIN, richmanapi.ksedt.com, REJECT
+DOMAIN, richmanmain.jxedt.com, REJECT
+DOMAIN, richmanmain.ksedt.com, REJECT
+DOMAIN, richmanrules.jxedt.com, REJECT
+DOMAIN, richmanrules.ksedt.com, REJECT
+
+[URL Rewrite]
+^https?:\/\/api\.jxedt\.com\/ad\/ - reject
+
+[Map Local]
+^https?:\/\/gouche\.ksedt\.com\/config\/popup\/ data-type=text data="{}" status-code=200
+^https?:\/\/op\.ksedt\.com\/jxedtLive\/liveIntroduceResource data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% api.jxedt.com, gouche.ksedt.com, op.ksedt.com

@@ -1,0 +1,20 @@
+#!name=R-Store | 随手记 - FEIDEE
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/S/随手记/feidee.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/api\.feidee\.net\/v\d\/configs\/client\/configs - reject
+^https?:\/\/tg\.feidee\.com\/online_ad\/api\/search - reject
+^https?:\/\/yun\.feidee\.net\/cab-periodic-activity-ws\/terminal\/v\d\/members\/status - reject
+^https?:\/\/yunmk\.feidee\.net\/cab-market-ws\/market\/v\d\/contents - reject
+
+[Map Local]
+^https?:\/\/tg\.feidee\.com\/vis-ad-engine-ws\/api\/show data-type=text data="{}" status-code=200
+^https?:\/\/tg\.feidee\.com\/vis-ad-engine-ws\/api\/v\d\/ads\/ data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% api.feidee.net, tg.feidee.com, yun.feidee.net, yunmk.feidee.net

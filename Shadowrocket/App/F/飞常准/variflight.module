@@ -1,0 +1,21 @@
+#!name=R-Store | 飞常准 - VARIFLIGHT
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/F/飞常准/variflight.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, adv-adlog.variflight.com, REJECT
+DOMAIN, adv-ads.variflight.com, REJECT
+DOMAIN, app-ad.variflight.com, REJECT
+
+[URL Rewrite]
+^https?:\/\/api\.cdmcaac\.com\/ad - reject
+^https?:\/\/app\.variflight\.com(\/v\d)?\/ad - reject
+^https?:\/\/app\.variflight\.com\/flight\/getIosAdToken - reject
+^https?:\/\/app\.variflight\.com\/v\d\/config\/getmenunotice - reject
+
+[MITM]
+hostname = %APPEND% api.cdmcaac.com, app.variflight.com

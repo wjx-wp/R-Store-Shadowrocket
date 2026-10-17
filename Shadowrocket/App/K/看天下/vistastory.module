@@ -1,0 +1,14 @@
+#!name=R-Store | 看天下 - VISTASTORY
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/K/看天下/vistastory.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/open3\.vistastory\.com\/v\d\/api.*get_popup - reject
+^https?:\/\/open3\.vistastory\.com\/v\d\/api\/index\/loading_ad - reject
+
+[MITM]
+hostname = %APPEND% open3.vistastory.com

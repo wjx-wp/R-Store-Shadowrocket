@@ -1,0 +1,16 @@
+#!name=R-Store | 朴朴超市 - PUPU
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/P/朴朴超市/pupu.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/j1\.pupuapi\.com\/client\/marketing\/banner\/v\d\?position - reject
+
+[Map Local]
+^https?:\/\/j1\.pupuapi\.com\/client\/marketing\/advertisement\/ data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% j1.pupuapi.com

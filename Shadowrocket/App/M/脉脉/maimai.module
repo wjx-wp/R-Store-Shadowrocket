@@ -1,0 +1,21 @@
+#!name=R-Store | 脉脉 - MAIMAI
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/M/脉脉/maimai.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN-SUFFIX, track.mm.taou.com, REJECT
+
+[URL Rewrite]
+^https?:\/\/(h3\.)?open\.taou\.com\/maimai\/(?>launch_ad|ad?) - reject
+^https?:\/\/api\.taou\.com\/sdk\/global\/splash_ad - reject
+
+[Map Local]
+^https?:\/\/(h3\.)?open\.taou\.com\/maimai\/go_gossip_darwin\/external\/v\d\/query_flow_cards data-type=text data="{}" status-code=200
+^https?:\/\/(h3\.)?open\.taou\.com\/maimai\/pay\/v\d\/check_gift data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% api.taou.com, h3.open.taou.com, open.taou.com

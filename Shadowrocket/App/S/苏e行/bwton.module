@@ -1,0 +1,17 @@
+#!name=R-Store | 苏e行 - BWTON
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/S/苏e行/bwton.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Map Local]
+^https?:\/\/ad\.shunchangzhixing\.com\/getAd data-type=text data="{}" status-code=200
+^https?:\/\/api\.bwton\.com\/bas\/ad data-type=text data="" status-code=200
+^https?:\/\/api\.bwton\.com\/bff\/app\/h5\/v\d\/station\/goods data-type=text data="{}" status-code=200
+^https?:\/\/api\.bwton\.com\/bff\/app\/index\/goods data-type=text data="{}" status-code=200
+^https?:\/\/api\.bwton\.com\/bff\/app\/index\/recommend data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% ad.shunchangzhixing.com, api.bwton.com

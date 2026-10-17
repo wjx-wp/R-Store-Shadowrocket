@@ -1,0 +1,31 @@
+#!name=R-Store | soul - SOUL
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/S/soul/soul.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, ad-h5-cdn.soulapp.cn, REJECT
+DOMAIN, ad-h5-station-cdn.soulapp.cn, REJECT
+DOMAIN, ad-r.soulapp.cn, REJECT
+DOMAIN, ad-reward.soulapp.cn, REJECT
+DOMAIN, soul-ad.soulapp.cn, REJECT
+DOMAIN-SUFFIX, cdn.soulapp.cn, REJECT
+IP-CIDR, 120.27.235.201/32, REJECT
+IP-CIDR, 121.196.197.147/32, REJECT
+IP-CIDR, 47.56.131.76/32, REJECT
+IP-CIDR, 47.97.215.55/32, REJECT
+IP-CIDR, 47.99.42.29/32, REJECT
+
+[URL Rewrite]
+^https?:\/\/api-global\.soulapp\.me\/app\/open\/get - reject
+
+[Map Local]
+^https?:\/\/api-account\.soulapp\.cn\/teenager\/config data-type=text data="{}" status-code=200
+^https?:\/\/api-chat\.soulapp\.cn\/chat\/entrance\/first data-type=text data="{}" status-code=200
+^https?:\/\/ssp\.soulapp\.cn\/api\/q data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% api-a.soulapp.cn, api-account.soulapp.cn, api-chat.soulapp.cn, api-global.soulapp.me, api-pay.soulapp.cn, api-user.soulapp.cn, gateway-mobile-gray.soulapp.cn, post.soulapp.cn, ssp.soulapp.cn

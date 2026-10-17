@@ -1,0 +1,16 @@
+#!name=R-Store | 每日精選 - NGDAILY
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/M/每日精選/ngdaily.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/dili\.bdatu\.com\/jiekou\/ad\/ - reject
+
+[Map Local]
+^https?:\/\/wap\.ngchina\.cn\/news\/adverts\/ data-type=text data="" status-code=200
+
+[MITM]
+hostname = %APPEND% dili.bdatu.com, wap.ngchina.cn

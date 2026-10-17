@@ -1,0 +1,23 @@
+#!name=R-Store | 趣兜风 - QDF
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/Q/趣兜风/qdf.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, lwlog.laiwang.com, REJECT
+DOMAIN-SUFFIX, cpatrk.net, REJECT
+DOMAIN-SUFFIX, mobsurl.com, REJECT
+DOMAIN-SUFFIX, yksdks.com, REJECT
+IP-CIDR, 114.67.227.198/32, REJECT
+
+[URL Rewrite]
+^https?:\/\/st7niu\.aicarmap\.com\/st_?!(a2|a3|e9)\w+\.webp$ - reject
+
+[Map Local]
+^https?:\/\/online\.aicarmap\.com\/club\/api\/user\/updateloc data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% online.aicarmap.com, st7niu.aicarmap.com

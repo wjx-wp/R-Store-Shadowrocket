@@ -1,0 +1,64 @@
+#!name=R-Store | 搜狗输入法 - SOGOU
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/S/搜狗输入法/sogou.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN-KEYWORD, wan.sogou.com, REJECT
+DOMAIN-SUFFIX, 123.sogou.com, REJECT
+DOMAIN-SUFFIX, adsence.sogou.com, REJECT
+DOMAIN-SUFFIX, adstream.123.sogoucdn.com, REJECT
+DOMAIN-SUFFIX, amfi.gou.sogou.com, REJECT
+DOMAIN-SUFFIX, bazinga.mse.sogou.com, REJECT
+DOMAIN-SUFFIX, brand.sogou.com, REJECT
+DOMAIN-SUFFIX, bsiet.husky.sogou.com, REJECT
+DOMAIN-SUFFIX, cjroq.bealge.sogou.com, REJECT
+DOMAIN-SUFFIX, cpc.sogou.com, REJECT
+DOMAIN-SUFFIX, download.zhushou.sogou.com, REJECT
+DOMAIN-SUFFIX, epro.sogou.com, REJECT
+DOMAIN-SUFFIX, fair.sogou.com, REJECT
+DOMAIN-SUFFIX, files2.sogou.com, REJECT
+DOMAIN-SUFFIX, galaxy.sogoucdn.com, REJECT
+DOMAIN-SUFFIX, golden1.sogou.com, REJECT
+DOMAIN-SUFFIX, goto.sogou.com, REJECT
+DOMAIN-SUFFIX, gxe.husky.sogou.com, REJECT
+DOMAIN-SUFFIX, ht.www.sogou.com, REJECT
+DOMAIN-SUFFIX, info.pinyin.sogou.com, REJECT
+DOMAIN-SUFFIX, inte.sogou.com, REJECT
+DOMAIN-SUFFIX, inte.sogoucdn.com, REJECT
+DOMAIN-SUFFIX, lu.sogou.com, REJECT
+DOMAIN-SUFFIX, lu.sogoucdn.com, REJECT
+DOMAIN-SUFFIX, p3p.sogou.com, REJECT
+DOMAIN-SUFFIX, pb.sogou.com, REJECT
+DOMAIN-SUFFIX, pbd.sogou.com, REJECT
+DOMAIN-SUFFIX, pcxzo.pluto.sogou.com, REJECT
+DOMAIN-SUFFIX, ping.acc.sogou.com, REJECT
+DOMAIN-SUFFIX, ping.pinyin.sogou.com, REJECT
+DOMAIN-SUFFIX, psfq.gou.sogou.com, REJECT
+DOMAIN-SUFFIX, push.sogou.com, REJECT
+DOMAIN-SUFFIX, pv.sogou.com, REJECT
+DOMAIN-SUFFIX, qhl.bealge.sogou.com, REJECT
+DOMAIN-SUFFIX, qxm.pluto.sogou.com, REJECT
+DOMAIN-SUFFIX, rd.e.sogou.com, REJECT
+DOMAIN-SUFFIX, rmoeu.mercury.sogou.com, REJECT
+DOMAIN-SUFFIX, shouji.sougou.com, REJECT
+DOMAIN-SUFFIX, sw.mobile.sogou.com, REJECT
+DOMAIN-SUFFIX, theta.sogou.com, REJECT
+DOMAIN-SUFFIX, theta.sogoucdn.com, REJECT
+DOMAIN-SUFFIX, union.sogou.com, REJECT
+DOMAIN-SUFFIX, uranus.sogou.com, REJECT
+DOMAIN-SUFFIX, wan.sogoucdn.com, REJECT
+DOMAIN-SUFFIX, wangmeng.sogou.com, REJECT
+DOMAIN-SUFFIX, web.sogou.com, REJECT
+
+[URL Rewrite]
+^https?://(ios|android)\.sogou\.com/[^/]+/sogou_input_[^/]+/[^/]+/index\.html - reject
+
+[Map Local]
+^https?:\/\/h5api\.sginput\.qq\.com\/v\d\/gcenter\/ios\/homepage data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% android.sogou.com, h5api.sginput.qq.com, ios.sogou.com, sec.sginput.qq.com

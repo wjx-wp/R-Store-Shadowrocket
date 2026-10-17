@@ -1,0 +1,30 @@
+#!name=R-Store | trip - TRIP
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/T/Trip/trip.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, ak-d.tripcdn.com, REJECT
+DOMAIN, cpush.trip.com, REJECT
+DOMAIN, easytomessage.com, REJECT
+DOMAIN, firebaseinstallations.googleapis.com, REJECT
+DOMAIN, ocsp.pki.goog, REJECT
+DOMAIN, tcpgateway-sgp-trip.trip.com, REJECT
+DOMAIN-KEYWORD, app.adjust, REJECT
+DOMAIN-SUFFIX, graph.facebook.com, REJECT
+IP-CIDR, 103.143.160.209/32, REJECT
+IP-CIDR, 162.14.137.26/32, REJECT
+IP-CIDR, 162.14.145.13/32, REJECT
+IP-CIDR, 210.13.85.204/32, REJECT
+
+[URL Rewrite]
+^https?:\/\/download\.trip\.com\/html5 - reject
+^https?:\/\/m\.trip\.com\/quic - reject
+^https?:\/\/m\.trip\.com\/restapi\/.*\/(queryAdsDisplayData|queryBadge|isPopUp|(?>G|g)etAppConfig|getRecommendResource|appWelcomeImage|uploadConfigContent|appData|appAttributionLog|heartBeat|GetUserUpgradeNoticeInfo|incrQueryTrans|getTopPic|getABTestData) - reject
+^https?:\/\/pages\.trip\.com\/js\/market - reject
+
+[MITM]
+hostname = %APPEND% download.trip.com, m.trip.com, pages.trip.com

@@ -1,0 +1,13 @@
+#!name=R-Store | 网易新闻 - 163NEWS
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/W/网易新闻/163news.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Map Local]
+^https?:\/\/c\.m\.163\.com\/nc\/gl\/ data-type=text data="" status-code=200
+
+[MITM]
+hostname = %APPEND% c.m.163.com, gw.m.163.com, nex.163.com

@@ -1,0 +1,18 @@
+#!name=R-Store | 上海交通卡 - SPTCC
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/S/上海交通卡/sptcc.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN-SUFFIX, medproad.com, REJECT
+
+[URL Rewrite]
+^https?:\/\/jiguang\.sptcc\.com\/smartop\/\d/getEvent - reject
+^https?:\/\/online\.sptcc\.com(:\d+)?\/handapp_app\/(?>ActivityGetServlet|queryWebUrlConfig) - reject
+^https?:\/\/online\.sptcc\.com(:\d+)?\/handapp_zx\/rss_info - reject
+
+[MITM]
+hostname = %APPEND% jiguang.sptcc.com, online.sptcc.com

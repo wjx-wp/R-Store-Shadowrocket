@@ -1,0 +1,17 @@
+#!name=R-Store | bahecloud
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/Applet/Wechat/Z/智慧云停车管家/bahecloud.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, djad.nmgyhxxkj.cn, REJECT
+DOMAIN, pro.dajuhl.com, REJECT
+
+[URL Rewrite]
+^https?:\/\/www\.bahecloud\.com\/webapi\.asmx\/api_GetAdvCmdCode - reject
+
+[MITM]
+hostname = %APPEND% www.bahecloud.com

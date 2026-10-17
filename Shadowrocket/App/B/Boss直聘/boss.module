@@ -1,0 +1,12 @@
+#!name=R-Store | Boss直聘 - BOSS
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/B/Boss直聘/boss.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Map Local]
+^https?:\/\/api-ios\.zhipin\.com\/api\/zpCommon\/upgrade\/check data-type=text data="{}" status-code=200
+^https?:\/\/api-ios\.zhipin\.com\/api\/zpCommon\/user\/startupAd data-type=text data="{}" status-code=200
+^https?:\/\/apm-ios\.zhipin\.com\/api\/zpApm\/ios\/gray\/release\/check data-type=text data="{}" status-code=200

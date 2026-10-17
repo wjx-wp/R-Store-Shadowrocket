@@ -1,0 +1,17 @@
+#!name=R-Store | 一号店 - YHD
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/Y/一号店/yhd.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN-SUFFIX, api.dsp.yhd.com, REJECT
+DOMAIN-SUFFIX, tracker.yhd.com, REJECT
+
+[URL Rewrite]
+^https?:\/\/venus\.yhd\.com\/memhome\/launchConfig - reject
+
+[MITM]
+hostname = %APPEND% venus.yhd.com

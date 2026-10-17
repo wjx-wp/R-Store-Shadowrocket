@@ -1,0 +1,13 @@
+#!name=R-Store | 贝壳找房 - KE
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/B/贝壳找房/ke.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/apps\.api\.ke\.com\/config\/config\/(?>bootpage|getactivityconfig) - reject
+
+[MITM]
+hostname = %APPEND% apps.api.ke.com

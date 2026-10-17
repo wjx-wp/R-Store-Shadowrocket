@@ -1,0 +1,14 @@
+#!name=R-Store | 小熊拦截 - XIAOXIONG
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/X/小熊拦截/xiaoxiong.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/spamblocker-api\.zeekstudio\.com\/checkVersion - reject
+^https?:\/\/spamblocker-api\.zeekstudio\.com\/profile - reject
+
+[MITM]
+hostname = %APPEND% spamblocker-api.zeekstudio.com

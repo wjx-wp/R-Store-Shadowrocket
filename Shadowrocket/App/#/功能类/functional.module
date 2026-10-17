@@ -1,0 +1,26 @@
+#!name=R-Store | 功能类插件 - FUNCTIONAL PLUGIN
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/#/功能类/functional.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, geo2.adobe.com, REJECT
+DOMAIN, lookup.api.bsb.baidu.com, REJECT
+DOMAIN, safebrowsing.g.applimg.com, REJECT
+DOMAIN, safebrowsing.googleapis.com, REJECT
+DOMAIN, safebrowsing.urlsec.qq.com, REJECT
+DOMAIN-SUFFIX, safebrowsing.apple, REJECT
+DOMAIN-SUFFIX, u3.ucweb.com, REJECT
+IP-CIDR, 119.29.29.90/32, REJECT
+IP-CIDR, 119.29.29.98/32, REJECT
+IP-CIDR, 119.29.29.99/32, REJECT
+IP-CIDR, 81.71.61.216/32, REJECT
+
+[URL Rewrite]
+^https?:\/\/doh\.pub\/dns-query\? - reject
+
+[MITM]
+hostname = %APPEND% doh.pub, gist.githubusercontent.com, github.com, raw.githubusercontent.com

@@ -1,0 +1,17 @@
+#!name=R-Store | ONE·一个 - ONE
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/O/ONE·一个/one.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/api\.21ec74\.com\/v\d\.\d\/ad - reject
+^https?:\/\/app\.api\.d3yuiw4\.com\/api\/app\/ad - reject
+
+[Map Local]
+^https?:\/\/v\d\.wufazhuce\.com:\w+\/api\/adpreloadlist data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% api.21ec74.com, app.api.d3yuiw4.com

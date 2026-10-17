@@ -1,0 +1,19 @@
+#!name=R-Store | 领英 - LINKEDIN
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/L/领英/linkedin.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN-SUFFIX, ads.linkedin.com, REJECT
+
+[URL Rewrite]
+^https?:\/\/www\.linkedin\.com\/voyager\/api\/voyagerConfiguration - reject
+
+[Map Local]
+^https?:\/\/www\.linkedin\.com\/voyager\/api\/graphql\?queryId=voyagerAdstracking data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% www.linkedin.com

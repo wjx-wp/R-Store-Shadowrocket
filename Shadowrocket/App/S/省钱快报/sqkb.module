@@ -1,0 +1,19 @@
+#!name=R-Store | 省钱快报 - SQKB
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/S/省钱快报/sqkb.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, log.17gwx.com, REJECT
+
+[Map Local]
+^https?:\/\/api\.17gwx\.com\/v\d\/base\/app\/ad data-type=text data="{}" status-code=200
+^https?:\/\/api\.17gwx\.com\/v\d\/growth\/popup\/remind data-type=text data="{}" status-code=200
+^https?:\/\/api\.17gwx\.com\/v\d\/mentor\/testflight\/getupgradereward data-type=text data="" status-code=200
+^https?:\/\/api\.17gwx\.com\/v\d\/recommend\/feed\/list data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% api.17gwx.com

@@ -1,0 +1,16 @@
+#!name=R-Store | 微医 - GUAHAO
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/W/微医/guahao.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/app\.wy\.guahao\.com\/json\/white\/dayquestion\/getpopad - reject
+
+[Map Local]
+^https?:\/\/kano\.guahao\.cn\/[a-zA-Z0-9]{12} data-type=text data="" status-code=200
+
+[MITM]
+hostname = %APPEND% app.wy.guahao.com, kano.guahao.cn

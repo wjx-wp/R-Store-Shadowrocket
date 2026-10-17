@@ -1,0 +1,18 @@
+#!name=R-Store | 笑容加 - USMILE
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/X/笑容加/usmile.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/myusmile\.online\/user\/version\/requestFirmwareUpdate\/ - reject
+^https?:\/\/www\.myusmile\.online\/user\/userTagRecord\/popup - reject
+
+[Map Local]
+^https?:\/\/myusmile\.online\/user\/version\/requestAppUpdate data-type=text data="{}" status-code=200
+^https?:\/\/wemallh5\.usmile\.com\/api\/sp-portal\/store\/usmile\/activity\/dayCheck\?pop data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% myusmile.online, wemallh5.usmile.com, www.myusmile.online

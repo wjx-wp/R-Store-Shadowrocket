@@ -1,0 +1,34 @@
+#!name=R-Store | 搜狐 - SOHU
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/S/搜狐/sohu.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN-SUFFIX, 3rd.t.sohu.com, REJECT
+DOMAIN-SUFFIX, 888.tv.sohu.com, REJECT
+DOMAIN-SUFFIX, ad.mail.sohu.com, REJECT
+DOMAIN-SUFFIX, ad.sohu.com, REJECT
+DOMAIN-SUFFIX, adnet.sohu.com, REJECT
+DOMAIN-SUFFIX, ads.sohu.com, REJECT
+DOMAIN-SUFFIX, aty.sohu.com, REJECT
+DOMAIN-SUFFIX, corp.sohu.com, REJECT
+DOMAIN-SUFFIX, cpc.sohu.com, REJECT
+DOMAIN-SUFFIX, go.sohu.com, REJECT
+DOMAIN-SUFFIX, hui.sohu.com, REJECT
+DOMAIN-SUFFIX, suvset.sohu.com, REJECT
+DOMAIN-SUFFIX, track.sohu.com, REJECT
+
+[URL Rewrite]
+^https?:\/\/(api|api-bk\d+)\.tv\.sohu\.com\/agg\/api\/app\/config\/bootstrap - reject
+^https?:\/\/pic\.k\.sohu\.com\/img\d\/wb\/tj\/ - reject
+
+[Map Local]
+^https?:\/\/api\.k\.sohu\.com\/api\/news\/adsense data-type=text data="" status-code=200
+^https?:\/\/pic\.k\.sohu\.com\/img8\/wb\/tj\/ data-type=text data="" status-code=200
+^https?:\/\/s1\.api\.tv\.itc\.cn\/v\d\/mobile\/control\/switch\.json data-type=text data="" status-code=200
+
+[MITM]
+hostname = %APPEND% *.souhu.com

@@ -1,0 +1,30 @@
+#!name=R-Store | 快看漫画 - KKMH
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/K/快看漫画/kkmh.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/(cdn-)?api\.kkmh\.com\/v\d\/ad - reject
+
+[Map Local]
+^https?:\/\/(cdn-)?api\.kkmh\.com\/v\d\/business\/activities\/get data-type=text data="{}" status-code=200
+^https?:\/\/(cdn-)?api\.kkmh\.com\/v\d\/business\/fake_push\/info data-type=text data="{}" status-code=200
+^https?:\/\/(cdn-)?api\.kkmh\.com\/v\d\/business\/mine\/business_config data-type=text data="{}" status-code=200
+^https?:\/\/(cdn-)?api\.kkmh\.com\/v\d\/checkin\/api\/new_user\/tab_info data-type=text data="{}" status-code=200
+^https?:\/\/(cdn-)?api\.kkmh\.com\/v\d\/checkin\/task_center\/get_by_task_type data-type=text data="{}" status-code=200
+^https?:\/\/(cdn-)?h5\.kuaikanmanhua\.com\/game-h5\/new-user-welfare\/index\.html data-type=text data="" status-code=200
+^https?:\/\/(cdn-)?h5\.kuaikanmanhua\.com\/user\/scene\/api\/new_user\/sign_in\/list data-type=text data="{}" status-code=200
+^https?:\/\/(cdn-)?h5\.kuaikanmanhua\.com\/v\d\/kb\/recharge_good\/list_h5 data-type=text data="{}" status-code=200
+^https?:\/\/(cdn-)?pay\.kkmh\.com\/v\d\/kb\/(?>wallet|comic_page_banner) data-type=text data="{}" status-code=200
+^https?:\/\/(cdn-)?pay\.kkmh\.com\/v\d\/vip\/(?>banner|charge)_tip_list data-type=text data="{}" status-code=200
+^https?:\/\/(cdn-)?pay\.kkmh\.com\/v\d\/vip\/platform_base\/popups_display data-type=text data="{}" status-code=200
+^https?:\/\/(cdn-)?shop\.kkmh\.com\/mbff\/popup_administration data-type=text data="{}" status-code=200
+^https?:\/\/(cdn-)?topic\.kkmh\.com\/gamecard\/v\d\/activityModule\/fetchButtonInfo\?buttonConfigId data-type=text data="{}" status-code=200
+^https?:\/\/(cdn-)?topic\.kkmh\.com\/gamecard\/v\d\/activityModule\/userSignInInfo\?activitySignInConfigId data-type=text data="{}" status-code=200
+^https?:\/\/(cdn-)?topic\.kkmh\.com\/gamecard\/v\d\/activityText\/getUserActivityTextInfo\?activityTextConfigId data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% api.kkmh.com, cdn-api.kkmh.com, cdn-h5.kuaikanmanhua.com, cdn-pay.kkmh.com, cdn-shop.kkmh.com, cdn-social.kkmh.com, cdn-topic.kkmh.com, h5.kuaikanmanhua.com, pay.kkmh.com, shop.kkmh.com, social.kkmh.com, topic.kkmh.com

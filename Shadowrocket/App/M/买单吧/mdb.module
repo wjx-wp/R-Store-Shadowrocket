@@ -1,0 +1,24 @@
+#!name=R-Store | 买单吧 - BANKCOMM
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/M/买单吧/mdb.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN-SUFFIX, track.bankcomm.com, REJECT
+
+[URL Rewrite]
+^https?:\/\/creditcard.*\.bankcomm\.(com|cn)\/.*Ads\.do - reject
+^https?:\/\/creditcardapp\.bankcomm\.(com|cn)\/mappweb_collection - reject
+^https?:\/\/creditcardapp\.bankcomm\.(com|cn)\/mappweb_interaction\/common\/globalNotify - reject
+^https?:\/\/creditcardapp\.bankcomm\.(com|cn)\/mappweb_interaction\/qryHighRiskUser - reject
+
+[Map Local]
+^https?:\/\/creditcardapp\.bankcomm\.(com|cn)\/CnsvMdbaptFinclipWeb data-type=text data="{}" status-code=200
+^https?:\/\/creditcardapp\.bankcomm\.(com|cn)\/mappweb\/homepage(\/discovery)?\/promote data-type=text data="{}" status-code=200
+^https?:\/\/creditcardapp\.bankcomm\.(com|cn)\/mappweb_interaction\/appInfo\/appNewestVersion data-type=text data="" status-code=200
+
+[MITM]
+hostname = %APPEND% *.bankcomm.cn, *.bankcomm.com

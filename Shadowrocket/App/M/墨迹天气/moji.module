@@ -1,0 +1,21 @@
+#!name=R-Store | 墨迹天气 - MOJI
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/M/墨迹天气/moji.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, ad.api.moji.com, REJECT
+DOMAIN, adlaunch.moji.com, REJECT
+DOMAIN, ads.mojicdn.com, REJECT
+DOMAIN-SUFFIX, fds.api.moji.com, REJECT
+DOMAIN-SUFFIX, log.moji.com, REJECT
+DOMAIN-SUFFIX, me.api.moji.com, REJECT
+
+[Map Local]
+^https?:\/\/cdn\.moji\.com\/(adoss|adlink)\/ data-type=text data="" status-code=200
+
+[MITM]
+hostname = %APPEND% cdn.moji.com

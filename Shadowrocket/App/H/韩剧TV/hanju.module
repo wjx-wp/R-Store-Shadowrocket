@@ -1,0 +1,18 @@
+#!name=R-Store | 韩剧TV - HANJUTV
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/H/韩剧TV/hanju.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, adx-os.bridgeturbo.com, REJECT
+DOMAIN, da.bridgeturbo.com, REJECT
+
+[URL Rewrite]
+^https?:\/\/api\.hanju\.koudaibaobao\.com\/api\/carp\/kp\? - reject
+^https?:\/\/gfp\.veta\.naver\.com\/adcall\? - reject
+
+[MITM]
+hostname = %APPEND% api.hanju.koudaibaobao.com, gfp.veta.naver.com

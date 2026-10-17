@@ -1,0 +1,13 @@
+#!name=R-Store | 比亚迪 - BYD
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/B/比亚迪/byd.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Map Local]
+^https?:\/\/cache\.bydauto\.com\.cn\/dilink_user_upload\/20 data-type=text data="" status-code=200
+
+[MITM]
+hostname = %APPEND% cache.bydauto.com.cn

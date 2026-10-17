@@ -1,0 +1,13 @@
+#!name=R-Store | lwh
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/Applet/Wechat/L/老碗会点单/lwh.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/wx\.youhaosoft\.com\/prom\/Ad - reject
+
+[MITM]
+hostname = %APPEND% wx.youhaosoft.com

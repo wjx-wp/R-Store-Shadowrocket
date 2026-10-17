@@ -1,0 +1,30 @@
+#!name=R-Store | 携程旅行 - CTRIP
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/X/携程旅行/ctrip.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, sofire.baidu.com, REJECT
+DOMAIN-SUFFIX, cn-shanghai.nlb.aliyuncs.com, REJECT
+DOMAIN-SUFFIX, volceapplog.com, REJECT
+IP-CIDR, 114.80.56.98/32, REJECT
+IP-CIDR, 162.14.137.43/32, REJECT
+IP-CIDR, 162.14.145.54/32, REJECT
+IP-CIDR, 210.13.85.204/32, REJECT
+
+[URL Rewrite]
+^https?:\/\/m\.ctrip\.com\/html5\/webresource\/js\/iscroll\.js$ - reject
+^https?:\/\/m\.ctrip\.com\/restapi\/.*\/getAdsList - reject
+^https?:\/\/m\.ctrip\.com\/restapi\/.*\/getAppConfig - reject
+^https?:\/\/m\.ctrip\.com\/restapi\/.*\/getDiscardUbts - reject
+^https?:\/\/m\.ctrip\.com\/restapi\/.*\/getTimeZoneServerIpList - reject
+^https?:\/\/m\.ctrip\.com\/restapi\/.*\/incrQueryTrans - reject
+^https?:\/\/m\.ctrip\.com\/restapi\/.*\/tripAds - reject
+^https?:\/\/ma-adx\.ctrip\.com\/_ma\.gif - reject
+^https?:\/\/mbd\.baidu\.com\/newspage\/api\/getmobads\?page\=landingshare - reject
+
+[MITM]
+hostname = %APPEND% ma-adx.ctrip.com, mbd.baidu.com

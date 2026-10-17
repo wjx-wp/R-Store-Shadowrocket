@@ -1,0 +1,19 @@
+#!name=R-Store | 帆书(樊登读书) - DUSHU365
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/F/帆书/dushu365.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, popup.dushu365.com, REJECT
+
+[URL Rewrite]
+^https?:\/\/g(.*)\.dushu365\.com\/chief-orch\/config\/config\/v\d+\/(shortCut|appUpdateUnite|loadingAd|appConfig) - reject
+^https?:\/\/g(.*)\.dushu365\.com\/fandeng-orch\/bookboy\/v\d+\/vipPagePop - reject
+^https?:\/\/g(.*)\.dushu365\.com\/fandeng-orch\/dual2211\/config - reject
+^https?:\/\/g(.*)\.dushu365\.com\/fdtalk-orch\/newcomerzone\/v\d+\/guide - reject
+^https?:\/\/g(.*)\.dushu365\.com\/fs-retain\/trialVip\/v\d+\/requestTrialVipPopDoNotSendReward - reject
+^https?:\/\/g(.*)\.dushu365\.com\/order-orchestration\/orderWeb\/exchange\/v\d+\/showExchangeButton - reject
+^https?:\/\/g(.*)\.dushu365\.com\/resource-orchestration-system\/vipLandingPage\/v\d+\/getVipLandingPageApp - reject

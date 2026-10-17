@@ -1,0 +1,14 @@
+#!name=R-Store | 公考雷达 - GONGKAOLEIDA
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/G/公考雷达/gongkaoleida.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/api\.gongkaoleida\.com\/api\/\w+\/sets\/getAppVersion - reject
+^https?:\/\/api\.gongkaoleida\.com\/api\/v\d\/ad\/info - reject
+
+[MITM]
+hostname = %APPEND% api.gongkaoleida.com

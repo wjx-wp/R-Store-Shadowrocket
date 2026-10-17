@@ -1,0 +1,17 @@
+#!name=R-Store | 发现精彩 - 95508
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/F/发现精彩/cgbcc.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, union.chinalifeonline.com.cn, REJECT
+
+[Map Local]
+^https?:\/\/static\.95508\.com\/mmg\/ciop\/sysabbr\/cmep\/images\/(app)?popupads data-type=text data="{}" status-code=200
+^https?:\/\/wap\.cgbchina\.com\.cn\/mdpNativeApi\/cawp\/h5-wealth-app\/noSessionServlet\/cawp\/base\/getPersonalizedRecommendations data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% 8.95508.com, static.95508.com, wap.cgbchina.com.cn

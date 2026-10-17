@@ -1,0 +1,15 @@
+#!name=R-Store | 到梦空间 - 5IDREAM
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/D/到梦空间/5idream.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Map Local]
+^https?:\/\/appdmkj\.5idream\.net\/appPic\/homepage data-type=text data="{}" status-code=200
+^https?:\/\/appdmkj\.5idream\.net\/v\d\/login\/message\/tip data-type=text data="{}" status-code=200
+^https?:\/\/appdmkj\.5idream\.net\/v\d\/user\/advertising\/list data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% appdmkj.5idream.net

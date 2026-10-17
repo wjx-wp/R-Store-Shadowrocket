@@ -1,0 +1,37 @@
+#!name=R-Store | 高德地图 - AMAP
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/G/高德地图/amap.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, amap-aos-info-nogw.amap.com, REJECT
+DOMAIN, apiinit.amap.com, REJECT
+DOMAIN, free-aos-cdn-image.amap.com, REJECT
+DOMAIN, icloud-amap.com, REJECT
+DOMAIN, optimus-ads.amap.com, REJECT
+DOMAIN-KEYWORD, ads.amap.com, REJECT
+DOMAIN-KEYWORD, logs.amap.com, REJECT
+DOMAIN-SUFFIX, adiu.amap.com, REJECT
+DOMAIN-SUFFIX, page.amap.com, REJECT
+
+[URL Rewrite]
+^https?:\/\/amap-aos-info-nogw\.amap\.com\/ws\/aos\/alimama\/splash_screen_rt - reject
+^https?:\/\/m\d\.amap\.com\/ws\/valueadded\/ - reject
+
+[Map Local]
+^https?:\/\/m\d-zb\.amap\.com\/ws\/boss\/(order\/car\/king_toolbox_car_bubble|tips\/onscene_visual_optimization) data-type=text data="{}" status-code=200
+^https?:\/\/m\d\.amap\.com\/ws\/(mapapi\/hint_text\/offline_data|message\/notice\/list|shield\/search\/new_hotword) data-type=text data="{}" status-code=200
+^https?:\/\/m\d\.amap\.com\/ws\/faas\/amap-navigation\/(?>main-page-assets|main-page-location|ridewalk-end-fc) data-type=text data="{}" status-code=200
+^https?:\/\/m\d\.amap\.com\/ws\/faas\/amap-navigation\/card-service-(?>car-end|route-plan) data-type=text data="{}" status-code=200
+^https?:\/\/m\d\.amap\.com\/ws\/shield\/dsp\/app\/startup\/init\? data-type=text data="{}" status-code=200
+^https?:\/\/m\d\.amap\.com\/ws\/shield\/scene\/recommend\? data-type=text data="{}" status-code=200
+^https?:\/\/m\d\.amap\.com\/ws\/shield\/search\/new_hotword\? data-type=text data="{}" status-code=200
+^https?:\/\/m\d\.amap\.com\/ws\/shield\/search_poi\/tips_adv\? data-type=text data="{}" status-code=200
+^https?:\/\/oss\.amap\.com\/ws\/banner\/lists\/\? data-type=text data="{}" status-code=200
+^https?:\/\/sns\.amap\.com\/ws\/msgbox\/pull_mp\? data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% amap-aos-info-nogw.amap.com, oss.amap.com, sns.amap.com

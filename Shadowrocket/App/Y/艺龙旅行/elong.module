@@ -1,0 +1,17 @@
+#!name=R-Store | 艺龙旅行 - ELONG
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/Y/艺龙旅行/elong.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/saad\.ms\.zhangyue\.net\/ad - reject
+^https?:\/\/webboot\.zhangyue\.com\/zycl\/api\/ad\/ - reject
+
+[Map Local]
+^https?:\/\/mobile-api2011\.elong\.com\/ad(?>v|gateway) data-type=text data="" status-code=200
+
+[MITM]
+hostname = %APPEND% mobile-api2011.elong.com, saad.ms.zhangyue.net, webboot.zhangyue.com

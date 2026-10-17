@@ -1,0 +1,16 @@
+#!name=R-Store | 高铁管家 - GTGJ
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/G/高铁管家/rsscc.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/[a-z]*\.rsscc\.com\/[a-z]*\/adver - reject
+
+[Map Local]
+^https?:\/\/cdn\.133\.cn\/md\/gtgj\/.+\/.+720x1280 data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% *.rsscc.com, cdn.133.cn

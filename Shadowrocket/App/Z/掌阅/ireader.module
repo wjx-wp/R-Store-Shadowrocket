@@ -1,0 +1,15 @@
+#!name=R-Store | 掌阅 - IREADER
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/Z/掌阅/ireader.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Map Local]
+^https?:\/\/ih2\.ireader\.com\/zyapi\/bookstore\/ad\/ data-type=text data="" status-code=200
+^https?:\/\/ih2\.ireader\.com\/zyapi\/self\/screen\/ad data-type=text data="" status-code=200
+^https?:\/\/ih2\.ireader\.com\/zycl\/api\/ad\/ data-type=text data="" status-code=200
+
+[MITM]
+hostname = %APPEND% book.img.ireader.com, ih2.ireader.com

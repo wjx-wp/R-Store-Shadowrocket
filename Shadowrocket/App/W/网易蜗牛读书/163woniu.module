@@ -1,0 +1,14 @@
+#!name=R-Store | 网易蜗牛读书 - 163WONIU
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/W/网易蜗牛读书/163woniu.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Map Local]
+^https?:\/\/easyreadfs\.nosdn\.127\.net\/ad-material\/ data-type=text data="" status-code=200
+^https?:\/\/p\.du\.163\.com\/ad\/ data-type=text data="" status-code=200
+
+[MITM]
+hostname = %APPEND% easyreadfs.nosdn.127.net, p.du.163.com

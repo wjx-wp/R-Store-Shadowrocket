@@ -1,0 +1,18 @@
+#!name=R-Store | WPSOffice - WPS
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/W/WPSOffice/wps.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/ios\.wps\.cn\/ad-statistics-service - reject
+
+[Map Local]
+^https?:\/\/\w+\.kingsoft-office-service\.com\/ad data-type=text data="" status-code=200
+^https?:\/\/ovs-shopwindow-server.*\.wps\.com\/api\/v\d\/shop_window\/type\/ios data-type=text data="{}" status-code=200
+^https?:\/\/tiance\.wps\.cn\/dce\/exec\/api\/market\/activity data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% *.kingsoft-office-service.com, ios.wps.cn, tiance.wps.cn

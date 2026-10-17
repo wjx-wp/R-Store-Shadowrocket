@@ -1,0 +1,41 @@
+#!name=R-Store | 芒果TV - MGTV
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/M/芒果TV/mgtv.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, credits.bz.mgtv.com, REJECT
+DOMAIN, credits2.bz.mgtv.com, REJECT
+DOMAIN, credits3.bz.mgtv.com, REJECT
+DOMAIN, dflow.bz.mgtv.com, REJECT
+DOMAIN, encounter.bz.mgtv.com, REJECT
+DOMAIN, floor.bz.mgtv.com, REJECT
+DOMAIN, layer.bz.mgtv.com, REJECT
+DOMAIN, mob.bz.mgtv.com, REJECT
+DOMAIN, rc-topic-api.bz.mgtv.com, REJECT
+DOMAIN, rprain.bz.mgtv.com, REJECT
+DOMAIN, vip.bz.mgtv.com, REJECT
+DOMAIN-SUFFIX, cmop.mgtv.com, REJECT
+DOMAIN-SUFFIX, da.mgtv.com, REJECT
+DOMAIN-SUFFIX, imgaliyun.res.mgtv.com, REJECT
+DOMAIN-SUFFIX, log.mgtv.com, REJECT
+DOMAIN-SUFFIX, mobaliyun.res.mgtv.com, REJECT
+DOMAIN-SUFFIX, pcvideoaliyun.titan.mgtv.com, REJECT
+DOMAIN-SUFFIX, pcvideoyd.titan.mgtv.com, REJECT
+DOMAIN-SUFFIX, pcweb.v1.mgtv.com, REJECT
+
+[URL Rewrite]
+^https?:\/\/[\d\.]+:\d{5}\/\?cmd=indexes - reject
+
+[Map Local]
+^https?:\/\/[\d\.]+\/odin\/c\d\/(channel\/ads|skin\/config)\? data-type=text data="{}" status-code=200
+^https?:\/\/damang\.api\.mgtv\.com\/station\/album\/red\/dot\? data-type=text data="{}" status-code=200
+^https?:\/\/hb-boom\.api\.mgtv\.com\/release\/pullReleaseInfo data-type=text data="{}" status-code=200
+^https?:\/\/mobile\.api\.mgtv\.com\/v\d\/mobile\/checkUpdate\? data-type=text data="{}" status-code=200
+^https?:\/\/mobileso\.bz\.mgtv\.com\/spotlight\/search\/v\d\? data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% *.mgtv.com

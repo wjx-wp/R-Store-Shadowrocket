@@ -1,0 +1,15 @@
+#!name=R-Store | 涨乐财富通 - ZHANGLE
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/Z/涨乐财富通/zhangle.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Map Local]
+^https?:\/\/c\.zhangle\.com\/pic\/mktg\/diversity\/.+\.jpg$ data-type=text data="{}" status-code=200
+^https?:\/\/geetest\.htsc\.com:\d+\/pre_get_token data-type=text data="" status-code=200
+^https?:\/\/live\.inst-service\.htsc\.com\/live data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% c.zhangle.com, geetest.htsc.com, live.inst-service.htsc.com

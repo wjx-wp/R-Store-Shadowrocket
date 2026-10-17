@@ -1,0 +1,25 @@
+#!name=R-Store | 17u
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/Applet/Wechat/T/同程旅行/17u.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/wx\.17u\.cn\/xcxhomeapi\/((aggregator\/index)|(home\/(?>screen|banner|converge)))$ - reject
+
+[Map Local]
+^https?:\/\/\w+\.sh\.wxgateway\.com\/xcxhomeapi\/((aggregator\/index)|(home\/(?>screen|banner|converge)))$ data-type=text data="{}" status-code=200
+^https?:\/\/wx\.17u\.cn\/homemarketapi\/(aggregator\/index|search\/recommend) data-type=text data="{}" status-code=200
+^https?:\/\/wx\.17u\.cn\/membermessageuserapi\/(message\/list|category\/getCategory) data-type=text data="{}" status-code=200
+^https?:\/\/wx\.17u\.cn\/mytourapi\/blankpage\/recommendList data-type=text data="{}" status-code=200
+^https?:\/\/wx\.17u\.cn\/mytourapi\/mytrip\/(?>blankflight|toptips) data-type=text data="{}" status-code=200
+^https?:\/\/wx\.17u\.cn\/mytourapi\/recommendation\/arriveCity data-type=text data="{}" status-code=200
+^https?:\/\/wx\.17u\.cn\/platformpubapi\/customer\/lead\/getInfo data-type=text data="{}" status-code=200
+^https?:\/\/wx\.17u\.cn\/vacation\/webapp\/tailor\/miniHomeConfig data-type=text data="{}" status-code=200
+^https?:\/\/wx\.17u\.cn\/wireless\/monitor\/wx\/common\/compressevent data-type=text data="{}" status-code=200
+^https?:\/\/wx\.17u\.cn\/wxocbdapi\/adService data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% *.sh.wxgateway.com, wx.17u.cn

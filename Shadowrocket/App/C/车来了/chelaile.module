@@ -1,0 +1,22 @@
+#!name=R-Store | 车来了 - CHELAILE
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/C/车来了/chelaile.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, ad.chelaile.net.cn, REJECT
+DOMAIN, atrace.chelaile.net.cn, REJECT
+DOMAIN, logs.chelaile.net.cn, REJECT
+
+[URL Rewrite]
+^https?:\/\/(api|atrace)\.chelaile\.net\.cn\/adpub - reject
+^https?:\/\/api\.chelaile\.net\.cn\/goocity\/advert - reject
+^https?:\/\/cdn\.\w{3}\.chelaileapp\.cn\/(api\/)?adpub - reject
+^https?:\/\/pic\d\.chelaile\.net\.cn\/adv\/ - reject
+^https?:\/\/web\.chelaile\.net\.cn\/api\/adpub - reject
+
+[MITM]
+hostname = %APPEND% api.chelaile.net.cn, atrace.chelaile.net.cn, web.chelaile.net.cn

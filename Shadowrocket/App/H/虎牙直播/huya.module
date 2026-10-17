@@ -1,0 +1,23 @@
+#!name=R-Store | 虎牙直播 - HUYA
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/H/虎牙直播/huya.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, business.msstatic.com, REJECT
+DOMAIN, huyafile.msstatic.com, REJECT
+DOMAIN, live-ads.huya.com, REJECT
+DOMAIN, livewebbs2.msstatic.com, REJECT
+DOMAIN, livewebbs2pcdn.msstatic.com, REJECT
+DOMAIN, pp-cdnfile2pcdn.msstatic.com, REJECT
+DOMAIN-SUFFIX, v1d.szbdyd.com, REJECT
+
+[URL Rewrite]
+^https?:\/\/business\.msstatic\.com\/advertiser\/material - reject
+^https?:\/\/cdn\.wup\.huya\.com\/launch\/queryHttpDns$ - reject
+
+[MITM]
+hostname = %APPEND% business.msstatic.com, cdn.wup.huya.com, cdnfile1.msstatic.com

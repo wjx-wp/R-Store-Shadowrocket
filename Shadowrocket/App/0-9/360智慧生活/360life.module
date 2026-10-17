@@ -1,0 +1,16 @@
+#!name=R-Store | 360智慧生活 - 360LIFE
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/0-9/360智慧生活/360life.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, ad.iot.360.cn, REJECT
+
+[URL Rewrite]
+^https?:\/\/app\.home\.360\.cn\/v\d\/config\/custom_config - reject
+
+[MITM]
+hostname = %APPEND% app.home.360.cn

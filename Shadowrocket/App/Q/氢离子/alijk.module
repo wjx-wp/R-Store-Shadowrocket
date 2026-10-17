@@ -1,0 +1,15 @@
+#!name=R-Store | 氢离子 - ALIJK
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/Q/氢离子/alijk.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/acs-m\.alijk\.com\/gw\/mtop\.alihealth\.doctor\.llm\.config\.list - reject
+^https?:\/\/acs-m\.alijk\.com\/gw\/mtop\.alihealth\.doctor\.llm\.platform\.user\.activity\.get - reject
+^https?:\/\/acs-m\.alijk\.com\/gw\/mtop\.alihealth\.doctor\.llm\.splash - reject
+
+[MITM]
+hostname = %APPEND% acs-m.alijk.com

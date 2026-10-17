@@ -1,0 +1,17 @@
+#!name=R-Store | pixiv - PIXIV
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/P/pixiv/pixiv.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, open-pixon.ads-pixiv.net, REJECT
+
+[Map Local]
+^https?:\/\/app-api\.pixiv\.net\/v\d\/application-info\/ios data-type=text data="{}" status-code=200
+^https?:\/\/d\.socdm\.com\/adsv\/ data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% app-api.pixiv.net, d.socdm.com

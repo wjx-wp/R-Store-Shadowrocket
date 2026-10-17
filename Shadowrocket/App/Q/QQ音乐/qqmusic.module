@@ -1,0 +1,41 @@
+#!name=R-Store | QQ音乐 - QQMUSIC
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/Q/QQ音乐/qqmusic.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, ad.tencentmusic.com, REJECT
+DOMAIN, adcdn.tencentmusic.com, REJECT
+DOMAIN, adcdn6.tencentmusic.com, REJECT
+DOMAIN, adclick.tencentmusic.com, REJECT
+DOMAIN, adexpo.tencentmusic.com, REJECT
+DOMAIN, adstats.tencentmusic.com, REJECT
+DOMAIN, aegis.qq.com, REJECT
+DOMAIN, iadsdk.qtlcdn.com.cdnmg.com, REJECT
+DOMAIN, mazu.m.qq.com, REJECT
+DOMAIN, mc.tencentmusic.com, REJECT
+DOMAIN, monitor.music.qq.com, REJECT
+DOMAIN, rdelivery.qq.com, REJECT
+DOMAIN, report.tencentmusic.com, REJECT
+DOMAIN, stat.y.qq.com, REJECT
+DOMAIN, tmead.y.qq.com, REJECT
+DOMAIN, tp2p.kg.qq.com, REJECT
+DOMAIN, twns.p2ptun.qq.com, REJECT
+DOMAIN, vv.video.qq.com, REJECT
+DOMAIN-KEYWORD, gdtimg.com, REJECT
+DOMAIN-KEYWORD, trace.qq.com, REJECT
+DOMAIN-SUFFIX, d3g.qq.com, REJECT
+DOMAIN-SUFFIX, e.qq.com, REJECT
+DOMAIN-SUFFIX, l.qq.com, REJECT
+DOMAIN-SUFFIX, mdt.qq.com, REJECT
+DOMAIN-SUFFIX, wup.imtt.qq.com, REJECT
+
+[URL Rewrite]
+^https?:\/\/music\.y\.qq\.com\/maproxy\/getPbCompressAd - reject
+^https?:\/\/y\.gtimg\.cn\/music\/common\/upload\/t_splash_info - reject
+
+[MITM]
+hostname = %APPEND% music.y.qq.com, y.gtimg.cn

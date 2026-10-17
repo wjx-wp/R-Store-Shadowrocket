@@ -1,0 +1,13 @@
+#!name=R-Store | 兴业生活 - CIBLIFE
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/X/兴业生活/ciblife.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/file\.cibfintech\.com\/file\/M0[1-9]{1}\/.*\.zip - reject
+
+[MITM]
+hostname = %APPEND% file.cibfintech.com

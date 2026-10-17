@@ -1,0 +1,25 @@
+#!name=R-Store | 起点读书 - QIDIAN
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/Q/起点读书/qidian.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/mage(v\d)?\.if\.qidian\.com\/argus\/api\/v\d\/adv - reject
+^https?:\/\/mage(v\d)?\.if\.qidian\.com\/argus\/api\/v\d\/booksearch\/hotWords - reject
+^https?:\/\/mage(v\d)?\.if\.qidian\.com\/argus\/api\/v\d\/bookshelf\/get(?>ad|TopOperation) - reject
+^https?:\/\/mage(v\d)?\.if\.qidian\.com\/argus\/api\/v\d\/client\/(?>getsplashscreen|iosad) - reject
+^https?:\/\/mage(v\d)?\.if\.qidian\.com\/argus\/api\/v\d\/dailyrecommend\/recommendBook - reject
+^https?:\/\/mage(v\d)?\.if\.qidian\.com\/argus\/api\/v\d\/freshman\/bookshelfbtn - reject
+^https?:\/\/mage(v\d)?\.if\.qidian\.com\/argus\/api\/v\d\/maintain\/playstrip$ - reject
+^https?:\/\/mage(v\d)?\.if\.qidian\.com\/argus\/api\/v\d\/message\/getpushedmessagelist$ - reject
+^https?:\/\/mage(v\d)?\.if\.qidian\.com\/argus\/api\/v\d\/push\/getdialog - reject
+^https?:\/\/mage(v\d)?\.if\.qidian\.com\/argus\/api\/v\d\/young\/getconf$ - reject
+
+[Map Local]
+^https?:\/\/mage(v\d)?\.if\.qidian\.com\/argus\/api\/v\d\/followsubscribe data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% mage.if.qidian.com

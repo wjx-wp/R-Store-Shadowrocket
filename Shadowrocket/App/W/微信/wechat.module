@@ -1,0 +1,23 @@
+#!name=R-Store | 微信 - WECHAT
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/W/微信/wechat.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, badjs.weixinbridge.com, REJECT
+DOMAIN, cube.weixinbridge.com, REJECT
+DOMAIN, dns.weixin.qq.com.cn, REJECT
+DOMAIN-SUFFIX, wxs.qq.com, REJECT
+
+[URL Rewrite]
+^https?:\/\/payapp\.weixin\.qq\.com\/mchopenapp\/goldplan\/adpage - reject
+
+[Map Local]
+^https?:\/\/dl\.wechat\.com\/checkresupdate data-type=text data="{}" status-code=200
+^https?:\/\/mp\.weixin\.qq\.com\/mp\/(?>ad_|advertisement|getappmsgad|cps_product_info|masonryfeed|relatedarticle|relatedsearchword|searchkeywordreport|geticon|getainfo|jsmonitor) data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% dl.wechat.com, mp.weixin.qq.com, payapp.weixin.qq.com, security.wechat.com, weixin110.qq.com

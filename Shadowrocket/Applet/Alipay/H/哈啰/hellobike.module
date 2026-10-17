@@ -1,0 +1,27 @@
+#!name=R-Store | hellobike
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/Applet/Alipay/H/哈啰/hellobike.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, abapi.hellobike.com, REJECT
+DOMAIN, apmgw.hellobike.com, REJECT
+DOMAIN, cdn.hellobike.com, REJECT
+DOMAIN, ip.hellobike.com, REJECT
+
+[URL Rewrite]
+^https?:\/\/api\.hellobike\.com\/api\?bottom\.aggregation\.tab\.info - reject
+^https?:\/\/api\.hellobike\.com\/api\?homepage\.module\.newAlipay - reject
+^https?:\/\/api\.hellobike\.com\/api\?homepage\.recommend\.popUp - reject
+^https?:\/\/api\.hellobike\.com\/api\?homepage\.shortcut\.scene\.perception - reject
+^https?:\/\/api\.hellobike\.com\/api\?msg\.toast\.user - reject
+
+[Map Local]
+^https?:\/\/api\.hellobike\.com\/api\?applet\.homepage\.medal\.activity data-type=text data="{}" status-code=200
+^https?:\/\/api\.hellobike\.com\/api\?homepage\.newWelfare\.alipay data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% api.hellobike.com

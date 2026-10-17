@@ -1,0 +1,13 @@
+#!name=R-Store | 磁力宅播放器 - CILIZHAI
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/C/磁力宅播放器/cilizhai.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/cili\.xfuse\.fun\/s\/ - reject
+
+[MITM]
+hostname = %APPEND% cili.xfuse.fun

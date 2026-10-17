@@ -1,0 +1,17 @@
+#!name=R-Store | 乐刷商家版 - LESHUA
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/L/乐刷商家版/leshua.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Map Local]
+^https?:\/\/m\.fqfin\.cn\/cls\/leshuapay\/preCredit\.json$ data-type=text data="{}" status-code=200
+^https?:\/\/syt\.leshuazf\.com\/merchant\/merchant\/getBannerConfig$ data-type=text data="{}" status-code=200
+^https?:\/\/syt\.leshuazf\.com\/merchant\/merchant\/showOpenScreenAd$ data-type=text data="{}" status-code=200
+^https?:\/\/syt\.leshuazf\.com\/merchant\/messageCenter\/stationLetterList$ data-type=text data="{}" status-code=200
+^https?:\/\/syt\.leshuazf\.com\/merchant\/popup\/getPopupInfo$ data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% m.fqfin.cn, syt.leshuazf.com

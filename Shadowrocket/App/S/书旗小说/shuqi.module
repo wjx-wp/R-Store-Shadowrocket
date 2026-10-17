@@ -1,0 +1,26 @@
+#!name=R-Store | 书旗小说 - SHUQI
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/S/书旗小说/shuqi.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/.+\.pglstatp-toutiao\.com - reject
+^https?:\/\/.+\.shuqireader\.com\/sapi\/.+ - reject
+^https?:\/\/101\.91\.69\.26:8080\/.+ - reject
+^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/.+ - reject
+^https?:\/\/dsp\.toutiao\.com\/api\/xunfei\/ads\/ - reject
+^https?:\/\/feedback\.uc\.cn\/feedback\/api\/get_unread_status - reject
+^https?:\/\/img-tailor\.11222\.cn\/cms\/upload\/img\/.+ - reject
+^https?:\/\/img-tailor\.11222\.cn\/pm\/app\/.+\.gif - reject
+^https?:\/\/message\.shuqireader\.com\/message\/.+ - reject
+^https?:\/\/ocean\.shuqireader\.com\/api\/ad\/adserver\/.+ - reject
+^https?:\/\/ocean\.shuqireader\.com\/api\/route\/iosReadPage\/ad.+ - reject
+^https?:\/\/sf3-be-pack\.pglstatp-toutiao\.com\/img\/ad\.union\.api - reject
+^https?:\/\/sq\.sljkj\.com\/api\/sdk\/ads - reject
+^https?:\/\/ut2\.shuqistat\.com\/.+\.gif - reject
+
+[MITM]
+hostname = %APPEND% *.shuqireader.com, api-access.pangolin-sdk-toutiao.com, dsp.toutiao.com, feedback.uc.cn, img-tailor.11222.cn, message.shuqireader.com, ocean.shuqireader.com, sf3-be-pack.pglstatp-toutiao.com, sq.sljkj.com, ut2.shuqistat.com

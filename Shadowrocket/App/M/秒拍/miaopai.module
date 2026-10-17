@@ -1,0 +1,13 @@
+#!name=R-Store | 秒拍 - MIAOPAI
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/M/秒拍/miaopai.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/b-api\.ins\.miaopai\.com\/\d\/ad/ - reject
+
+[MITM]
+hostname = %APPEND% b-api.ins.miaopai.com

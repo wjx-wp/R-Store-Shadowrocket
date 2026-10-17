@@ -1,0 +1,20 @@
+#!name=R-Store | 小鹏汽车 - XPENG
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/X/小鹏汽车/xpeng.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, applog-perf.uc.cn, REJECT
+DOMAIN, apps-booster.xiaopeng.com, REJECT
+DOMAIN, collect.xiaopeng.com, REJECT
+DOMAIN, httpdns.yunxindns.com, REJECT
+DOMAIN, woodpecker.uc.cn, REJECT
+
+[Map Local]
+^https?:\/\/ext-svc\.xiaopeng\.com\/api\/log\/open\/get\/image data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% ext-svc.xiaopeng.com

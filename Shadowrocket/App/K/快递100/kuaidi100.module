@@ -1,0 +1,18 @@
+#!name=R-Store | 快递100 - KUAIDI100
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/K/快递100/kuaidi100.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/p\.kuaidi100\.com\/advertisement\/ - reject
+^https?:\/\/p\.kuaidi100\.com\/mobile\/mobileapi\.do - reject
+
+[Map Local]
+^https?:\/\/p\.kuaidi100\.com\/apicenter\/card\.dox data-type=text data="{}" status-code=200
+^https?:\/\/p\.kuaidi100\.com\/e-commerce\/act\/actInfo\? data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% cdn.kuaidi100.com, p.kuaidi100.com

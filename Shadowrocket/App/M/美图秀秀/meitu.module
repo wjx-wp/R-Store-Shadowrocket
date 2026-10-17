@@ -1,0 +1,21 @@
+#!name=R-Store | 美图秀秀 - MEITU
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/M/美图秀秀/meitu.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, adui.tg.meitu.com, REJECT
+DOMAIN, corp.meitu.com, REJECT
+DOMAIN, gg.meitu.com, REJECT
+DOMAIN, message.meitu.com, REJECT
+DOMAIN, stat.meitudata.com, REJECT
+DOMAIN, tuiguang.meitu.com, REJECT
+
+[URL Rewrite]
+^https?:\/\/mea\.meitudata\.com\/kaiping - reject
+
+[MITM]
+hostname = %APPEND% api-sub.meitu.com, api.posters.meitu.com, api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com, mea.meitudata.com

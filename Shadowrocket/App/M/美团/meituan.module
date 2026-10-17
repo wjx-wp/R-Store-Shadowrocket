@@ -1,0 +1,41 @@
+#!name=R-Store | 美团 - MEITUAN
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/M/美团/meituan.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, flowplus.meituan.net, REJECT
+DOMAIN, hlx.meituan.com, REJECT
+DOMAIN, httpdnsmultiapi.meituan.com, REJECT
+DOMAIN, httpdnsmultiapivip.meituan.com, REJECT
+DOMAIN, layout.meituan.net, REJECT
+DOMAIN-KEYWORD, dnspod.meituan.httpdns, REJECT
+DOMAIN-KEYWORD, report.meituan, REJECT
+DOMAIN-SUFFIX, ad.e.waimai.sankuai.com, REJECT
+DOMAIN-SUFFIX, d.meituan.net, REJECT
+DOMAIN-SUFFIX, httpdns.meituan.com, REJECT
+DOMAIN-SUFFIX, mads.meituan.com, REJECT
+DOMAIN-SUFFIX, meituan.xn, REJECT
+DOMAIN-SUFFIX, meituan.yoga, REJECT
+DOMAIN-SUFFIX, meituangov.cn, REJECT
+DOMAIN-SUFFIX, wmlog.meituan.com, REJECT
+IP-CIDR, 103.37.155.60/32, REJECT
+
+[URL Rewrite]
+^https?:\/\/apimobile\.meituan\.com\/appupdate - reject
+^https?:\/\/apimobile\.meituan\.com\/group\/v\d\/recommend\/unity\/recommends - reject
+^https?:\/\/p\d\.meituan\.net\/(display|mmc)\/ - reject
+^https?:\/\/s3plus\.meituan\.net\/v\d\/mss_\w+\/brandcpt - reject
+^https?:\/\/s3plus\.meituan\.net\/v\d\/mss_\w+\/waimai-alita\/\w+\.zip$ - reject
+^https?:\/\/sqt\.meituan\.com\/s\/gateway\/mweb\/api\/marketingResource\/show - reject
+^https?:\/\/w\.meituan\.net\/v\d\/mss_\w+\/waimai-mach\/\d+\/\d+\/pt-im-(?>guider|coupon-card-stateful) - reject
+^https?:\/\/www\.meituan\.com\/api\/v\d\/appstatus\? - reject
+
+[Map Local]
+^https?:\/\/portal-portm\.meituan\.com\/horn_ios data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% apimobile.meituan.com, flowplus.meituan.net, img.meituan.net, portal-portm.meituan.com, s3plus.meituan.net, sqt.meituan.com, w.meituan.net, www.meituan.com

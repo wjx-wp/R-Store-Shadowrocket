@@ -1,0 +1,21 @@
+#!name=R-Store | 海南航空 - HNAIR
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/H/海南航空/hnair.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, collect.hnair.com, REJECT
+
+[URL Rewrite]
+^https?:\/\/app\.hnair\.com\/mapp\/webservice\/v1\/common\/news\/list - reject
+
+[Map Local]
+^https?:\/\/m\.hnair\.com\/cms\/config\/standard\/(?>homePop|recommend|share|startPic) data-type=text data="{}" status-code=200
+^https?:\/\/m\.hnair\.com\/cms\/config\/standard\/act\/act data-type=text data="{}" status-code=200
+^https?:\/\/m\.hnair\.com\/cms\/config\/standard\/slider\/slider data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% app.hnair.com, m.hnair.com

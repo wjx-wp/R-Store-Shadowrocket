@@ -1,0 +1,26 @@
+#!name=R-Store | 太平洋科技 - PCONLINE
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/T/太平洋科技/pconline.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, ad-analysis.pconline.com.cn, REJECT
+DOMAIN, iad0ssl.pcauto.com.cn, REJECT
+DOMAIN, iad0ssl.pconline.com.cn, REJECT
+DOMAIN, imgad0.pcauto.com.cn, REJECT
+DOMAIN, imgad0.pconline.com.cn, REJECT
+DOMAIN, ivy.pchouse.com.cn, REJECT
+
+[URL Rewrite]
+^https?:\/\/agent-count\.(?>pcauto|pconline)\.com\.cn\/counter\/adAnalyse\/ - reject
+^https?:\/\/mrobot\.(?>pcauto|pconline)\.com\.cn\/v\d\/ad - reject
+^https?:\/\/mrobot\.(?>pcauto|pconline)\.com\.cn\/xsp\/s\/auto\/info\/(ad|preload) - reject
+
+[Map Local]
+^https?:\/\/mrobot\.(?>pcauto|pconline)\.com\.cn\/[a-z0-9-]+\/onlineinfo\/(ad|cms\/launch) data-type=text data="" status-code=200
+
+[MITM]
+hostname = %APPEND% agent-count.pcauto.com.cn, agent-count.pconline.com.cn, mrobot.pcauto.com.cn, mrobot.pconline.com.cn

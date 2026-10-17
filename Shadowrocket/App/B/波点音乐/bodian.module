@@ -1,0 +1,20 @@
+#!name=R-Store | 波点音乐 - BODIAN
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/B/波点音乐/bodian.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Map Local]
+^https?:\/\/bd-api\.kuwo\.cn\/api\/(\w+\/)?advert data-type=text data="{}" status-code=200
+^https?:\/\/bd-api\.kuwo\.cn\/api\/.*popup data-type=text data="{}" status-code=200
+^https?:\/\/bd-api\.kuwo\.cn\/api\/pay\/vip\/lowPriceText data-type=text data="{}" status-code=200
+^https?:\/\/bd-api\.kuwo\.cn\/api\/play\/listening\/entrance\/music\?musicId data-type=text data="{}" status-code=200
+^https?:\/\/bd-api\.kuwo\.cn\/api\/search\/topic\/word\/list data-type=text data="{}" status-code=200
+^https?:\/\/bd-api\.kuwo\.cn\/api\/service\/banner data-type=text data="{}" status-code=200
+^https?:\/\/bd-api\.kuwo\.cn\/api\/service\/finds\/module data-type=text data="{}" status-code=200
+^https?:\/\/bd-api\.kuwo\.cn\/api\/service\/global\/config\/vipEnter data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% bd-api.kuwo.cn

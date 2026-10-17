@@ -1,0 +1,40 @@
+#!name=R-Store | Talkatone - TALKATONE
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/T/Talkatone/talkatone.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN-SUFFIX, 4dvertible.com, REJECT
+DOMAIN-SUFFIX, adrta.com, REJECT
+DOMAIN-SUFFIX, ads.inmobi.com, REJECT
+DOMAIN-SUFFIX, ads.pubmatic.com, REJECT
+DOMAIN-SUFFIX, adsrvr.org, REJECT
+DOMAIN-SUFFIX, amazon-adsystem.com, REJECT
+DOMAIN-SUFFIX, bidder.criteo.com, REJECT
+DOMAIN-SUFFIX, gum.criteo.com, REJECT
+DOMAIN-SUFFIX, i.sng.link, REJECT
+DOMAIN-SUFFIX, impression.link, REJECT
+DOMAIN-SUFFIX, inhousedsp.com, REJECT
+DOMAIN-SUFFIX, inner-active.mobi, REJECT
+DOMAIN-SUFFIX, jampp.com, REJECT
+DOMAIN-SUFFIX, mobilefuse.com, REJECT
+DOMAIN-SUFFIX, outbrain.com, REJECT
+DOMAIN-SUFFIX, outbrainimg.com, REJECT
+DOMAIN-SUFFIX, pomodoromedia.com, REJECT
+DOMAIN-SUFFIX, richmob.cn, REJECT
+DOMAIN-SUFFIX, smaato.net, REJECT
+DOMAIN-SUFFIX, smadex.com, REJECT
+DOMAIN-SUFFIX, spadsync.com, REJECT
+DOMAIN-SUFFIX, tappx.com, REJECT
+DOMAIN-SUFFIX, trustarc.com, REJECT
+DOMAIN-SUFFIX, truste.com, REJECT
+DOMAIN-SUFFIX, zemanta.com, REJECT
+
+[Map Local]
+^https?:\/\/alt-r\.my\.com\/mobile data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% alt-r.my.com, imgx.jampp.com

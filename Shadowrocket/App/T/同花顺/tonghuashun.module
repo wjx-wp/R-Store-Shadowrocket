@@ -1,0 +1,17 @@
+#!name=R-Store | 同花顺 - TONGHUASHUN
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/T/同花顺/tonghuashun.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, adm.10jqka.com.cn, REJECT
+DOMAIN, stat.10jqka.com.cn, REJECT
+
+[URL Rewrite]
+^https?:\/\/iphone\.ac\.qq\.com\/.*\/Support\/(?>getSystemConf|bootScreen) - reject
+
+[MITM]
+hostname = %APPEND% iphone.ac.qq.com

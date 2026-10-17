@@ -1,0 +1,33 @@
+#!name=R-Store | 番茄小说 - FANQIE
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/F/番茄小说/fanqie.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, content-open.douyin.com, REJECT
+DOMAIN, lf-webcast-gr-sourcecdn.bytegecko.com, REJECT
+DOMAIN, lf3-reading.fqnovelstatic.com, REJECT
+DOMAIN, mon11-misc.fqnovel.com, REJECT
+DOMAIN, webcast-open.douyin.com, REJECT
+DOMAIN, zlink.ugsdk.cn, REJECT
+DOMAIN-KEYWORD, -applog.fqnovel.com, REJECT
+
+[URL Rewrite]
+^https?:\/\/.+\.byteimg.com/tos-cn-i-1yzifmftcy\/(.+)-jpeg\.jpeg - reject
+^https?:\/\/.+\.byteimg\.com\/ad-app-package - reject
+^https?:\/\/.+\.byteimg\.com\/web\.business\.image - reject
+^https?:\/\/.+\.pstatp\.com\/(obj|img)\/ad - reject
+^https?:\/\/.+\.pstatp\.com\/(obj|img)\/web\.business\.image\/.+ - reject
+^https?:\/\/.+\.pstatp\.com\/bytecom\/resource\/track_log\/src\/.+ - reject
+^https?:\/\/.+\.pstatp\.com\/obj\/mosaic-legacy\/.+\?from\=ad - reject
+^https?:\/\/.+\.snssdk.com\/api\/ad\/.+ - reject
+^https?:\/\/.+\.snssdk\.com\/video\/play\/1\/toutiao\/.+\/mp4 - reject
+^https?:\/\/gurd\.snssdk\.com\/src\/server\/v\d\/package - reject
+^https?:\/\/lf-cdn-tos\.bytescm\.com\/obj\/static\/ad - reject
+^https?:\/\/tnc3-alisc1\.zijieapi\.com\/get_domains - reject
+
+[MITM]
+hostname = %APPEND% *.pglstatp-toutiao.com, *.pstatp.com, gurd.snssdk.com, lf-cdn-tos.bytescm.com, tnc3-alisc1.zijieapi.com

@@ -1,0 +1,12 @@
+#!name=R-Store | 百度贴吧 - BAIDUTIEBA
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/B/百度贴吧/baidutieba.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, afd.baidu.com, REJECT
+DOMAIN, mobads.baidu.com, REJECT
+IP-CIDR, 180.76.76.200/32, REJECT

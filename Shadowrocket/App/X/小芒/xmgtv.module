@@ -1,0 +1,16 @@
+#!name=R-Store | 小芒 - XMGTV
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/X/小芒/xmgtv.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Map Local]
+^https?:\/\/mgesq\.api\.mgtv\.com\/search\/goods\/rank data-type=text data="{}" status-code=200
+^https?:\/\/mgesq\.api\.mgtv\.com\/user\/center\/config data-type=text data="{}" status-code=200
+^https?:\/\/mgesq\.api\.mgtv\.com\/v\d\/goods\/guess_you_like data-type=text data="{}" status-code=200
+^https?:\/\/mgesq\.api\.mgtv\.com\/v\d\/user\/center\/icon data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% mgesq.api.mgtv.com

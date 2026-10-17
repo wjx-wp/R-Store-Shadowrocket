@@ -1,0 +1,30 @@
+#!name=R-Store | 七猫小说 - QUMAO
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/Q/七猫小说/qumao.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, ad-drs-ipv6.52qumao.com, REJECT
+DOMAIN, ad-drs.52qumao.com, REJECT
+DOMAIN, ad.wtzw.com, REJECT
+DOMAIN, api-adx.52qumao.com, REJECT
+DOMAIN, drs-ipv6.wtzw.com, REJECT
+DOMAIN, fp-it.fengkongcloud.com, REJECT
+DOMAIN-KEYWORD, remad.qm989.com, REJECT
+DOMAIN-SUFFIX, 58iclick.com, REJECT
+DOMAIN-SUFFIX, ad.xelements.cn, REJECT
+DOMAIN-SUFFIX, adxvip.com, REJECT
+DOMAIN-SUFFIX, iggrowth.cn, REJECT
+DOMAIN-SUFFIX, yunxish.com, REJECT
+
+[URL Rewrite]
+^https?:\/\/api-cfg\.wtzw\.com\/v\d\/(?>splash|adv) - reject
+
+[Map Local]
+^https?:\/\/api-cfg\.wtzw\.com\/v\d\/operation\/index\?ad_personal_switch data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% api-cfg.wtzw.com

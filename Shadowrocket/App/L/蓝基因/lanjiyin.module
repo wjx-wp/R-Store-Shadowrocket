@@ -1,0 +1,16 @@
+#!name=R-Store | 蓝基因 - LANJIYIN
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/L/蓝基因/lanjiyin.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN-KEYWORD, medicine.lanjiyin.com.cn, REJECT
+
+[URL Rewrite]
+^https?:\/\/tk\.lanjiyin\.com\.cn\/ad\/getAdList - reject
+
+[MITM]
+hostname = %APPEND% tk.lanjiyin.com.cn

@@ -1,0 +1,37 @@
+#!name=R-Store | 支付宝小程序-广告拦截合集
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/All/alipayAdBlock.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, abapi.hellobike.com, REJECT
+DOMAIN, apmgw.hellobike.com, REJECT
+DOMAIN, cdn.hellobike.com, REJECT
+DOMAIN, ip.hellobike.com, REJECT
+
+[URL Rewrite]
+^https?:\/\/api\.hellobike\.com\/api\?bottom\.aggregation\.tab\.info - reject
+^https?:\/\/api\.hellobike\.com\/api\?homepage\.module\.newAlipay - reject
+^https?:\/\/api\.hellobike\.com\/api\?homepage\.recommend\.popUp - reject
+^https?:\/\/api\.hellobike\.com\/api\?homepage\.shortcut\.scene\.perception - reject
+^https?:\/\/api\.hellobike\.com\/api\?msg\.toast\.user - reject
+^https?:\/\/waimai-guide\.ele\.me\/(gw|h5)\/mtop\.alsc\.eleme\.trigger\.respond - reject
+^https?:\/\/waimai-guide\.ele\.me\/h5\/mtop\.alsc\.interact\.content\.homepage\.float - reject
+
+[Map Local]
+^https?:\/\/api\.hellobike\.com\/api\?applet\.homepage\.medal\.activity data-type=text data="{}" status-code=200
+^https?:\/\/api\.hellobike\.com\/api\?homepage\.newWelfare\.alipay data-type=text data="{}" status-code=200
+^https?:\/\/creditcardapp\.bankcomm\.com\/cnsvPmpaAliCardWeb\/page\/getGuidePageAds data-type=text data="{}" status-code=200
+^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads data-type=text data="{}" status-code=200
+^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.film\.life\.(popup|aristotle)\.get data-type=text data="{}" status-code=200
+^https?:\/\/m5-zb\.amap\.com\/ws\/boss\/end\/recommend data-type=text data="{}" status-code=200
+^https?:\/\/m5-zb\.amap\.com\/ws\/promotion-web\/resource data-type=text data="{}" status-code=200
+^https?:\/\/shopping\.ele\.me\/(gw|h5)\/mtop\.o2o\.ad\.exposure\.get data-type=text data="{}" status-code=200
+^https?:\/\/waimai-guide\.ele\.me\/(gw|h5)\/mtop\.alsc\.upp\.tbet\.send data-type=text data="{}" status-code=200
+^https?:\/\/waimai-guide\.ele\.me\/h5\/mtop\.ele\.growth\.fission\.client\.etmd\.et\.getmainpageicon data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% aimai-guide.ele.me, alsc-buy2.ele.me, api.hellobike.com, creditcardapp.bankcomm.com, guide-acs.m.taobao.com, m5-zb.amap.com, mdn.alicdn.com, shopping.ele.me, waimai-guide.ele.me

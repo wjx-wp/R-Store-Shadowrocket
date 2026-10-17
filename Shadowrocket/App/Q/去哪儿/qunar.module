@@ -1,0 +1,21 @@
+#!name=R-Store | 去哪儿 - QUNAR
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/Q/去哪儿/qunar.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/client\.qunar\.com\/pitcher-proxy\?qrt=p_splashAd - reject
+^https?:\/\/slugger\.qunar\.com\/slugger-proxy\?qrt=content_api_common_feed_open_postList - reject
+^https?:\/\/slugger\.qunar\.com\/slugger-proxy\?qrt=home_notice_banner - reject
+
+[Map Local]
+^https?:\/\/homefront\.qunar\.com\/front\/splash\/ad data-type=text data="{}" status-code=200
+^https?:\/\/qde\.qunar\.com\/preload data-type=text data="" status-code=200
+^https?:\/\/slugger\.qunar\.com\/slugger-proxy\?qrt=content_api_common_desert_damo_getPostList data-type=text data="" status-code=200
+^https?:\/\/slugger\.qunar\.com\/slugger-proxy\?qrt=p_feedlist_recommend data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% client.qunar.com, homefront.qunar.com, qde.qunar.com, qimgs.qunarzz.com, slugger.qunar.com

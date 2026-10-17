@@ -1,0 +1,15 @@
+#!name=R-Store | 亚马逊 - AMAZON
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/Y/亚马逊/amazon.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Map Local]
+^https?:\/\/(?>api-cslp-emt|api\.globalstore)\.amazon\.cn\/gateway\/config\/getUpdatePopupConfig data-type=text data="{}" status-code=200
+^https?:\/\/(?>api-cslp-emt|api\.globalstore)\.amazon\.cn\/gateway\/content\/widget\/(?>popup|floatingWindow) data-type=text data="{}" status-code=200
+^https?:\/\/(?>api-cslp-emt|api\.globalstore)\.amazon\.cn\/gateway\/recommend data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% api-cslp-emt.amazon.cn, api.globalstore.amazon.cn

@@ -1,0 +1,18 @@
+#!name=R-Store | 银盛小Y管家 - YSXYGJ
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/Y/银盛小Y管家/ysxygj.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, ads.ysepay.com, REJECT
+
+[URL Rewrite]
+^https?:\/\/ya-sdn\.ysepay\.com\/ma_gate\/advertisement - reject
+^https?:\/\/ya-sdn\.ysepay\.com\/ma_gate\/popupAds - reject
+^https?:\/\/ya-sdn\.ysepay\.com\/ma_gate\/version\/updateAppVersion - reject
+
+[MITM]
+hostname = %APPEND% ya-sdn.ysepay.com

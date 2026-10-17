@@ -1,0 +1,16 @@
+#!name=R-Store | 途家民宿 - TUJIA
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/T/途家民宿/tujia.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/client\.tujia\.com\/bnbapp-node\/app\/(promotion\/popup\/getpopupups\/bnb|portal\/getStartPictureAdvertising) - reject
+
+[Map Local]
+^https?:\/\/client\.tujia\.com\/bnbapp-node data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% client.tujia.com

@@ -1,0 +1,16 @@
+#!name=R-Store | yonghui
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/Applet/Wechat/Y/永辉生活/yonghui.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/activity\.yonghuivip\.com\/api\/\/web\/shensuan\/ad - reject
+^https?:\/\/activity\.yonghuivip\.com\/api\/app\/fp\/homepage\/pop - reject
+^https?:\/\/api\.yonghuivip\.com\/api\/fp\/homepage\/pop - reject
+^https?:\/\/sauron-report\.yonghuivip\.com\/collect - reject
+
+[MITM]
+hostname = %APPEND% activity.yonghuivip.com, api.yonghuivip.com, sauron-report.yonghuivip.com

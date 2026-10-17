@@ -1,0 +1,40 @@
+#!name=R-Store | 淘宝闪购 - TBTO
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/T/淘宝闪购/eleme.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, app-monitor.ele.me, REJECT
+DOMAIN, cdn.ynuf.aliapp.org, REJECT
+DOMAIN, h-adashx.ut.ele.me, REJECT
+DOMAIN, highway-tb.ele.me, REJECT
+DOMAIN, wgo.mmstat.com, REJECT
+DOMAIN-KEYWORD, baichuan.taobao.com, REJECT
+DOMAIN-KEYWORD, o2o-ad-dev.oss-cn, REJECT
+IP-CIDR, 203.119.212.22/32, REJECT
+IP-CIDR, 59.82.120.166/32, REJECT
+IP-CIDR, 59.82.120.171/32, REJECT
+IP-CIDR, 59.82.120.210/32, REJECT
+IP-CIDR, 59.82.120.252/32, REJECT
+IP-CIDR, 59.82.120.33/32, REJECT
+IP-CIDR, 59.82.121.172/32, REJECT
+IP-CIDR, 59.82.121.215/32, REJECT
+IP-CIDR, 59.82.121.216/32, REJECT
+IP-CIDR, 59.82.121.222/32, REJECT
+IP-CIDR, 59.82.121.72/32, REJECT
+IP-CIDR, 59.82.133.157/32, REJECT
+IP-CIDR, 59.82.133.36/32, REJECT
+IP-CIDR, 59.82.133.78/32, REJECT
+
+[URL Rewrite]
+^https?:\/\/nr-op\.elemecdn\.com\/eleme\/transformer\/templates\/\w_eleme_home_yolo_popup - reject
+
+[Map Local]
+^https?:\/\/amdc\.m\.ele\.me\/amdc\/mobileDispatch data-type=text data="{}" status-code=200
+^https?:\/\/g\.alicdn\.com\/TBTakeout\/et-store\/(\d+.)*\/weex\/store-brand-popup data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% amdc.m.ele.me, cube.elemecdn.com, g.alicdn.com, nr-op.elemecdn.com

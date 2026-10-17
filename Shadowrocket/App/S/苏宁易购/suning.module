@@ -1,0 +1,17 @@
+#!name=R-Store | 苏宁易购 - SUNING
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/S/苏宁易购/suning.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/mpcs\.suning\.com\/mpcs\/dm\/getDmInfo - reject
+
+[Map Local]
+^https?:\/\/image\.suning\.cn\/uimg\/ma\/ad\/ data-type=text data="" status-code=200
+^https?:\/\/luckman\.suning\.com\/luck-web\/policy\/v\d\/msf\/index\.do data-type=text data="" status-code=200
+
+[MITM]
+hostname = %APPEND% image.suning.com, luckman.suning.com, mpcs.suning.com

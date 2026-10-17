@@ -1,0 +1,21 @@
+#!name=R-Store | jdexpress
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/Applet/Wechat/J/京东快递/jdexpress.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/lop-proxy\.jd\.com\/index\/queryTabBubble - reject
+
+[Map Local]
+^https?:\/\/lop-proxy\.jd\.com\/BeaconFireApi\/queryMarketingRecommendRuleConfigInfo data-type=text data="{}" status-code=200
+^https?:\/\/lop-proxy\.jd\.com\/csat\/getNPSQuestionnaire data-type=text data="{}" status-code=200
+^https?:\/\/lop-proxy\.jd\.com\/home\/banner data-type=text data="{}" status-code=200
+^https?:\/\/lop-proxy\.jd\.com\/order\/getCarbonIntegral data-type=text data="{}" status-code=200
+^https?:\/\/lop-proxy\.jd\.com\/search\/getQuestionnaireByOrderInfo data-type=text data="{}" status-code=200
+^https?:\/\/lop-proxy\.jd\.com\/smartmp\/querySmartDecision data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% lop-proxy.jd.com

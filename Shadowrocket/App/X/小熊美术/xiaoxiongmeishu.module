@@ -1,0 +1,13 @@
+#!name=R-Store | 小熊美术 - XIAOXIONGMEISHU
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/X/小熊美术/xiaoxiongmeishu.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/www\.xiaoxiongmeishu\.com\/api\/(home\/v\d\/config\/appInit|s\/v\d\/popup\/createCouponPopup) - reject
+
+[MITM]
+hostname = %APPEND% www.xiaoxiongmeishu.com

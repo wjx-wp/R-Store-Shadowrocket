@@ -1,0 +1,20 @@
+#!name=R-Store | 中国银行 - BOC
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/Z/中国银行/boc.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, iisp-oidea.mbs.boc.cn, REJECT
+DOMAIN, iisp.mbs.boc.cn, REJECT
+
+[Map Local]
+^https?:\/\/cdn1\.mbs\.boc\.cn\/ubas-mgateway-static\/images\/advertType\/\.+\.jpg data-type=text data="" status-code=200
+^https?:\/\/cdn1\.mbs\.boc\.cn\/ubas-mgateway-static\/images\/theme\/ data-type=text data="" status-code=200
+^https?:\/\/mbs\.boc\.cn\/ubas-mgateway-static\/images\/advertType\/.+.jpg data-type=text data="" status-code=200
+^https?:\/\/mbs\.boc\.cn\/ubas-mgateway-static\/images\/theme\/ data-type=text data="" status-code=200
+
+[MITM]
+hostname = %APPEND% cdn1.mbs.boc.cn, mbs.boc.cn

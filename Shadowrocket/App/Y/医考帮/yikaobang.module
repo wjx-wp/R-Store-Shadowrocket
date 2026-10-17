@@ -1,0 +1,15 @@
+#!name=R-Store | 医考帮 - YIKAOBANG
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/Y/医考帮/yikaobang.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/api\.yikaobang\.com\.cn\/client\/main\/homePageSmallAd - reject
+^https?:\/\/api\.yikaobang\.com\.cn\/index\.php\/Client\/main\/startPage - reject
+^https?:\/\/api\.yikaobang\.com\.cn\/index\.php\/version\/version\/check - reject
+
+[MITM]
+hostname = %APPEND% api.yikaobang.com.cn

@@ -1,0 +1,13 @@
+#!name=R-Store | 小牛电动 - NIU
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/X/小牛电动/niu.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Map Local]
+^https?:\/\/app-api\.niu\.com\/v\d\/advertisement data-type=text data="" status-code=200
+
+[MITM]
+hostname = %APPEND% app-api.niu.com

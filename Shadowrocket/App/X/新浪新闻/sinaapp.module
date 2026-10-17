@@ -1,0 +1,13 @@
+#!name=R-Store | 新浪新闻 - SINAAPP
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/X/新浪新闻/sinaapp.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Map Local]
+^https?:\/\/edit\.sinaapp\.com\/ua\?t=adv data-type=text data="" status-code=200
+
+[MITM]
+hostname = %APPEND% edit.sinaapp.com

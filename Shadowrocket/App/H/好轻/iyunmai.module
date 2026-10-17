@@ -1,0 +1,19 @@
+#!name=R-Store | 好轻 - IYUNMAI
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/H/好轻/iyunmai.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/restapi\.iyunmai\.com\/(?>app|ad-)?api\/ios\/(?>tips|ad) - reject
+^https?:\/\/sq\.iyunmai\.com\/api\/ios\/adlunbo - reject
+
+[Map Local]
+^https?:\/\/restapi\.iyunmai\.com\/api\/ios\/credit\/credit-family data-type=text data="{}" status-code=200
+^https?:\/\/restapi\.iyunmai\.com\/behaviour\/ios\/recommend data-type=text data="{}" status-code=200
+^https?:\/\/restapi\.iyunmai\.com\/fellow-service\/ios\/popUp data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% apisvr.iyunmai.com, restapi.iyunmai.com, sq.iyunmai.com

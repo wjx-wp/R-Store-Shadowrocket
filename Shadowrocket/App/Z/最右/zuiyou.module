@@ -1,0 +1,17 @@
+#!name=R-Store | 最右 - ZUIYOU
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/Z/最右/zuiyou.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, adapi.izuiyou.com, REJECT
+
+[URL Rewrite]
+^https?:\/\/api\.izuiyou\.com\/ad\/ - reject
+^https?:\/\/mercury-gateway\.ixiaochuan\.cn\/mercury\/v\d\/ad\/ - reject
+
+[MITM]
+hostname = %APPEND% api.izuiyou.com, mercury-gateway.ixiaochuan.cn

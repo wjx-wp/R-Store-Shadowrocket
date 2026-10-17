@@ -1,0 +1,22 @@
+#!name=R-Store | 马蜂窝 - MAFENGWO
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/M/马蜂窝/mafengwo.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN-SUFFIX, advert.mafengwo.cn, REJECT
+
+[URL Rewrite]
+^https?:\/\/mapi\.mafengwo\.cn\/(travelguide\/)?ad - reject
+^https?:\/\/mapi\.mafengwo\.cn\/system\/push\/get_local_push_config - reject
+^https?:\/\/mapi\.mafengwo\.cn\/widget\/note\/get_widget_note - reject
+
+[Map Local]
+^https?:\/\/mapi\.mafengwo\.cn\/system\/config\/(?>get|mark)_(?>push|alert)_config data-type=text data="{}" status-code=200
+^https?:\/\/mapi\.mafengwo\.cn\/system\/update\/check_update data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% mapi.mafengwo.cn

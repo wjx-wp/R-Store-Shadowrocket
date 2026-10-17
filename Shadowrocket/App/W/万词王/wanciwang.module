@@ -1,0 +1,18 @@
+#!name=R-Store | 万词王 - WANCIWANG
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/W/万词王/wanciwang.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/wanciwangdata\.oss-cn-\w+\.aliyuncs\.com\/startup\/resource\/content - reject
+
+[Map Local]
+^https?:\/\/recite\.perfectlingo\.com\/api\/recite\/app-act\/act-list data-type=text data="{}" status-code=200
+^https?:\/\/recite\.perfectlingo\.com\/api\/recite\/content-recommend\/v\d\/get-by-uid data-type=text data="{}" status-code=200
+^https?:\/\/recite\.perfectlingo\.com\/api\/recite\/floating-window\/v\d\/get-show data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% recite.perfectlingo.com

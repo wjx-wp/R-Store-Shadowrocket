@@ -1,0 +1,14 @@
+#!name=R-Store | 丰巢 - FCBOX
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/F/丰巢/fcbox.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/dsp\.fcbox\.com\/adSearch\/get\? - reject
+^https?:\/\/external\.fcbox\.com\/wxgw\/post\/suggestion\/query - reject
+
+[MITM]
+hostname = %APPEND% dsp.fcbox.com, external.fcbox.com

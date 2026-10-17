@@ -1,0 +1,18 @@
+#!name=R-Store | 建行生活 - CCBLIFE
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/J/建行生活/ccblife.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/waimai-guide\.ele\.me\/\w+\/mtop\.alsc\.wamai\.store\.detail\.miniapp\.popup - reject
+^https?:\/\/waimai-guide\.ele\.me\/\w+\/mtop\.venus\.shopcouponpopupservice\.getshopcouponspopup - reject
+^https?:\/\/xc\.ccblife\.ccb\.com\/p1ccbl\/service\/goods-service\/txCtrl\?txcode=A3341Z020 - reject
+
+[Map Local]
+^https?:\/\/waimai-guide\.ele\.me\/\w+\/mtop\.alsc\.eleme\.\w+\.trigger\.respond data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% waimai-guide.ele.me, xc.ccblife.ccb.com, yunbusiness.ccb.com

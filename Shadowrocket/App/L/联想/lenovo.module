@@ -1,0 +1,13 @@
+#!name=R-Store | 联想 - LENOVO
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/L/联想/lenovo.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/api\.club\.lenovo\.cn\/common\/open_ad - reject
+
+[MITM]
+hostname = %APPEND% api.club.lenovo.cn

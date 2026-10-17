@@ -1,0 +1,16 @@
+#!name=R-Store | 无他相机 - WUTA
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/W/无他相机/wuta.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/res-release\.wuta-cam\.com\/json\/ads_component_cache - reject
+
+[Map Local]
+^https?:\/\/api-release\.wuta-cam\.com\/ad_tree data-type=text data="" status-code=200
+
+[MITM]
+hostname = %APPEND% api-release.wuta-cam.com, res-release.wuta-cam.com

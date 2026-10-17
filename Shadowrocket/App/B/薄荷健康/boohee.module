@@ -1,0 +1,22 @@
+#!name=R-Store | 薄荷健康 - BOOHEE
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/B/薄荷健康/boohee.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/.*\.boohee\.(?>cn|com).*(?>notification_template|advertisements|share_contents|app_square|plugins|notifications|start_up_with_ad|float_ad|data_file_entrance) - reject
+^https?:\/\/api\.boohee\.com\/app-interface\/v\d\/ad\/info - reject
+
+[Map Local]
+^https?:\/\/api\.boohee\.com\/app-interface\/v\d\/record\/record_tool(_pop)?_ad data-type=text data="{}" status-code=200
+^https?:\/\/api\.boohee\.com\/app-interface\/v\d\/search\/search\? data-type=text data="{}" status-code=200
+^https?:\/\/api\.boohee\.com\/meta-interface\/v\d\/index\/(?>discover_chosen|page_float_bubbles|sensor-banners|tool_buttons) data-type=text data="{}" status-code=200
+^https?:\/\/api\.boohee\.com\/shop-interface\/api\/v\d\/home\/index data-type=text data="{}" status-code=200
+^https?:\/\/bohe\.sfo-tx-shanghai-01\.saas\.sensorsdata\.cn\/api\/v\d\/sfo\/user_popup_configs data-type=text data="{}" status-code=200
+^https?:\/\/status\.boohee\.com\/api\/v\d\/merged_messages$ data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% *.boohee.cn, *.boohee.com, bohe.sfo-tx-shanghai-01.saas.sensorsdata.cn

@@ -1,0 +1,16 @@
+#!name=R-Store | 小米有品 - MIYOUPIN
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/X/小米有品/miyoupin.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, stat.youpin.mi.com, REJECT
+
+[Map Local]
+^https?:\/\/shopapi\.io\.mi\.com\/mtop\/mf\/resource\/homePage\/pageConfig data-type=text data="" status-code=200
+
+[MITM]
+hostname = %APPEND% shopapi.io.mi.com

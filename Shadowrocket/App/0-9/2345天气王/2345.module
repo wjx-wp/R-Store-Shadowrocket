@@ -1,0 +1,13 @@
+#!name=R-Store | 2345天气王 - 2345
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/0-9/2345天气王/2345.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Map Local]
+^https?:\/\/tianqi\.2345\.com\/api\/content\/getContentFeeds data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% tianqi.2345.com

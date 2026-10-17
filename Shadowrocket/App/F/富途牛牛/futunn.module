@@ -1,0 +1,14 @@
+#!name=R-Store | 富途牛牛 - FUTUNN
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/F/富途牛牛/futunn.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/api\.futunn\.com\/treasure-chest\/box-data - reject
+^https?:\/\/api\.futunn\.com\/v\d\/ad - reject
+^https?:\/\/api\.futunn\.com\/v\d\/config\/promote-config - reject
+^https?:\/\/api\.futunn\.com\/v\d\/optimus\/my-homepage-config - reject
+^https?:\/\/api\d?\.futunn\.com\/ad - reject

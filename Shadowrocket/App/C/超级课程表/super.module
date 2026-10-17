@@ -1,0 +1,14 @@
+#!name=R-Store | 超级课程表 - SUPER
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/C/超级课程表/super.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/182\.92\.244\.70\/d\/json - reject
+^https?:\/\/ad\.myfriday\.cn\/d\/json - reject
+
+[MITM]
+hostname = %APPEND% ad.myfriday.cn

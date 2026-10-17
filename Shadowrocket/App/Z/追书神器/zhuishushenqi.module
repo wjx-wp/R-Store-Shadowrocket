@@ -1,0 +1,16 @@
+#!name=R-Store | 追书神器 - ZHUISHUSHENQI
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/Z/追书神器/zhuishushenqi.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Map Local]
+^https?:\/\/(api|b)\.zhuishushenqi\.com\/advert data-type=text data="" status-code=200
+^https?:\/\/api\.zhuishushenqi\.com\/notification\/shelfMessage data-type=text data="" status-code=200
+^https?:\/\/api\.zhuishushenqi\.com\/splashes\/ios data-type=text data="" status-code=200
+^https?:\/\/api\.zhuishushenqi\.com\/user\/bookshelf-updated data-type=text data="" status-code=200
+
+[MITM]
+hostname = %APPEND% api.zhuishushenqi.com, b.zhuishushenqi.com

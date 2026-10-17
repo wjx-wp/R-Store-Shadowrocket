@@ -1,0 +1,21 @@
+#!name=R-Store | 唯品会 - VIPSHOP
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/W/唯品会/vipshop.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/b\.appsimg\.com\/upload\/momin - reject
+^https?:\/\/mapi\.appvipshop\.com\/vips-mobile\/rest\/activity\/float_ball\/get - reject
+^https?:\/\/mapi\.appvipshop\.com\/vips-mobile\/rest\/iosAdInfo\/report - reject
+^https?:\/\/mapi\.appvipshop\.com\/vips-mobile\/rest\/layout\/channel_b\/scene_data - reject
+
+[Map Local]
+^https?:\/\/mapi\.appvipshop\.com\/vips-mobile\/rest\/activity\/advertisement\/get data-type=text data="" status-code=200
+^https?:\/\/mapi\.appvipshop\.com\/vips-mobile\/rest\/activity\/coupon\/float_entrance\/get\?api_key data-type=text data="" status-code=200
+^https?:\/\/mapi\.appvipshop\.com\/vips-mobile\/rest\/layout\/productList\/eventData\/v data-type=text data="" status-code=200
+
+[MITM]
+hostname = %APPEND% b.appsimg.com, mapi.appvipshop.com

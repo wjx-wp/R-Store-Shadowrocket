@@ -1,0 +1,36 @@
+#!name=R-Store | 小红书 - XIAOHONGSHU
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/X/小红书/xiaohongshu.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, ads-img-al.xhscdn.com, REJECT
+DOMAIN, ads-img-qc.xhscdn.com, REJECT
+DOMAIN, ads-video-al.xhscdn.com, REJECT
+DOMAIN, ads-video-qc.xhscdn.com, REJECT
+DOMAIN, ads-vp5.xhscdn.com, REJECT
+DOMAIN, apm-native.xiaohongshu.com, REJECT
+DOMAIN, spider-tracker.xiaohongshu.com, REJECT
+DOMAIN, t-ads.xiaohongshu.com, REJECT
+DOMAIN, trace.rtbasia.com, REJECT
+DOMAIN-KEYWORD, ads-splash-i, REJECT
+
+[URL Rewrite]
+^https?:\/\/\w+\.xiaohongshu\.com\/api\/sns\/v\d+(\/tag)?\/ads - reject
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/guide\/home_guide - reject
+^https?:\/\/mediacloud\.xiaohongshu\.com\/api\/httpdns\/ - reject
+
+[Map Local]
+^https?:\/\/edith\.xiaohongshu\.com\/api\/nike\/v\d\/update\/check data-type=text data="{}" status-code=200
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/guide\/user_banner data-type=text data="{}" status-code=200
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/note\/guide\? data-type=text data="{}" status-code=200
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/surprisebox\/(?>get_style|open|submit_action) data-type=text data="{}" status-code=200
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/system_service\/splash data-type=text data="{}" status-code=200
+^https?:\/\/www\.xiaohongshu\.com\/api\/marketing\/box\/trigger\? data-type=text data="{}" status-code=200
+^https?:\/\/www\.xiaohongshu\.com\/api\/sns\/v\d+\/hey\/\w+\/hey_gallery data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% ci.xiaohongshu.com, edith.xiaohongshu.com, mediacloud.xiaohongshu.com, rec.xiaohongshu.com, www.xiaohongshu.com

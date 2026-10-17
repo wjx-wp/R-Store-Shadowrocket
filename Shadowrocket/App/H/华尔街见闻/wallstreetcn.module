@@ -1,0 +1,15 @@
+#!name=R-Store | 华尔街见闻 - WALLSTREETCN
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/H/华尔街见闻/wallstreetcn.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/api-one-wscn\.awtmt\.com\/apiv\d\/advertising\/ - reject
+^https?:\/\/api\.wallstcn\.com\/apiv\d\/advertising\/ - reject
+^https?:\/\/api\.wallstreetcn\.com\/apiv\d\/advertising\/ - reject
+
+[MITM]
+hostname = %APPEND% api-one-wscn.awtmt.com, api.wallstcn.com, api.wallstreetcn.com

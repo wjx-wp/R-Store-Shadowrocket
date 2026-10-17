@@ -1,0 +1,23 @@
+#!name=R-Store | 财新 - CAIXIN
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/C/财新/caixin.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, dolphin.caixin.com, REJECT
+DOMAIN, gg.caixin.com, REJECT
+DOMAIN-SUFFIX, apollo.caixin.com, REJECT
+DOMAIN-SUFFIX, logstat.caixin.com, REJECT
+DOMAIN-SUFFIX, promote.caixin.com, REJECT
+
+[Map Local]
+^https?:\/\/cxdata\.caixin\.com\/api\/dataplus\/stkData\/list data-type=text data="{}" status-code=200
+^https?:\/\/entities\.caixin\.com\/api\/public\/push\/appIndex\?target=index data-type=text data="{}" status-code=200
+^https?:\/\/gateway\.caixin\.com\/api\/app-api\/(?>search\/getkeyword|caixinminiapp\/appinfo|articlesHotRecommend\/getHotRecommendArticles) data-type=text data="{}" status-code=200
+^https?:\/\/www\.caixin\.com\/ai\/question data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% cxdata.caixin.com, entities.caixin.com, gateway.caixin.com, www.caixin.com

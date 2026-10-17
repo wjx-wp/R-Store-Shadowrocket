@@ -1,0 +1,13 @@
+#!name=R-Store | TubeMax - TUBEMAX
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/T/TubeMax/tubemax.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/.*\.i18n-pglstatp\.com\/obj\/ad-pattern-sg - reject
+
+[MITM]
+hostname = %APPEND% *.i18n-pglstatp.com

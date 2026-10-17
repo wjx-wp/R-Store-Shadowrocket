@@ -1,0 +1,14 @@
+#!name=R-Store | 达达秒送骑士 - IMDADA
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/D/达达秒送骑士/imdada.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Map Local]
+^https?:\/\/delivery-api\.imdada\.cn\/\w+\/dada\/promote\/imax\?privacyParam data-type=text data="{}" status-code=200
+^https?:\/\/delivery-api\.imdada\.cn\/\w+\/transporter(\/screen)?\/ad data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% delivery-api.imdada.cn

@@ -1,0 +1,19 @@
+#!name=R-Store | 米家 - MIHOME
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/M/米家/mihome.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, sdkconfig.ad.xiaomi.com, REJECT
+
+[URL Rewrite]
+^https?:\/\/home\.mi\.com\/cgi-op\/api\/v\d\/recommendation - reject
+
+[Map Local]
+^https?:\/\/home\.mi\.com\/cgi-op\/api\/v\d\/resource\/realtime\/openingBanner data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% home.mi.com

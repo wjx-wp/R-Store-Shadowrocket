@@ -1,0 +1,14 @@
+#!name=R-Store | Blued - BLUED
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/B/Blued/blued.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Map Local]
+^https?:\/\/social\.blued\.cn\/users\/no_auth\/benefit data-type=text data="{}" status-code=200
+^https?:\/\/social\.blued\.cn\/users\/recommend data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% social.blued.cn

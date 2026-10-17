@@ -1,0 +1,24 @@
+#!name=R-Store | 招商银行 - CMBCHINA
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/Z/招商银行/cmb.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, log.cmbchina.com, REJECT
+DOMAIN, mbads.paas.cmbchina.com, REJECT
+DOMAIN, yl.zh.cmbchina.com, REJECT
+
+[URL Rewrite]
+^https?:\/\/mobile\.cmbchina\.com\/gexternal - reject
+^https?:\/\/mobile\.cmbchina\.com\/icornucopia\/accompany\/slot - reject
+
+[Map Local]
+^https?:\/\/entry-gateway\.paas\.cmbchina\.com\/ccgateway\/api\/paas-entry\/ai-column data-type=text data="{}" status-code=200
+^https?:\/\/entry-gateway\.paas\.cmbchina\.com\/ccgateway\/api\/paas-entry\/recommend data-type=text data="{}" status-code=200
+^https?:\/\/webappcfg\.paas\.cmbchina\.com\/v\d\/func\/getmarketconfig data-type=text data="" status-code=200
+
+[MITM]
+hostname = %APPEND% entry-gateway.paas.cmbchina.com, mobile.cmbchina.com, webappcfg.paas.cmbchina.com

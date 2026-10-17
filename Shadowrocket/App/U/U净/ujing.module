@@ -1,0 +1,17 @@
+#!name=R-Store | U净 - UJING
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/U/U净/ujing.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN-SUFFIX, ads.zhinengxiyifang.cn, REJECT
+
+[URL Rewrite]
+^https?:\/\/adsoss\.zhinengxiyifang\.cn\/ads - reject
+^https?:\/\/api-marketing\.zhinengxiyifang\.cn\/api\/v\d\/cloudcode\/wechat\/bid - reject
+
+[MITM]
+hostname = %APPEND% adsoss.zhinengxiyifang.cn, api-marketing.zhinengxiyifang.cn

@@ -1,0 +1,19 @@
+#!name=R-Store | 春秋航空 - CHAIR
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/C/春秋航空/chair.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/gaia\.ch\.com\/ECMember\/psnCenter\/adversAndInfo - reject
+^https?:\/\/gaia\.ch\.com\/ECProduct\/homePageRevision\/(?>queryRecommend|findAll)Info - reject
+^https?:\/\/gaia\.ch\.com\/ECProduct\/popupWindow - reject
+^https?:\/\/gaia\.ch\.com\/ECPromotion\/appFlash - reject
+
+[Map Local]
+^https?:\/\/gaia\.ch\.com\/ECPromotion\/precisionactivity\/queryad data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% appmedia.springairlines.com, gaia.ch.com

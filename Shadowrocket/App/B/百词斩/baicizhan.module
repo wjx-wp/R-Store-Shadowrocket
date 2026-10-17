@@ -1,0 +1,17 @@
+#!name=R-Store | 百词斩 - BAICIZHAN
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/B/百词斩/baicizhan.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, advertise.baicizhan.com, REJECT
+DOMAIN, advertise.baicizhan.org, REJECT
+
+[Map Local]
+^https?:\/\/7n\.bczcdn\.com\/launchad\/ data-type=text data="" status-code=200
+
+[MITM]
+hostname = %APPEND% 7n.bczcdn.com

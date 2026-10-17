@@ -1,0 +1,13 @@
+#!name=R-Store | 怪兽赤兔 - ENMONSTER
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/G/怪兽赤兔/enmonster.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/awg\.enmonster\.com\/apa(\/index)?\/advert - reject
+
+[MITM]
+hostname = %APPEND% awg.enmonster.com

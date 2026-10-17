@@ -1,0 +1,15 @@
+#!name=R-Store | 掌上英雄联盟 - MLOL
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/Z/掌上英雄联盟/mlol.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Map Local]
+^https?:\/\/mlol\.qt\.qq\.com\/go\/recommend\/(?!v\d\/platactivity) data-type=text data="" status-code=200
+^https?:\/\/ossweb-img\.qq\.com\/upload\/adw\/image\/[0-9]{3}\/202[0-9]{5}\/[a-z0-9]{32}\.(?>jpg|jpeg) data-type=text data="" status-code=200
+^https?:\/\/us\.l\.qq\.com\/exapp data-type=text data="" status-code=200
+
+[MITM]
+hostname = %APPEND% mlol.qt.qq.com, ossweb-img.qq.com, us.l.qq.com

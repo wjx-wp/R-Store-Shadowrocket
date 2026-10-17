@@ -1,0 +1,17 @@
+#!name=R-Store | 上银美好生活 - BOSCLIFE
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/S/上银美好生活/bosclife.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/gdlf\.bosc\.cn(:\d+)?\/static\/upload\/pro\/resource\/(?!1762370|1939565|20543596)\w+\.jpg$ - reject
+
+[Map Local]
+^https?:\/\/dfg\.bosc\.cn(:\d+)?\/public\/sdkConfig\/get data-type=text data="{}" status-code=200
+^https?:\/\/mpaas1\.bosc\.cn(:\d+)?\/loggw data-type=text data="" status-code=200
+
+[MITM]
+hostname = %APPEND% dfg.bosc.cn, gdlf.bosc.cn, mgs1.bosc.cn, mpaas1.bosc.cn

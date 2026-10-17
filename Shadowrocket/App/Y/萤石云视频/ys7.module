@@ -1,0 +1,20 @@
+#!name=R-Store | 萤石云视频 - YS7
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/Y/萤石云视频/ys7.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/\w+\.ys7\.com\/api\/ads - reject
+
+[Map Local]
+^https?:\/\/\w+\.ys7\.com\/api\/user\/tabList data-type=text data="{}" status-code=200
+^https?:\/\/\w+\.ys7\.com\/v\d\/config\/service\/entrance\/bannerInfo data-type=text data="{}" status-code=200
+^https?:\/\/\w+\.ys7\.com\/v\d\/configurations\/gray\/info\?grayTypes=185 data-type=text data="{}" status-code=200
+^https?:\/\/\w+\.ys7\.com\/v\d\/intelligent-app\/apps\/linkage data-type=text data="{}" status-code=200
+^https?:\/\/\w+\.ys7\.com\/v\d\/videoclips\/square\/video\/query data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% api.ys7.com, i.ys7.com

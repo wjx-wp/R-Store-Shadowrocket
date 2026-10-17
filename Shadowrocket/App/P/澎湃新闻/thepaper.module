@@ -1,0 +1,13 @@
+#!name=R-Store | 澎湃新闻 - THEPAPER
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/P/澎湃新闻/thepaper.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/adpai\.thepaper\.cn\/.+&ad= - reject
+
+[MITM]
+hostname = %APPEND% adpai.thepaper.cn

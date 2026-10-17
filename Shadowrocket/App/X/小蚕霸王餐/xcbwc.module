@@ -1,0 +1,13 @@
+#!name=R-Store | 小蚕霸王餐 - XCBWC
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/X/小蚕霸王餐/xcbwc.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Map Local]
+^https?:\/\/web2\.realtech-inc\.com\/oss\/xc-app-assets\/configs\/common\/theme data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% gw.xiaocantech.com, web2.realtech-inc.com

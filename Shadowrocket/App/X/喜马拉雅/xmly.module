@@ -1,0 +1,47 @@
+#!name=R-Store | 喜马拉雅 - XMLY
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/X/喜马拉雅/xmly.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, adbehavior.ximalaya.com, REJECT
+DOMAIN, adwbs.ximalaya.com, REJECT
+DOMAIN-SUFFIX, ad.test.ximalaya.com, REJECT
+DOMAIN-SUFFIX, ad.ximalaya.com, REJECT
+DOMAIN-SUFFIX, adbehavior.wsa.ximalaya.com, REJECT
+DOMAIN-SUFFIX, adbs.ximalaya.com, REJECT
+DOMAIN-SUFFIX, adse.test.ximalaya.com, REJECT
+DOMAIN-SUFFIX, adse.wsa.ximalaya.com, REJECT
+DOMAIN-SUFFIX, adse.ximalaya.com, REJECT
+DOMAIN-SUFFIX, adsebs.ximalaya.com, REJECT
+DOMAIN-SUFFIX, adweb.test.ximalaya.com, REJECT
+DOMAIN-SUFFIX, adweb.ximalaya.com, REJECT
+DOMAIN-SUFFIX, linkeye.ximalaya.com, REJECT
+DOMAIN-SUFFIX, location.ximalaya.com, REJECT
+DOMAIN-SUFFIX, xdcs-collector.ximalaya.com, REJECT
+
+[URL Rewrite]
+^https?:\/\/(adse\.wsa|adse|adbehavior|xdcs-collector)\.xima.*\.com\/.* - reject
+^https?:\/\/.*\.xima.*\.com/mobile-user/minorProtection/pop - reject
+^https?:\/\/.*\.xima.*\.com\/(dog-portal\/checkOld|(child-mobile\/child|aged-mobile\/aged)\/mode\/query) - reject
+^https?:\/\/.*\.xima.*\.com\/(hub)?guideWord - reject
+^https?:\/\/.*\.xima.*\.com\/api\/v\d\/adRealTime - reject
+^https?:\/\/.*\.xima.*\.com\/butler-portal\/versionCheck - reject
+^https?:\/\/.*\.xima.*\.com\/chaos-notice-web\/v1\/message\/preview\/list - reject
+^https?:\/\/.*\.xima.*\.com\/collector\/xl\/v\d - reject
+^https?:\/\/.*\.xima.*\.com\/discovery-feed\/focus\/queryF - reject
+^https?:\/\/.*\.xima.*\.com\/discovery-feed\/isShowUserGiftPendant - reject
+^https?:\/\/.*\.xima.*\.com\/hotWord - reject
+^https?:\/\/.*\.xima.*\.com\/mobile-playpage\/view\/ - reject
+^https?:\/\/.*\.xima.*\.com\/mobile-user\/unread - reject
+^https?:\/\/.*\.xima.*\.com\/mobile\/discovery\/v\d\/location - reject
+^https?:\/\/.*\.xima.*\.com\/social-web\/bottomTabs\/dynamicEntrance\/status - reject
+^https?:\/\/.*\.xima.*\.com\/ting\/(?>loading|feed|home)? - reject
+^https?:\/\/.*\.xmcdn\.com\/\w{8}\/\w{4}-\w{16}\/.+gif$ - reject
+^https?:\/\/gslb.*\.xima.*\.com\/ - reject
+
+[MITM]
+hostname = %APPEND% *.xmcdn.com

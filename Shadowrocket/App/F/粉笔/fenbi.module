@@ -1,0 +1,14 @@
+#!name=R-Store | 粉笔 - FENBI
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/F/粉笔/fenbi.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Map Local]
+^https?:\/\/market-api\.fenbi\.com\/iphone\/v\d\/assistant\/entrance\/show data-type=text data="{}" status-code=200
+^https?:\/\/tiku\.fenbi\.com\/activity\/app\/(?>launcher|versions) data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% market-api.fenbi.com, tiku.fenbi.com

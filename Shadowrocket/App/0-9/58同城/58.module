@@ -1,0 +1,23 @@
+#!name=R-Store | 58同城 - 58
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/0-9/58同城/58.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, track.58.com, REJECT
+DOMAIN, tracklog.58.com, REJECT
+
+[URL Rewrite]
+^https?:\/\/app\.58\.com\/api\/home\/(advertising|appadv)\/ - reject
+^https?:\/\/app\.58\.com\/api\/log\/ - reject
+^https?:\/\/pic\d\.ajkimg\.com\/mat\/\w+\?imageMogr\d\/format\/jpg\/thumbnail\/\d{3}x\d{4}$ - reject
+
+[Map Local]
+^https?:\/\/.+?\.58cdn\.com\.cn\/brandads\/ data-type=text data="" status-code=200
+^https?:\/\/app\.58\.com\/api\/home\/invite\/popupAdv data-type=text data="" status-code=200
+
+[MITM]
+hostname = %APPEND% *.58cdn.com, app.58.com

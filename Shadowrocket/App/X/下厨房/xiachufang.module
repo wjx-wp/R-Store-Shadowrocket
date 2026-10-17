@@ -1,0 +1,17 @@
+#!name=R-Store | 下厨房 - XIACHUFANG
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/X/下厨房/xiachufang.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN-SUFFIX, baidu-union-js.xiachufang.com, REJECT
+DOMAIN-SUFFIX, baidu-union-pos.xiachufang.com, REJECT
+
+[URL Rewrite]
+^https?:\/\/api\.xiachufang\.com\/v\d\/ad/ - reject
+
+[MITM]
+hostname = %APPEND% api.xiachufang.com

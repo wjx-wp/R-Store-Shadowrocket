@@ -1,0 +1,13 @@
+#!name=R-Store | 小白学习打印 - XBXXHZ
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/X/小白学习打印/xbxxhz.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/api\.xbxxhz\.com\/big_data\/v\d\/home_pages - reject
+
+[MITM]
+hostname = %APPEND% api.xbxxhz.com

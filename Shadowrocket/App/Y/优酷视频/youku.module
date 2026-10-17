@@ -1,0 +1,72 @@
+#!name=R-Store | 优酷 - YOUKU
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/Y/优酷视频/youku.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, amdc.m.youku.com, REJECT
+DOMAIN, api.sm.cn, REJECT
+DOMAIN, cad.youku.com, REJECT
+DOMAIN, huichuan-mc.sm.cn, REJECT
+DOMAIN, huichuan.sm.cn, REJECT
+DOMAIN, m-vali.cp31.ott.cibntv.net, REJECT
+DOMAIN, pl.cp31.ott.cibntv.net, REJECT
+DOMAIN, pre-acs.youku.com, REJECT
+DOMAIN, sealine.youku.com, REJECT
+DOMAIN, vali-g1.cp31.ott.cibntv.net, REJECT
+DOMAIN, vali-ugc.cp31.ott.cibntv.net, REJECT
+DOMAIN, ykad-data.youku.com, REJECT
+DOMAIN, youku-acs.m.taobao.com, REJECT
+DOMAIN-KEYWORD, iyes.youku.com, REJECT
+DOMAIN-KEYWORD, push.m.youku.com, REJECT
+DOMAIN-SUFFIX, a-dxk.play.api.3g.youku.com, REJECT
+DOMAIN-SUFFIX, actives.youku.com, REJECT
+DOMAIN-SUFFIX, ad.api.3g.tudou.com, REJECT
+DOMAIN-SUFFIX, ad.api.3g.youku.com, REJECT
+DOMAIN-SUFFIX, ad.api.mobile.youku.com, REJECT
+DOMAIN-SUFFIX, ad.mobile.youku.com, REJECT
+DOMAIN-SUFFIX, ad.youku.com, REJECT
+DOMAIN-SUFFIX, atm.youku.com, REJECT
+DOMAIN-SUFFIX, b.smartvideo.youku.com, REJECT
+DOMAIN-SUFFIX, bdcode.youke.com, REJECT
+DOMAIN-SUFFIX, c.yes.youku.com, REJECT
+DOMAIN-SUFFIX, das.api.youku.com, REJECT
+DOMAIN-SUFFIX, das.mobile.youku.com, REJECT
+DOMAIN-SUFFIX, dl.g.youku.com, REJECT
+DOMAIN-SUFFIX, dmapp.youku.com, REJECT
+DOMAIN-SUFFIX, ems.youku.com, REJECT
+DOMAIN-SUFFIX, gamex.mobile.youku.com, REJECT
+DOMAIN-SUFFIX, hudong.pl.youku.com, REJECT
+DOMAIN-SUFFIX, huodong.pl.youku.com, REJECT
+DOMAIN-SUFFIX, huodong.vip.youku.com, REJECT
+DOMAIN-SUFFIX, hz.youku.com, REJECT
+DOMAIN-SUFFIX, l.ykimg.com, REJECT
+DOMAIN-SUFFIX, l.youku.com, REJECT
+DOMAIN-SUFFIX, lstat.youku.com, REJECT
+DOMAIN-SUFFIX, m.yes.youku.com, REJECT
+DOMAIN-SUFFIX, mobilemsg.youku.com, REJECT
+DOMAIN-SUFFIX, msg.youku.com, REJECT
+DOMAIN-SUFFIX, myes.youku.com, REJECT
+DOMAIN-SUFFIX, p-log.ykimg.com, REJECT
+DOMAIN-SUFFIX, passport-log.youku.com, REJECT
+DOMAIN-SUFFIX, s.p.youku.com, REJECT
+DOMAIN-SUFFIX, sdk.m.youku.com, REJECT
+DOMAIN-SUFFIX, stat.youku.com, REJECT
+DOMAIN-SUFFIX, store.tv.api.3g.youku.com, REJECT
+DOMAIN-SUFFIX, store.xl.api.3g.youku.com, REJECT
+DOMAIN-SUFFIX, tdrec.youku.com, REJECT
+DOMAIN-SUFFIX, test.ott.youku.com, REJECT
+DOMAIN-SUFFIX, urchin.lstat.youku.com, REJECT
+DOMAIN-SUFFIX, val.api.youku.com, REJECT
+DOMAIN-SUFFIX, wan.youku.com, REJECT
+DOMAIN-SUFFIX, ykatr.youku.com, REJECT
+DOMAIN-SUFFIX, ykrec.youku.com, REJECT
+
+[Map Local]
+^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.(pisp\.scripts\.get|xspace\.play\.position\.preload\.query|xspace\.poplayer\.position\.query) data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% acs.youku.com, push.m.youku.com, un-acs.youku.com

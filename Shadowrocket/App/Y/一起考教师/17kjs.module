@@ -1,0 +1,13 @@
+#!name=R-Store | 一起考教师 - 17KJS
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/Y/一起考教师/17kjs.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/api\.17kjs\.com\/meta\/ads_targets - reject
+
+[MITM]
+hostname = %APPEND% api.17kjs.com

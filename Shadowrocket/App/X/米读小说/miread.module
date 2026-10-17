@@ -1,0 +1,15 @@
+#!name=R-Store | 米读小说 - MIREAD
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/X/米读小说/miread.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/apiwz\.midukanshu\.com\/advert\/getPopup$ - reject
+^https?:\/\/apiwz\.midukanshu\.com\/advert\/treasureInfo$ - reject
+^https?:\/\/apiwz\.midukanshu\.com\/config\/getAds$ - reject
+
+[MITM]
+hostname = %APPEND% apiwz.midukanshu.com

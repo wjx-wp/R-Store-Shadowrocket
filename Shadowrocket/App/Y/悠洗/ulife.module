@@ -1,0 +1,17 @@
+#!name=R-Store | 悠洗 - ULIFE
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/Y/悠洗/ulife.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Map Local]
+^https?:\/\/api\.ulife\.group\/auth\/account\/entrance data-type=text data="{}" status-code=200
+^https?:\/\/api\.ulife\.group\/auth\/account\/getUpgradeStrategy data-type=text data="{}" status-code=200
+^https?:\/\/api\.ulife\.group\/market\/frontEntrance\/getThirdAdvertising data-type=text data="{}" status-code=200
+^https?:\/\/api\.ulife\.group\/market\/memberCard\/listMemberCard\?isShowSecondaryCard=1 data-type=text data="{}" status-code=200
+^https?:\/\/api\.ulife\.group\/signintask\/adServing data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% api.ulife.group

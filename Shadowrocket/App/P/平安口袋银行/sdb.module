@@ -1,0 +1,28 @@
+#!name=R-Store | 平安口袋银行 - SDB
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/P/平安口袋银行/sdb.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, dwtracking.jk.cn, REJECT
+
+[URL Rewrite]
+^https?:\/\/b\.pingan\.com\.cn\/arch\/webtrends3\/collector-core - reject
+^https?:\/\/cdn\.sdb\.com\.cn\/widget\/nps\/feedback\/ - reject
+
+[Map Local]
+^https:\/\/cdn\.sdb\.com\.cn\/ibank\/upgrade\/plugins\/upgradefile\.ios\.simplify data-type=text data="" status-code=200
+^https?:\/\/cdn\.sdb\.com\.cn\/app_com\/adversdk data-type=text data="" status-code=200
+^https?:\/\/cdn\.sdb\.com\.cn\/widget\/magic-module-sprite\/dialog-normal data-type=text data="{}" status-code=200
+^https?:\/\/cdn\.sdb\.com\.cn\/widget\/magic-module-sprite\/general-banner data-type=text data="{}" status-code=200
+^https?:\/\/cdn\.sdb\.com\.cn\/widget\/pb\/pb-plugins-rec-content-list data-type=text data="{}" status-code=200
+^https?:\/\/cdn\.sdb\.com\.cn\/widget\/pb\/pb-plugins-rec-mivideo data-type=text data="{}" status-code=200
+^https?:\/\/cdn\.sdb\.com\.cn\/widget\/pb\/pb-plugins-recomend-content data-type=text data="{}" status-code=200
+^https?:\/\/rsb\.pingan\.com\.cn\/brcp\/bds\/cust\/ygfz\/up data-type=text data="{}" status-code=200
+^https?:\/\/rsb\.pingan\.com\.cn\/brcp\/stp\/cust\/mobile\/source\/upgrade data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% b.pingan.com.cn, cdn.sdb.com.cn, rsb.pingan.com.cn

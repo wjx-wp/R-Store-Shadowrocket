@@ -1,0 +1,28 @@
+#!name=R-Store | 掌上生活 - CMBCC
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/Z/掌上生活/cmbcc.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN, applog.paas.cmbchina.com, REJECT
+
+[URL Rewrite]
+^https?:\/\/.*mbasecc\.\w+\.cmbchina\.com\/Edge\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec - reject
+^https?:\/\/.*mbasecc\.\w+\.cmbchina\.com\/Edge\/api\/mlife\.clientface\.clientservice\.api\.preloadService\/preload - reject
+^https?:\/\/.*mbasecc\.\w+\.cmbchina\.com\/Edge\/api\/mlife\.mbase\.appWidget\.api\.WidgetGatewayControllerApi\/executeWidgetJobs - reject
+^https?:\/\/intellicc\.\w+\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.adrender\.api\.(?>AdWork|QueryMultipleAds) - reject
+^https?:\/\/intellicc\.\w+\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.render\.api\.render\/getDynamicDataSec - reject
+
+[Map Local]
+^https?:\/\/contentcc\.bcs\.cmbchina\.com\/Edge\/api\/contentpublisher\.api\.UserFeedsControllerApi\/query data-type=text data="{}" status-code=200
+^https?:\/\/intellicc\.\w+\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.render\.api\.RecommendRenderControllerApi\/getRecommendResult data-type=text data="{}" status-code=200
+^https?:\/\/interactivecc\.\w+\.cmbchina\.com\/Edge\/api\/atpcore\.api\.AccompanyingServiceControllerApi\/queryAccompanyingServiceUserConfForApp data-type=text data="{}" status-code=200
+^https?:\/\/mars\.ccc\.cmbchina\.com\/MarsReceiver data-type=text data="{}" status-code=200
+^https?:\/\/marscc\.bcs\.cmbchina\.com\/MarsReceiver data-type=text data="{}" status-code=200
+^https?:\/\/yummy2web01-edge-dmz\.bcs\.cmbchina\.com\/Edge\/api\/cmscampaign\.api\.HomeActivityClientControllerApi\/activityClientPartake data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% contentcc.bcs.cmbchina.com, mars.ccc.cmbchina.com, marscc.bcs.cmbchina.com, yummy2web01-edge-dmz.bcs.cmbchina.com

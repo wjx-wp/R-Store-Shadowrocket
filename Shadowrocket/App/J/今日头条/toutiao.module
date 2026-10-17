@@ -1,0 +1,23 @@
+#!name=R-Store | 今日头条 - TOUTIAO
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/J/今日头条/toutiao.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Rule]
+DOMAIN-KEYWORD, a3.bytecdn.cn, REJECT
+DOMAIN-KEYWORD, a3.pstatp.com, REJECT
+DOMAIN-KEYWORD, s1.pstatp.com, REJECT
+DOMAIN-KEYWORD, s2.pstatp.com, REJECT
+DOMAIN-KEYWORD, s3.pstatp.com, REJECT
+DOMAIN-SUFFIX, ad.toutiao.com, REJECT
+DOMAIN-SUFFIX, adshare.toutiao.com, REJECT
+DOMAIN-SUFFIX, dm.toutiao.com, REJECT
+DOMAIN-SUFFIX, dsp.toutiao.com, REJECT
+DOMAIN-SUFFIX, partner.toutiao.com, REJECT
+DOMAIN-SUFFIX, track.toutiao.com, REJECT
+
+[URL Rewrite]
+^https?:\/\/p(b)?\d\.pstatp.com\/origin - reject

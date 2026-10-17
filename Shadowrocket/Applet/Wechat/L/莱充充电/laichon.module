@@ -1,0 +1,13 @@
+#!name=R-Store | laichon
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/Applet/Wechat/L/莱充充电/laichon.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/(mobile|shop)\.laichon\.com\/api\/(v\d\/goods\/goodsList|exposureAdvStatistics|getWebAdvList) - reject
+
+[MITM]
+hostname = %APPEND% mobile.laichon.com, shop.laichon.com

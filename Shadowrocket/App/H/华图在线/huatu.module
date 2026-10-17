@@ -1,0 +1,14 @@
+#!name=R-Store | 华图在线 - HUATU
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/H/华图在线/huatu.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Map Local]
+^https?:\/\/ocfapi\.huatu\.com\/api\/user\/get_my_suggest data-type=text data="{}" status-code=200
+^https?:\/\/yyfapi\.huatu\.com\/common\/ad\/resource\/home data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% ocfapi.huatu.com, yyfapi.huatu.com

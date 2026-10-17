@@ -1,0 +1,16 @@
+#!name=R-Store | 吉祥航空 - JUNEYAOAIR
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/J/吉祥航空/juneyaoair.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[URL Rewrite]
+^https?:\/\/hoapp\.juneyaoair\.com\/data\/index\/(?>queryPopUpWinPic|getLoadPic|getRecommendProduct|creditCardAd) - reject
+
+[Map Local]
+^https?:\/\/hoapp\.juneyaoair\.com\/version data-type=text data="" status-code=200
+
+[MITM]
+hostname = %APPEND% hoapp.juneyaoair.com

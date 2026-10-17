@@ -1,0 +1,14 @@
+#!name=R-Store | 阿里云盘 - ADRIVE
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/A/阿里云盘/adrive.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Map Local]
+^https?:\/\/api\.alipan\.com\/adrive\/v\d\/file\/getTopFolders data-type=text data="{}" status-code=200
+^https?:\/\/member\.alipan\.com\/v\d\/activity\/sign_in_(?>info|luckyBottle) data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% api.alipan.com, member.alipan.com

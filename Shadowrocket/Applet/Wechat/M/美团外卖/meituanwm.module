@@ -1,0 +1,16 @@
+#!name=R-Store | meituanwm
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/Applet/Wechat/M/美团外卖/meituanwm.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Map Local]
+^https?:\/\/npay\.meituan\.com\/conch\/flow\/mypage-wallet-info data-type=text data="{}" status-code=200
+^https?:\/\/npay\.meituan\.com\/conch\/walletv\d\/wechat-pop-window data-type=text data="{}" status-code=200
+^https?:\/\/web\.meituan\.com\/api\/miniprogram\/my\/(?>novelZone|resources) data-type=text data="{}" status-code=200
+^https?:\/\/web\.meituan\.com\/newUser\/returnMoney\/popWindow data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% npay.meituan.com, web.meituan.com
