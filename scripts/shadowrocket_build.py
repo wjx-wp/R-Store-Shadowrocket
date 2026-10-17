@@ -177,10 +177,10 @@ def compile_module(source: Path, relative: Path, raw: str) -> tuple[str | None, 
 
 def output_path(relative: Path) -> Path:
     parts = relative.parts
-    if parts[0] == "App":
-        return Path("App", *parts[1:]).with_suffix(".module")
-    if parts[0] == "All":
-        return Path("All", *parts[1:]).with_suffix(".module")
+    # Upstream separates standalone apps, two kinds of applets, websites and bundles.
+    # Preserve every directory so e.g. Applet/Wechat and Applet/Alipay never collide.
+    if parts and parts[0] in {"App", "All", "Applet", "Web"}:
+        return Path(*parts).with_suffix(".module")
     raise ValueError(f"unexpected source path: {relative}")
 
 
