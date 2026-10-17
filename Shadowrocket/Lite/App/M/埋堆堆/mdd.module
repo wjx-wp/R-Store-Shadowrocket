@@ -1,0 +1,11 @@
+#!name=R-Store Lite | 埋堆堆 - MDD
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/M/埋堆堆/mdd.sgmodule
+
+[Rule]
+DOMAIN, conf-darwin.xycdn.com, REJECT
+DOMAIN, sdk1xyajs.data.kuiniuca.com, REJECT
+DOMAIN, t-dsp.pinduoduo.com, REJECT
+DOMAIN, toblog.ctobsnssdk.com, REJECT

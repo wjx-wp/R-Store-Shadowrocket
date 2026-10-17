@@ -1,0 +1,10 @@
+#!name=R-Store Lite | 虎扑 - HUPU
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/H/虎扑/hupu.sgmodule
+
+[Rule]
+DOMAIN, adx-api.hupu.com, REJECT
+DOMAIN, adx.hupu.com, REJECT
+DOMAIN, goblin.hupu.com, REJECT

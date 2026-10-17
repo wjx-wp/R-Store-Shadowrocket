@@ -1,0 +1,16 @@
+#!name=R-Store Lite | 宝宝树 - BABYTREE
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/B/宝宝树/babytree.sgmodule
+
+[Rule]
+DOMAIN, ads.babytree.com, REJECT
+DOMAIN, adx-backend.babytree.com, REJECT
+DOMAIN, adx.babytree.com, REJECT
+DOMAIN, bbtads.babytree.com, REJECT
+DOMAIN, m.meitun.com, REJECT
+DOMAIN, mobads-pre-config.cdn.bcebos.com, REJECT
+DOMAIN, titan.babytree.com, REJECT
+DOMAIN, titan01.babytree.com, REJECT
+DOMAIN, tracking.babytree.com, REJECT

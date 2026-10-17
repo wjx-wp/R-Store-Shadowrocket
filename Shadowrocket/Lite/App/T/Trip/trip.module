@@ -1,0 +1,19 @@
+#!name=R-Store Lite | trip - TRIP
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/T/Trip/trip.sgmodule
+
+[Rule]
+DOMAIN, ak-d.tripcdn.com, REJECT
+DOMAIN, cpush.trip.com, REJECT
+DOMAIN, easytomessage.com, REJECT
+DOMAIN, firebaseinstallations.googleapis.com, REJECT
+DOMAIN, ocsp.pki.goog, REJECT
+DOMAIN, tcpgateway-sgp-trip.trip.com, REJECT
+DOMAIN-KEYWORD, app.adjust, REJECT
+DOMAIN-SUFFIX, graph.facebook.com, REJECT
+IP-CIDR, 103.143.160.209/32, REJECT
+IP-CIDR, 162.14.137.26/32, REJECT
+IP-CIDR, 162.14.145.13/32, REJECT
+IP-CIDR, 210.13.85.204/32, REJECT

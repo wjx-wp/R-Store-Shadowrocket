@@ -1,0 +1,16 @@
+#!name=R-Store Lite | 中国电信 - 189
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/Z/中国电信/189.sgmodule
+
+[Rule]
+DOMAIN, ad.21cn.com, REJECT
+DOMAIN, ad.k.21cn.com, REJECT
+DOMAIN, admarket.21cn.com, REJECT
+DOMAIN, adshows.21cn.com, REJECT
+DOMAIN, appgo.189.cn, REJECT
+DOMAIN, appgoad.189.cn, REJECT
+DOMAIN, appupdates.189.cn, REJECT
+IP-CIDR, 122.229.29.89/32, REJECT
+IP-CIDR, 122.229.8.47/32, REJECT

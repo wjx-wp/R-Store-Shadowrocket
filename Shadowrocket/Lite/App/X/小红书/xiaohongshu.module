@@ -1,0 +1,17 @@
+#!name=R-Store Lite | 小红书 - XIAOHONGSHU
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/X/小红书/xiaohongshu.sgmodule
+
+[Rule]
+DOMAIN, ads-img-al.xhscdn.com, REJECT
+DOMAIN, ads-img-qc.xhscdn.com, REJECT
+DOMAIN, ads-video-al.xhscdn.com, REJECT
+DOMAIN, ads-video-qc.xhscdn.com, REJECT
+DOMAIN, ads-vp5.xhscdn.com, REJECT
+DOMAIN, apm-native.xiaohongshu.com, REJECT
+DOMAIN, spider-tracker.xiaohongshu.com, REJECT
+DOMAIN, t-ads.xiaohongshu.com, REJECT
+DOMAIN, trace.rtbasia.com, REJECT
+DOMAIN-KEYWORD, ads-splash-i, REJECT

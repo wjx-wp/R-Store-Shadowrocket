@@ -1,0 +1,26 @@
+#!name=R-Store Lite | 微信小程序-广告拦截合集
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/All/wechatAdBlock.sgmodule
+
+[Rule]
+DOMAIN, ad-api.4pyun.com, REJECT
+DOMAIN, ad-files.4pyun.com, REJECT
+DOMAIN, ad.maoyan.com, REJECT
+DOMAIN, ads-shopping.shouqianba.com, REJECT
+DOMAIN, ads.ishansong.com, REJECT
+DOMAIN, api.hongyibo.com.cn, REJECT
+DOMAIN, api.zysdsk.cn, REJECT
+DOMAIN, bigdata-behaviordata.189.cn, REJECT
+DOMAIN, djad.nmgyhxxkj.cn, REJECT
+DOMAIN, dsp.fcbox.com, REJECT
+DOMAIN, et.ykccn.com, REJECT
+DOMAIN, file.dian.so, REJECT
+DOMAIN, logs-bigdata.yeehaw.com.cn, REJECT
+DOMAIN, pro.dajuhl.com, REJECT
+DOMAIN, rumt-zh.com, REJECT
+DOMAIN, smarket.dian.so, REJECT
+DOMAIN, tracker-prd.aldi.com.cn, REJECT
+DOMAIN-SUFFIX, ad.duoduo.link, REJECT
+DOMAIN-SUFFIX, wxsmsdy.video.qq.com, REJECT

@@ -1,0 +1,9 @@
+#!name=R-Store Lite | xiandian
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/Applet/Wechat/X/小电充电/xiandian.sgmodule
+
+[Rule]
+DOMAIN, file.dian.so, REJECT
+DOMAIN, smarket.dian.so, REJECT

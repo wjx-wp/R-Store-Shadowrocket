@@ -1,0 +1,9 @@
+#!name=R-Store Lite | aldi
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/Applet/Wechat/A/ALDI奥乐齐商城/aldi.sgmodule
+
+[Rule]
+DOMAIN, rumt-zh.com, REJECT
+DOMAIN, tracker-prd.aldi.com.cn, REJECT

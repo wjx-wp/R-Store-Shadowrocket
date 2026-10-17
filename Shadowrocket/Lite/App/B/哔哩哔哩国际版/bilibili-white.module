@@ -1,0 +1,11 @@
+#!name=R-Store Lite | 哔哩哔哩(国际版) - BILIBILI-WHITE
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/B/哔哩哔哩国际版/bilibili-white.sgmodule
+
+[Rule]
+DOMAIN, ads.games.laohu.com, REJECT
+DOMAIN, ptom.caohua.com, REJECT
+DOMAIN, shark-tracer.netease.com, REJECT
+DOMAIN, tracking.leiting.com, REJECT

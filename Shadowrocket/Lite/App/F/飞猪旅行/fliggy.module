@@ -1,0 +1,9 @@
+#!name=R-Store Lite | 飞猪旅行 - FLIGGY
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/F/飞猪旅行/fliggy.sgmodule
+
+[Rule]
+DOMAIN, ad-track.fliggy.com, REJECT
+IP-CIDR, 59.82.113.8/32, REJECT

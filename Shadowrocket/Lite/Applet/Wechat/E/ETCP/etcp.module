@@ -1,0 +1,8 @@
+#!name=R-Store Lite | etcp
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/Applet/Wechat/E/ETCP/etcp.sgmodule
+
+[Rule]
+DOMAIN, logs-bigdata.yeehaw.com.cn, REJECT

@@ -1,0 +1,18 @@
+#!name=R-Store Lite | 大众点评 - DIANPING
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/D/大众点评/dianping.sgmodule
+
+[Rule]
+DOMAIN, dpmtpush.dianping.com, REJECT
+DOMAIN, dxlvs.meituan.com, REJECT
+DOMAIN, dynamicf.sankuai.com, REJECT
+DOMAIN, live-monitor-broker.sankuai.com, REJECT
+DOMAIN, lx0.meituan.com, REJECT
+DOMAIN, r.dianping.com, REJECT
+DOMAIN, tte.meituan.com, REJECT
+DOMAIN-SUFFIX, lx.meituan.net, REJECT
+IP-CIDR, 101.32.16.204/32, REJECT
+IP-CIDR, 103.63.160.80/32, REJECT
+IP-CIDR, 119.29.126.137/32, REJECT

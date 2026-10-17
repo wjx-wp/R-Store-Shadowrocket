@@ -1,0 +1,10 @@
+#!name=R-Store Lite | 什么值得买 - SMZDM
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/S/什么值得买/smzdm.sgmodule
+
+[Rule]
+DOMAIN, analytics-api.smzdm.com, REJECT
+DOMAIN, api.zuihuimai.com, REJECT
+DOMAIN, ynuf.aliapp.org, REJECT

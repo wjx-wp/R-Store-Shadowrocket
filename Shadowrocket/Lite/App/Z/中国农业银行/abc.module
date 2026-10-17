@@ -1,0 +1,10 @@
+#!name=R-Store Lite | 中国农业银行 - ABCHINA
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/Z/中国农业银行/abc.sgmodule
+
+[Rule]
+DOMAIN, firefly.abchina.com.cn, REJECT
+DOMAIN, imc.abchina.com.cn, REJECT
+DOMAIN, msmp.abchina.com.cn, REJECT

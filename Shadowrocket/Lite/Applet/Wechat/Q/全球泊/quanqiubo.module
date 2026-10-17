@@ -1,0 +1,8 @@
+#!name=R-Store Lite | quanqiubo
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/Applet/Wechat/Q/全球泊/quanqiubo.sgmodule
+
+[Rule]
+DOMAIN, api.zysdsk.cn, REJECT

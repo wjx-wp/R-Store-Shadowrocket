@@ -1,0 +1,16 @@
+#!name=R-Store Lite | 高德地图 - AMAP
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/G/高德地图/amap.sgmodule
+
+[Rule]
+DOMAIN, amap-aos-info-nogw.amap.com, REJECT
+DOMAIN, apiinit.amap.com, REJECT
+DOMAIN, free-aos-cdn-image.amap.com, REJECT
+DOMAIN, icloud-amap.com, REJECT
+DOMAIN, optimus-ads.amap.com, REJECT
+DOMAIN-KEYWORD, ads.amap.com, REJECT
+DOMAIN-KEYWORD, logs.amap.com, REJECT
+DOMAIN-SUFFIX, adiu.amap.com, REJECT
+DOMAIN-SUFFIX, page.amap.com, REJECT

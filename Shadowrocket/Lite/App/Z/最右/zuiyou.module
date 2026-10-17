@@ -1,0 +1,8 @@
+#!name=R-Store Lite | 最右 - ZUIYOU
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/Z/最右/zuiyou.sgmodule
+
+[Rule]
+DOMAIN, adapi.izuiyou.com, REJECT

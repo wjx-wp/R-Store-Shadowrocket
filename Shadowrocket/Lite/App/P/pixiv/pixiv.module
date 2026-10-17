@@ -1,0 +1,8 @@
+#!name=R-Store Lite | pixiv - PIXIV
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/P/pixiv/pixiv.sgmodule
+
+[Rule]
+DOMAIN, open-pixon.ads-pixiv.net, REJECT

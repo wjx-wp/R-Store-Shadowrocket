@@ -1,0 +1,11 @@
+#!name=R-Store Lite | 讯飞输入法 - XUNFEI
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/X/讯飞输入法/xunfei.sgmodule
+
+[Rule]
+DOMAIN-KEYWORD, ossp.voicecloud.cn, REJECT
+DOMAIN-SUFFIX, iflyad.bj.openstorage.cn, REJECT
+DOMAIN-SUFFIX, voiceads.cn, REJECT
+DOMAIN-SUFFIX, voiceads.com, REJECT

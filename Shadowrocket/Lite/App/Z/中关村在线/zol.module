@@ -1,0 +1,24 @@
+#!name=R-Store Lite | 中关村在线 - ZOL
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/Z/中关村在线/zol.sgmodule
+
+[Rule]
+DOMAIN-SUFFIX, afp.zol-img.com.cn, REJECT
+DOMAIN-SUFFIX, apppv.zol.com.cn, REJECT
+DOMAIN-SUFFIX, cpro.zol.com.cn, REJECT
+DOMAIN-SUFFIX, dynamic.zol.com.cn, REJECT
+DOMAIN-SUFFIX, imp.zol.com.cn, REJECT
+DOMAIN-SUFFIX, js.zol.com.cn, REJECT
+DOMAIN-SUFFIX, mstat.zol.com.cn, REJECT
+DOMAIN-SUFFIX, pic.zol-img.com.cn, REJECT
+DOMAIN-SUFFIX, pv.zol.com.cn, REJECT
+DOMAIN-SUFFIX, pvc.zol.com.cn, REJECT
+DOMAIN-SUFFIX, pvm.zol.com.cn, REJECT
+DOMAIN-SUFFIX, pvmsite.zol.com.cn, REJECT
+DOMAIN-SUFFIX, pvnapp.zol.com.cn, REJECT
+DOMAIN-SUFFIX, pvsite.zol.com.cn, REJECT
+DOMAIN-SUFFIX, pvtest.zol.com.cn, REJECT
+DOMAIN-SUFFIX, wappv.zol.com.cn, REJECT
+DOMAIN-SUFFIX, ydjs.zol.com.cn, REJECT

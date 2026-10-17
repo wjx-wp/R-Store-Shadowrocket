@@ -1,0 +1,19 @@
+#!name=R-Store Lite | 七猫小说 - QUMAO
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/Q/七猫小说/qumao.sgmodule
+
+[Rule]
+DOMAIN, ad-drs-ipv6.52qumao.com, REJECT
+DOMAIN, ad-drs.52qumao.com, REJECT
+DOMAIN, ad.wtzw.com, REJECT
+DOMAIN, api-adx.52qumao.com, REJECT
+DOMAIN, drs-ipv6.wtzw.com, REJECT
+DOMAIN, fp-it.fengkongcloud.com, REJECT
+DOMAIN-KEYWORD, remad.qm989.com, REJECT
+DOMAIN-SUFFIX, 58iclick.com, REJECT
+DOMAIN-SUFFIX, ad.xelements.cn, REJECT
+DOMAIN-SUFFIX, adxvip.com, REJECT
+DOMAIN-SUFFIX, iggrowth.cn, REJECT
+DOMAIN-SUFFIX, yunxish.com, REJECT

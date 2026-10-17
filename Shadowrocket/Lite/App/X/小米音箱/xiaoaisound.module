@@ -1,0 +1,8 @@
+#!name=R-Store Lite | 小米音箱 - XIAOAISOUND
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/X/小米音箱/xiaoaisound.sgmodule
+
+[Rule]
+DOMAIN-SUFFIX, mistat.xiaomi.com, REJECT

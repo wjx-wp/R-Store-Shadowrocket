@@ -1,0 +1,10 @@
+#!name=R-Store Lite | keep - KEEP
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/K/keep/keep.sgmodule
+
+[Rule]
+DOMAIN, apm.gotokeep.com, REJECT
+DOMAIN, hc-ssp.sm.cn, REJECT
+DOMAIN, kad.gotokeep.com, REJECT

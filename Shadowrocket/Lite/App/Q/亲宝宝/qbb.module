@@ -1,0 +1,8 @@
+#!name=R-Store Lite | 亲宝宝 - QBB
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/Q/亲宝宝/qbb.sgmodule
+
+[Rule]
+DOMAIN-SUFFIX, apilog.qbb6.com, REJECT

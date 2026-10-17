@@ -1,0 +1,8 @@
+#!name=R-Store Lite | shansong
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/Applet/Wechat/S/闪送/shansong.sgmodule
+
+[Rule]
+DOMAIN, ads.ishansong.com, REJECT

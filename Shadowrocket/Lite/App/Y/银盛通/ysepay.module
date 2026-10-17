@@ -1,0 +1,8 @@
+#!name=R-Store Lite | 银盛通 - YSEPAY
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/Y/银盛通/ysepay.sgmodule
+
+[Rule]
+DOMAIN, ad.ysepay.com, REJECT

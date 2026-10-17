@@ -1,0 +1,10 @@
+#!name=R-Store Lite | 挖财记账 - WACAI
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/W/挖财记账/wacai.sgmodule
+
+[Rule]
+DOMAIN, adservice.sigmob.cn, REJECT
+DOMAIN, iadsdk.qtlcdn.com.cdnmg.com, REJECT
+DOMAIN-SUFFIX, tobidad.cn, REJECT

@@ -1,0 +1,9 @@
+#!name=R-Store Lite | bahecloud
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/Applet/Wechat/Z/智慧云停车管家/bahecloud.sgmodule
+
+[Rule]
+DOMAIN, djad.nmgyhxxkj.cn, REJECT
+DOMAIN, pro.dajuhl.com, REJECT

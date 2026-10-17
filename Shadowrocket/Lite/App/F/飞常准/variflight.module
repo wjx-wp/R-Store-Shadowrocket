@@ -1,0 +1,10 @@
+#!name=R-Store Lite | 飞常准 - VARIFLIGHT
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/F/飞常准/variflight.sgmodule
+
+[Rule]
+DOMAIN, adv-adlog.variflight.com, REJECT
+DOMAIN, adv-ads.variflight.com, REJECT
+DOMAIN, app-ad.variflight.com, REJECT

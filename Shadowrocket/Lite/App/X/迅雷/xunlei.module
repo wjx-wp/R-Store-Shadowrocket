@@ -1,0 +1,9 @@
+#!name=R-Store Lite | 迅雷 - XUNLEI
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/X/迅雷/xunlei.sgmodule
+
+[Rule]
+DOMAIN, adsp.xunlei.com, REJECT
+DOMAIN, etl.xlmc.sandai.net, REJECT

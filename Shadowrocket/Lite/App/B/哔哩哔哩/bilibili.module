@@ -1,0 +1,14 @@
+#!name=R-Store Lite | 哔哩哔哩 - BILIBILI(PINK)
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/B/哔哩哔哩/bilibili.sgmodule
+
+[Rule]
+DOMAIN, ad-api.morefreegame.com, REJECT
+DOMAIN, adtrack.qianwen.com, REJECT
+DOMAIN-KEYWORD, api.sobot.com, REJECT
+DOMAIN-SUFFIX, ad.bilibili.com, REJECT
+DOMAIN-SUFFIX, adcommon.bilibili.com, REJECT
+DOMAIN-SUFFIX, cm.game.bilibili.com, REJECT
+DOMAIN-SUFFIX, track.biligame.bilibili.com, REJECT

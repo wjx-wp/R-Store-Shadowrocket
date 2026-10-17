@@ -1,0 +1,8 @@
+#!name=R-Store Lite | 平安口袋银行 - SDB
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/P/平安口袋银行/sdb.sgmodule
+
+[Rule]
+DOMAIN, dwtracking.jk.cn, REJECT

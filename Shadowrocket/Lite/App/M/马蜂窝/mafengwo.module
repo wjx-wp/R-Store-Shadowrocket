@@ -1,0 +1,8 @@
+#!name=R-Store Lite | 马蜂窝 - MAFENGWO
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/M/马蜂窝/mafengwo.sgmodule
+
+[Rule]
+DOMAIN-SUFFIX, advert.mafengwo.cn, REJECT

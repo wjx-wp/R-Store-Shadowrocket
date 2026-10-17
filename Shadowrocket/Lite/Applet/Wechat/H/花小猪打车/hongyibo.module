@@ -1,0 +1,8 @@
+#!name=R-Store Lite | hongyibo
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/Applet/Wechat/H/花小猪打车/hongyibo.sgmodule
+
+[Rule]
+DOMAIN, api.hongyibo.com.cn, REJECT

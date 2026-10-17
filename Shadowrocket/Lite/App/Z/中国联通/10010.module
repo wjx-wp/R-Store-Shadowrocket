@@ -1,0 +1,8 @@
+#!name=R-Store Lite | 中国联通 - 10010
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/Z/中国联通/10010.sgmodule
+
+[Rule]
+DOMAIN-SUFFIX, ad.10010.com, REJECT

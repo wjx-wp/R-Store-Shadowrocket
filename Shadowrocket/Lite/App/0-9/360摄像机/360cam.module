@@ -1,0 +1,9 @@
+#!name=R-Store Lite | 360摄像机 - 360CAM
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/0-9/360摄像机/360cam.sgmodule
+
+[Rule]
+DOMAIN, ad.iot.360.cn, REJECT
+DOMAIN, ad.jia.360.cn, REJECT

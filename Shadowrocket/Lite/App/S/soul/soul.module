@@ -1,0 +1,18 @@
+#!name=R-Store Lite | soul - SOUL
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/S/soul/soul.sgmodule
+
+[Rule]
+DOMAIN, ad-h5-cdn.soulapp.cn, REJECT
+DOMAIN, ad-h5-station-cdn.soulapp.cn, REJECT
+DOMAIN, ad-r.soulapp.cn, REJECT
+DOMAIN, ad-reward.soulapp.cn, REJECT
+DOMAIN, soul-ad.soulapp.cn, REJECT
+DOMAIN-SUFFIX, cdn.soulapp.cn, REJECT
+IP-CIDR, 120.27.235.201/32, REJECT
+IP-CIDR, 121.196.197.147/32, REJECT
+IP-CIDR, 47.56.131.76/32, REJECT
+IP-CIDR, 47.97.215.55/32, REJECT
+IP-CIDR, 47.99.42.29/32, REJECT

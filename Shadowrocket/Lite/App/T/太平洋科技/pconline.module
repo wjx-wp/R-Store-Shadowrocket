@@ -1,0 +1,13 @@
+#!name=R-Store Lite | 太平洋科技 - PCONLINE
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/T/太平洋科技/pconline.sgmodule
+
+[Rule]
+DOMAIN, ad-analysis.pconline.com.cn, REJECT
+DOMAIN, iad0ssl.pcauto.com.cn, REJECT
+DOMAIN, iad0ssl.pconline.com.cn, REJECT
+DOMAIN, imgad0.pcauto.com.cn, REJECT
+DOMAIN, imgad0.pconline.com.cn, REJECT
+DOMAIN, ivy.pchouse.com.cn, REJECT

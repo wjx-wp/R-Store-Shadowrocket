@@ -1,0 +1,9 @@
+#!name=R-Store Lite | 中国银行 - BOC
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/Z/中国银行/boc.sgmodule
+
+[Rule]
+DOMAIN, iisp-oidea.mbs.boc.cn, REJECT
+DOMAIN, iisp.mbs.boc.cn, REJECT

@@ -1,0 +1,10 @@
+#!name=R-Store Lite | 黄油相机 - BYBUTTER
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/H/黄油相机/bybutter.sgmodule
+
+[Rule]
+DOMAIN-SUFFIX, adkwai.com, REJECT
+DOMAIN-SUFFIX, anythinktech.com, REJECT
+DOMAIN-SUFFIX, mob.com, REJECT

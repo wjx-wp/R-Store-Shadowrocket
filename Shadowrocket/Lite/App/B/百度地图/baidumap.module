@@ -1,0 +1,12 @@
+#!name=R-Store Lite | 百度地图 - BAIDUMAP
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/B/百度地图/baidumap.sgmodule
+
+[Rule]
+DOMAIN, afd.baidu.com, REJECT
+DOMAIN, afdconf.baidu.com, REJECT
+DOMAIN, httpdns.baidubce.com, REJECT
+DOMAIN, lc.map.baidu.com, REJECT
+IP-CIDR, 186.76.76.200/32, REJECT

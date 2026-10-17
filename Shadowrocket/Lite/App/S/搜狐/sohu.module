@@ -1,0 +1,20 @@
+#!name=R-Store Lite | 搜狐 - SOHU
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/S/搜狐/sohu.sgmodule
+
+[Rule]
+DOMAIN-SUFFIX, 3rd.t.sohu.com, REJECT
+DOMAIN-SUFFIX, 888.tv.sohu.com, REJECT
+DOMAIN-SUFFIX, ad.mail.sohu.com, REJECT
+DOMAIN-SUFFIX, ad.sohu.com, REJECT
+DOMAIN-SUFFIX, adnet.sohu.com, REJECT
+DOMAIN-SUFFIX, ads.sohu.com, REJECT
+DOMAIN-SUFFIX, aty.sohu.com, REJECT
+DOMAIN-SUFFIX, corp.sohu.com, REJECT
+DOMAIN-SUFFIX, cpc.sohu.com, REJECT
+DOMAIN-SUFFIX, go.sohu.com, REJECT
+DOMAIN-SUFFIX, hui.sohu.com, REJECT
+DOMAIN-SUFFIX, suvset.sohu.com, REJECT
+DOMAIN-SUFFIX, track.sohu.com, REJECT

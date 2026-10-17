@@ -1,0 +1,10 @@
+#!name=R-Store Lite | 叮咚买菜 - DDXQ
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/D/叮咚买菜/ddxq.sgmodule
+
+[Rule]
+DOMAIN, ddfs-public.ddimg.mobi, REJECT
+DOMAIN, rttrack.ddxq.mobi, REJECT
+DOMAIN, trackercollect.ddxq.mobi, REJECT

@@ -1,0 +1,13 @@
+#!name=R-Store Lite | 晓晓优选 - XXYX
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/X/晓晓优选/xxyx.sgmodule
+
+[Rule]
+DOMAIN-SUFFIX, 1rtb.net, REJECT
+DOMAIN-SUFFIX, ad.richmob.cn, REJECT
+DOMAIN-SUFFIX, adwangmai.com, REJECT
+DOMAIN-SUFFIX, datads.cn, REJECT
+DOMAIN-SUFFIX, fancyapi.com, REJECT
+DOMAIN-SUFFIX, yfanads.com, REJECT

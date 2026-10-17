@@ -1,0 +1,9 @@
+#!name=R-Store Lite | 58同城 - 58
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/0-9/58同城/58.sgmodule
+
+[Rule]
+DOMAIN, track.58.com, REJECT
+DOMAIN, tracklog.58.com, REJECT

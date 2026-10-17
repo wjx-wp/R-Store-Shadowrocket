@@ -1,0 +1,9 @@
+#!name=R-Store Lite | 同花顺 - TONGHUASHUN
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/T/同花顺/tonghuashun.sgmodule
+
+[Rule]
+DOMAIN, adm.10jqka.com.cn, REJECT
+DOMAIN, stat.10jqka.com.cn, REJECT

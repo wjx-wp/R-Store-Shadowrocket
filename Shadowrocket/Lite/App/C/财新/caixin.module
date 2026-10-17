@@ -1,0 +1,12 @@
+#!name=R-Store Lite | 财新 - CAIXIN
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/C/财新/caixin.sgmodule
+
+[Rule]
+DOMAIN, dolphin.caixin.com, REJECT
+DOMAIN, gg.caixin.com, REJECT
+DOMAIN-SUFFIX, apollo.caixin.com, REJECT
+DOMAIN-SUFFIX, logstat.caixin.com, REJECT
+DOMAIN-SUFFIX, promote.caixin.com, REJECT

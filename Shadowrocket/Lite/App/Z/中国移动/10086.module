@@ -1,0 +1,8 @@
+#!name=R-Store Lite | 中国移动 - 10086
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/Z/中国移动/10086.sgmodule
+
+[Rule]
+IP-CIDR, 120.240.95.37/32, REJECT

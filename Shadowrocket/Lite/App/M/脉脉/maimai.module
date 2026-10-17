@@ -1,0 +1,8 @@
+#!name=R-Store Lite | 脉脉 - MAIMAI
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/M/脉脉/maimai.sgmodule
+
+[Rule]
+DOMAIN-SUFFIX, track.mm.taou.com, REJECT

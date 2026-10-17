@@ -1,0 +1,10 @@
+#!name=R-Store Lite | 蜻蜓FM - QINGTING
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/Q/蜻蜓FM/qingting.sgmodule
+
+[Rule]
+DOMAIN, ad-cdn.qingting.fm, REJECT
+DOMAIN, ad.qingting.fm, REJECT
+DOMAIN, adlaunch.qingting.fm, REJECT

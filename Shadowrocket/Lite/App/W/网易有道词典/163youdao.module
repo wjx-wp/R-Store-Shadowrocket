@@ -1,0 +1,35 @@
+#!name=R-Store Lite | 网易有道词典 - 163YOUDAO
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/W/网易有道词典/163youdao.sgmodule
+
+[Rule]
+DOMAIN, gorgon.youdao.com, REJECT
+DOMAIN-SUFFIX, a.youdao.com, REJECT
+DOMAIN-SUFFIX, c.youdao.com, REJECT
+DOMAIN-SUFFIX, clkservice.mail.youdao.com, REJECT
+DOMAIN-SUFFIX, clkservice.union.youdao.com, REJECT
+DOMAIN-SUFFIX, clkservice.youdao.com, REJECT
+DOMAIN-SUFFIX, clkservice2.dict.youdao.com, REJECT
+DOMAIN-SUFFIX, conv.youdao.com, REJECT
+DOMAIN-SUFFIX, dsp-click.youdao.com, REJECT
+DOMAIN-SUFFIX, dsp-impr.youdao.com, REJECT
+DOMAIN-SUFFIX, dsp-impr2.youdao.com, REJECT
+DOMAIN-SUFFIX, dsp.youdao.com, REJECT
+DOMAIN-SUFFIX, gorgon.youdao.com, REJECT
+DOMAIN-SUFFIX, impservice-test.dictapp.youdao.com, REJECT
+DOMAIN-SUFFIX, impservice.dictapp.youdao.com, REJECT
+DOMAIN-SUFFIX, impservice.youdao.com, REJECT
+DOMAIN-SUFFIX, impservice2.youdao.com, REJECT
+DOMAIN-SUFFIX, impservicetest.dictapp.youdao.com, REJECT
+DOMAIN-SUFFIX, log-yex.youdao.com, REJECT
+DOMAIN-SUFFIX, log.yex.youdao.com, REJECT
+DOMAIN-SUFFIX, nc004x.corp.youdao.com, REJECT
+DOMAIN-SUFFIX, nc045x.corp.youdao.com, REJECT
+DOMAIN-SUFFIX, qt002x.corp.youdao.com, REJECT
+DOMAIN-SUFFIX, rlogs.youdao.com, REJECT
+DOMAIN-SUFFIX, tb060x.corp.youdao.com, REJECT
+DOMAIN-SUFFIX, tb104x.corp.youdao.com, REJECT
+DOMAIN-SUFFIX, union.youdao.com, REJECT
+DOMAIN-SUFFIX, ydpushserver.youdao.com, REJECT

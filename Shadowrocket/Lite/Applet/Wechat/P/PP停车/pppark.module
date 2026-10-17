@@ -1,0 +1,9 @@
+#!name=R-Store Lite | pppark
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/Applet/Wechat/P/PP停车/pppark.sgmodule
+
+[Rule]
+DOMAIN, ad-api.4pyun.com, REJECT
+DOMAIN, ad-files.4pyun.com, REJECT

@@ -1,0 +1,8 @@
+#!name=R-Store Lite | 省钱快报 - SQKB
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/S/省钱快报/sqkb.sgmodule
+
+[Rule]
+DOMAIN, log.17gwx.com, REJECT

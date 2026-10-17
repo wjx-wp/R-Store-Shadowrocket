@@ -1,0 +1,14 @@
+#!name=R-Store Lite | 虎牙直播 - HUYA
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/H/虎牙直播/huya.sgmodule
+
+[Rule]
+DOMAIN, business.msstatic.com, REJECT
+DOMAIN, huyafile.msstatic.com, REJECT
+DOMAIN, live-ads.huya.com, REJECT
+DOMAIN, livewebbs2.msstatic.com, REJECT
+DOMAIN, livewebbs2pcdn.msstatic.com, REJECT
+DOMAIN, pp-cdnfile2pcdn.msstatic.com, REJECT
+DOMAIN-SUFFIX, v1d.szbdyd.com, REJECT

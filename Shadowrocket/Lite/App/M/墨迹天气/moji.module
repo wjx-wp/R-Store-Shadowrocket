@@ -1,0 +1,13 @@
+#!name=R-Store Lite | 墨迹天气 - MOJI
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/M/墨迹天气/moji.sgmodule
+
+[Rule]
+DOMAIN, ad.api.moji.com, REJECT
+DOMAIN, adlaunch.moji.com, REJECT
+DOMAIN, ads.mojicdn.com, REJECT
+DOMAIN-SUFFIX, fds.api.moji.com, REJECT
+DOMAIN-SUFFIX, log.moji.com, REJECT
+DOMAIN-SUFFIX, me.api.moji.com, REJECT

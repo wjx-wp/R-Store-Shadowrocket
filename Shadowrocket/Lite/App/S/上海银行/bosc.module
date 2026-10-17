@@ -1,0 +1,8 @@
+#!name=R-Store Lite | 上海银行 - BOSC
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/S/上海银行/bosc.sgmodule
+
+[Rule]
+DOMAIN-SUFFIX, pmbanalysis.bosc.cn, REJECT

@@ -1,0 +1,9 @@
+#!name=R-Store Lite | 途虎养车 - TUHU
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/T/途虎养车/tuhu.sgmodule
+
+[Rule]
+DOMAIN, analytics.tuhu.com, REJECT
+DOMAIN, ta.tuhu.cn, REJECT

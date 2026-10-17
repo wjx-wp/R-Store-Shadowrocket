@@ -1,0 +1,8 @@
+#!name=R-Store Lite | 米家 - MIHOME
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/M/米家/mihome.sgmodule
+
+[Rule]
+DOMAIN, sdkconfig.ad.xiaomi.com, REJECT

@@ -1,0 +1,8 @@
+#!name=R-Store Lite | 小利生活 - XLSH
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/X/小利生活/xlsh.sgmodule
+
+[Rule]
+DOMAIN-KEYWORD, mpos-pic.helipay.com, REJECT

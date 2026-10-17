@@ -1,0 +1,8 @@
+#!name=R-Store Lite | 上海交通卡 - SPTCC
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/S/上海交通卡/sptcc.sgmodule
+
+[Rule]
+DOMAIN-SUFFIX, medproad.com, REJECT

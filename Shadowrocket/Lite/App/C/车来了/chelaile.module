@@ -1,0 +1,10 @@
+#!name=R-Store Lite | 车来了 - CHELAILE
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/C/车来了/chelaile.sgmodule
+
+[Rule]
+DOMAIN, ad.chelaile.net.cn, REJECT
+DOMAIN, atrace.chelaile.net.cn, REJECT
+DOMAIN, logs.chelaile.net.cn, REJECT

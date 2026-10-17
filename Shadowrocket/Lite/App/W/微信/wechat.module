@@ -1,0 +1,11 @@
+#!name=R-Store Lite | 微信 - WECHAT
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/W/微信/wechat.sgmodule
+
+[Rule]
+DOMAIN, badjs.weixinbridge.com, REJECT
+DOMAIN, cube.weixinbridge.com, REJECT
+DOMAIN, dns.weixin.qq.com.cn, REJECT
+DOMAIN-SUFFIX, wxs.qq.com, REJECT

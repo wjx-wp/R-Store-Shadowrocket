@@ -1,0 +1,22 @@
+#!name=R-Store Lite | 喜马拉雅 - XMLY
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/X/喜马拉雅/xmly.sgmodule
+
+[Rule]
+DOMAIN, adbehavior.ximalaya.com, REJECT
+DOMAIN, adwbs.ximalaya.com, REJECT
+DOMAIN-SUFFIX, ad.test.ximalaya.com, REJECT
+DOMAIN-SUFFIX, ad.ximalaya.com, REJECT
+DOMAIN-SUFFIX, adbehavior.wsa.ximalaya.com, REJECT
+DOMAIN-SUFFIX, adbs.ximalaya.com, REJECT
+DOMAIN-SUFFIX, adse.test.ximalaya.com, REJECT
+DOMAIN-SUFFIX, adse.wsa.ximalaya.com, REJECT
+DOMAIN-SUFFIX, adse.ximalaya.com, REJECT
+DOMAIN-SUFFIX, adsebs.ximalaya.com, REJECT
+DOMAIN-SUFFIX, adweb.test.ximalaya.com, REJECT
+DOMAIN-SUFFIX, adweb.ximalaya.com, REJECT
+DOMAIN-SUFFIX, linkeye.ximalaya.com, REJECT
+DOMAIN-SUFFIX, location.ximalaya.com, REJECT
+DOMAIN-SUFFIX, xdcs-collector.ximalaya.com, REJECT

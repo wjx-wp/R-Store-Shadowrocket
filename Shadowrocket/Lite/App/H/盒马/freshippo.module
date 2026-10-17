@@ -1,0 +1,19 @@
+#!name=R-Store Lite | 盒马 - FRESHIPPO
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/H/盒马/freshippo.sgmodule
+
+[Rule]
+IP-CIDR, 139.95.0.151/32, REJECT
+IP-CIDR, 139.95.4.98/32, REJECT
+IP-CIDR, 203.119.238.164/32, REJECT
+IP-CIDR, 203.119.238.63/32, REJECT
+IP-CIDR, 47.246.103.10/32, REJECT
+IP-CIDR, 47.246.103.9/32, REJECT
+IP-CIDR, 59.82.113.10/32, REJECT
+IP-CIDR, 59.82.113.219/32, REJECT
+IP-CIDR, 59.82.14.1/32, REJECT
+IP-CIDR, 59.82.14.161/32, REJECT
+IP-CIDR, 59.82.34.147/32, REJECT
+IP-CIDR, 59.82.34.255/32, REJECT

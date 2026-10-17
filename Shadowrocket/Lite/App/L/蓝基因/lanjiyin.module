@@ -1,0 +1,8 @@
+#!name=R-Store Lite | 蓝基因 - LANJIYIN
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/L/蓝基因/lanjiyin.sgmodule
+
+[Rule]
+DOMAIN-KEYWORD, medicine.lanjiyin.com.cn, REJECT

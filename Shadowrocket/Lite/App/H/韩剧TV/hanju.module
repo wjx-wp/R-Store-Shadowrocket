@@ -1,0 +1,9 @@
+#!name=R-Store Lite | 韩剧TV - HANJUTV
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/H/韩剧TV/hanju.sgmodule
+
+[Rule]
+DOMAIN, adx-os.bridgeturbo.com, REJECT
+DOMAIN, da.bridgeturbo.com, REJECT

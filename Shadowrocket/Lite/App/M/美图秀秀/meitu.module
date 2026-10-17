@@ -1,0 +1,13 @@
+#!name=R-Store Lite | 美图秀秀 - MEITU
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/M/美图秀秀/meitu.sgmodule
+
+[Rule]
+DOMAIN, adui.tg.meitu.com, REJECT
+DOMAIN, corp.meitu.com, REJECT
+DOMAIN, gg.meitu.com, REJECT
+DOMAIN, message.meitu.com, REJECT
+DOMAIN, stat.meitudata.com, REJECT
+DOMAIN, tuiguang.meitu.com, REJECT

@@ -1,0 +1,23 @@
+#!name=R-Store Lite | 腾讯视频 - TXTV
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/T/腾讯视频/txtv.sgmodule
+
+[Rule]
+DOMAIN, activity.video.qq.com, REJECT
+DOMAIN, info4.video.qq.com, REJECT
+DOMAIN, info6.video.qq.com, REJECT
+DOMAIN, sdkconfig.video.qq.com, REJECT
+DOMAIN, ugchsy.gtimg.com, REJECT
+DOMAIN, vv.video.qq.com, REJECT
+DOMAIN, wxsmsdy.video.qq.com, REJECT
+DOMAIN-KEYWORD, 1258344696.file.myqcloud.com, REJECT
+DOMAIN-SUFFIX, api.poll.video.qq.com, REJECT
+DOMAIN-SUFFIX, livep.l.ott.video.qq.com, REJECT
+DOMAIN-SUFFIX, news-l.play.ott.video.qq.com, REJECT
+DOMAIN-SUFFIX, video.mpush.qq.com, REJECT
+DOMAIN-SUFFIX, video.ureport.push.qq.com, REJECT
+DOMAIN-SUFFIX, video.wap.mpush.qq.com, REJECT
+DOMAIN-SUFFIX, vlive.qqvideo.tc.qq.com, REJECT
+IP-CIDR, 183.201.213.194/24, REJECT

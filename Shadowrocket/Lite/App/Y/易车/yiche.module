@@ -1,0 +1,9 @@
+#!name=R-Store Lite | 易车 - YICHE
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/Y/易车/yiche.sgmodule
+
+[Rule]
+DOMAIN, adx.yiche.com, REJECT
+DOMAIN, log.ycapp.yiche.com, REJECT

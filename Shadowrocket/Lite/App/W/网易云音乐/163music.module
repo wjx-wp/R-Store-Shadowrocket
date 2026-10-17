@@ -1,0 +1,16 @@
+#!name=R-Store Lite | 网易云音乐 - 163MUSIC
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/W/网易云音乐/163music.sgmodule
+
+[Rule]
+DOMAIN, admusicpic.music.126.net, REJECT
+DOMAIN, iadmat.nosdn.127.net, REJECT
+DOMAIN, iadmatapk.nosdn.127.net, REJECT
+DOMAIN, ipv4.music.163.com, REJECT
+DOMAIN, ipv6.music.163.com, REJECT
+DOMAIN-SUFFIX, 163jiasu.com, REJECT
+DOMAIN-SUFFIX, httpdns.music.163.com, REJECT
+DOMAIN-SUFFIX, iadmusicmat.music.126.net, REJECT
+DOMAIN-SUFFIX, iadmusicmatvideo.music.126.net, REJECT

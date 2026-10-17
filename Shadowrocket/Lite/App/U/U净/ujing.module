@@ -1,0 +1,8 @@
+#!name=R-Store Lite | U净 - UJING
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/U/U净/ujing.sgmodule
+
+[Rule]
+DOMAIN-SUFFIX, ads.zhinengxiyifang.cn, REJECT

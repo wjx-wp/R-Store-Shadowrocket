@@ -1,0 +1,10 @@
+#!name=R-Store Lite | speedtest - SPEEDTEST
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/S/speedtest/speedtest.sgmodule
+
+[Rule]
+DOMAIN, ads.pubmatic.com, REJECT
+DOMAIN, id.hadron.ad.gt, REJECT
+DOMAIN-KEYWORD, -adsystem.com, REJECT

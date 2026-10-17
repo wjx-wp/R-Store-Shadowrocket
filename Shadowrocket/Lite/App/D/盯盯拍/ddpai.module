@@ -1,0 +1,9 @@
+#!name=R-Store Lite | 盯盯拍 - DDPAI
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/D/盯盯拍/ddpai.sgmodule
+
+[Rule]
+DOMAIN, api.htp.ad-scope.com.cn, REJECT
+DOMAIN, init.sms.mob.com, REJECT

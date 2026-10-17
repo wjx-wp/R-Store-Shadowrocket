@@ -1,0 +1,9 @@
+#!name=R-Store Lite | 网上国网 - SGCC
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/W/网上国网/sgcc.sgmodule
+
+[Rule]
+DOMAIN, csc-apm.sgcc.com.cn, REJECT
+DOMAIN, mdap.mpaas.cn-hangzhou.aliyuncs.com, REJECT

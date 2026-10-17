@@ -1,0 +1,8 @@
+#!name=R-Store Lite | 同程旅行 - 17U
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/T/同程旅行/17u.sgmodule
+
+[Rule]
+DOMAIN, vstlog.17usoft.com, REJECT

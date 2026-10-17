@@ -1,0 +1,37 @@
+#!name=R-Store Lite | 微博 - WEIBO
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/W/微博/weibo.sgmodule
+
+[Rule]
+DOMAIN, adpinpai.video.weibocdn.com, REJECT
+DOMAIN, bootpreload.uve.weibo.com, REJECT
+DOMAIN, datacollection.uve.weibo.com, REJECT
+DOMAIN, huodong.weibo.cn, REJECT
+DOMAIN-KEYWORD, biz.weibo.com, REJECT
+DOMAIN-SUFFIX, ad.weibo.com, REJECT
+DOMAIN-SUFFIX, adimg.uve.weibo.com, REJECT
+DOMAIN-SUFFIX, adimg.vue.weibo.com, REJECT
+DOMAIN-SUFFIX, ads-d.viber.com, REJECT
+DOMAIN-SUFFIX, ads.aws.viber.com, REJECT
+DOMAIN-SUFFIX, ads.viber.com, REJECT
+DOMAIN-SUFFIX, alitui.weibo.com, REJECT
+DOMAIN-SUFFIX, alitui.weibo.com.cn, REJECT
+DOMAIN-SUFFIX, click.uve.weibo.com, REJECT
+DOMAIN-SUFFIX, dp.im.weibo.cn, REJECT
+DOMAIN-SUFFIX, dsp.edm.weibo.cn, REJECT
+DOMAIN-SUFFIX, fastimage.uve.weibo.com, REJECT
+DOMAIN-SUFFIX, game.weibo.cn, REJECT
+DOMAIN-SUFFIX, game.weibo.com, REJECT
+DOMAIN-SUFFIX, gw5.push.mcp.weibo.cn, REJECT
+DOMAIN-SUFFIX, gw6.push.mcp.weibo.cn, REJECT
+DOMAIN-SUFFIX, promote.biz.weibo.cn, REJECT
+DOMAIN-SUFFIX, sdkapp.uve.weibo.com, REJECT
+DOMAIN-SUFFIX, tui.weibo.com, REJECT
+DOMAIN-SUFFIX, wax.weibo.com, REJECT
+DOMAIN-SUFFIX, wax.weibo.com.cn, REJECT
+DOMAIN-SUFFIX, wbapp.uve.weibo.com, REJECT
+DOMAIN-SUFFIX, weibomingzi.com, REJECT
+DOMAIN-SUFFIX, widget.weibo.com, REJECT
+DOMAIN-SUFFIX, zymo.mps.weibo.com, REJECT

@@ -1,0 +1,28 @@
+#!name=R-Store Lite | 淘宝闪购 - TBTO
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/T/淘宝闪购/eleme.sgmodule
+
+[Rule]
+DOMAIN, app-monitor.ele.me, REJECT
+DOMAIN, cdn.ynuf.aliapp.org, REJECT
+DOMAIN, h-adashx.ut.ele.me, REJECT
+DOMAIN, highway-tb.ele.me, REJECT
+DOMAIN, wgo.mmstat.com, REJECT
+DOMAIN-KEYWORD, baichuan.taobao.com, REJECT
+DOMAIN-KEYWORD, o2o-ad-dev.oss-cn, REJECT
+IP-CIDR, 203.119.212.22/32, REJECT
+IP-CIDR, 59.82.120.166/32, REJECT
+IP-CIDR, 59.82.120.171/32, REJECT
+IP-CIDR, 59.82.120.210/32, REJECT
+IP-CIDR, 59.82.120.252/32, REJECT
+IP-CIDR, 59.82.120.33/32, REJECT
+IP-CIDR, 59.82.121.172/32, REJECT
+IP-CIDR, 59.82.121.215/32, REJECT
+IP-CIDR, 59.82.121.216/32, REJECT
+IP-CIDR, 59.82.121.222/32, REJECT
+IP-CIDR, 59.82.121.72/32, REJECT
+IP-CIDR, 59.82.133.157/32, REJECT
+IP-CIDR, 59.82.133.36/32, REJECT
+IP-CIDR, 59.82.133.78/32, REJECT

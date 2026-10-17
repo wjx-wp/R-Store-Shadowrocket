@@ -1,0 +1,8 @@
+#!name=R-Store Lite | 杭州市民卡 - HZSMK
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/H/杭州市民卡/hzsmk.sgmodule
+
+[Rule]
+DOMAIN, ads.iconntech.com, REJECT

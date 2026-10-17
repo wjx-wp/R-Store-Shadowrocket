@@ -1,0 +1,11 @@
+#!name=R-Store Lite | 快手 - KUAISHOU
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/K/快手/kuaishou.sgmodule
+
+[Rule]
+DOMAIN-SUFFIX, cm.ad.gifshow.com, REJECT
+DOMAIN-SUFFIX, cm.downloader.commercial.kuaishou.com, REJECT
+DOMAIN-SUFFIX, cm.kwad.com, REJECT
+DOMAIN-SUFFIX, e.kuaishou.com, REJECT

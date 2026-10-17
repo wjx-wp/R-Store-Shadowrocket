@@ -1,0 +1,8 @@
+#!name=R-Store Lite | duoduo
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/Applet/Wechat/D/朵朵校友圈/duoduo.sgmodule
+
+[Rule]
+DOMAIN-SUFFIX, ad.duoduo.link, REJECT

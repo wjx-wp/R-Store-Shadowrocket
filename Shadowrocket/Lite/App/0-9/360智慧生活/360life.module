@@ -1,0 +1,8 @@
+#!name=R-Store Lite | 360智慧生活 - 360LIFE
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/0-9/360智慧生活/360life.sgmodule
+
+[Rule]
+DOMAIN, ad.iot.360.cn, REJECT

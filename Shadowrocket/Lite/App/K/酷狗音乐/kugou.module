@@ -1,0 +1,50 @@
+#!name=R-Store Lite | 酷狗音乐 - KUGOU
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/K/酷狗音乐/kugou.sgmodule
+
+[Rule]
+DOMAIN, ads.service.kugou.com, REJECT
+DOMAIN, adservice.kugou.com, REJECT
+DOMAIN, adserviceretry.kglink.cn, REJECT
+DOMAIN, adserviceretry.kugou.com, REJECT
+DOMAIN, log.web.kugou.com, REJECT
+DOMAIN, mobilelog.kugou.com, REJECT
+DOMAIN, serveraddr.service.kugou.com, REJECT
+DOMAIN, splashimgbssdl.yun.kugou.com, REJECT
+DOMAIN-KEYWORD, c1img.ali.kugou.com, REJECT
+DOMAIN-KEYWORD, logwebs.kugou.com, REJECT
+DOMAIN-KEYWORD, nbcollect.kugou.com, REJECT
+DOMAIN-KEYWORD, nbcollectretry.kugou.com, REJECT
+DOMAIN-KEYWORD, searchrecommend.kugou.com, REJECT
+DOMAIN-KEYWORD, stat.kugou.com, REJECT
+DOMAIN-KEYWORD, statbak.kugou.com, REJECT
+DOMAIN-KEYWORD, tracker.kugou.com, REJECT
+DOMAIN-KEYWORD, trackercdnbj.kugou.com, REJECT
+DOMAIN-SUFFIX, adsfile.bssdlbig.kugou.com, REJECT
+DOMAIN-SUFFIX, adsfilebssdlbig.ali.kugou.com, REJECT
+DOMAIN-SUFFIX, channel.fanxing.kugou.com, REJECT
+DOMAIN-SUFFIX, d.kugou.com, REJECT
+DOMAIN-SUFFIX, downmobile.kugou.com, REJECT
+DOMAIN-SUFFIX, gad.kugou.com, REJECT
+DOMAIN-SUFFIX, game.kugou.com, REJECT
+DOMAIN-SUFFIX, gamebox.kugou.com, REJECT
+DOMAIN-SUFFIX, gcapi.sy.kugou.com, REJECT
+DOMAIN-SUFFIX, gg.kugou.com, REJECT
+DOMAIN-SUFFIX, install.kugou.com, REJECT
+DOMAIN-SUFFIX, install2.kugou.com, REJECT
+DOMAIN-SUFFIX, kgstaticdlbssdlbig.tx.kugou.com, REJECT
+DOMAIN-SUFFIX, minidcsc.kugou.com, REJECT
+DOMAIN-SUFFIX, mo.kugou.com, REJECT
+DOMAIN-SUFFIX, msg.mobile.kugou.com, REJECT
+DOMAIN-SUFFIX, mvads.kugou.com, REJECT
+DOMAIN-SUFFIX, p.kugou.com, REJECT
+DOMAIN-SUFFIX, push.mobile.kugou.com, REJECT
+DOMAIN-SUFFIX, rt-m.kugou.com, REJECT
+DOMAIN-SUFFIX, rtmonitor.kugou.com, REJECT
+DOMAIN-SUFFIX, rtmretry.kugou.com, REJECT
+DOMAIN-SUFFIX, sdn.kugou.com, REJECT
+DOMAIN-SUFFIX, song.fanxing.kugou.com, REJECT
+DOMAIN-SUFFIX, update.mobile.kugou.com, REJECT
+DOMAIN-SUFFIX, youxi.kugou.com, REJECT

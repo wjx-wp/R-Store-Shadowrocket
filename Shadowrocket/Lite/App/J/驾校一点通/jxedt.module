@@ -1,0 +1,13 @@
+#!name=R-Store Lite | 驾校一点通 - JXEDT
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/J/驾校一点通/jxedt.sgmodule
+
+[Rule]
+DOMAIN, richmanapi.jxedt.com, REJECT
+DOMAIN, richmanapi.ksedt.com, REJECT
+DOMAIN, richmanmain.jxedt.com, REJECT
+DOMAIN, richmanmain.ksedt.com, REJECT
+DOMAIN, richmanrules.jxedt.com, REJECT
+DOMAIN, richmanrules.ksedt.com, REJECT

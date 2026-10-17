@@ -1,0 +1,10 @@
+#!name=R-Store Lite | 支付宝 - ALIPAY
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/Z/支付宝/alipay.sgmodule
+
+[Rule]
+DOMAIN, amdc-sibling.alipay.com.cn, REJECT
+DOMAIN, mobiledc.stable.alipay.net, REJECT
+DOMAIN-KEYWORD, loggw.alipay.com, REJECT

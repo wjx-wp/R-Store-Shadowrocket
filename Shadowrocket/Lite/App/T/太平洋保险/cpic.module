@@ -1,0 +1,8 @@
+#!name=R-Store Lite | 太平洋保险 - CPIC
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/T/太平洋保险/cpic.sgmodule
+
+[Rule]
+DOMAIN, a.cpic.com.cn, REJECT

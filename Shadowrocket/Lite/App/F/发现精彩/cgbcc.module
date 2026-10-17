@@ -1,0 +1,8 @@
+#!name=R-Store Lite | 发现精彩 - 95508
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/F/发现精彩/cgbcc.sgmodule
+
+[Rule]
+DOMAIN, union.chinalifeonline.com.cn, REJECT

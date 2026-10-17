@@ -1,0 +1,12 @@
+#!name=R-Store Lite | 趣兜风 - QDF
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/Q/趣兜风/qdf.sgmodule
+
+[Rule]
+DOMAIN, lwlog.laiwang.com, REJECT
+DOMAIN-SUFFIX, cpatrk.net, REJECT
+DOMAIN-SUFFIX, mobsurl.com, REJECT
+DOMAIN-SUFFIX, yksdks.com, REJECT
+IP-CIDR, 114.67.227.198/32, REJECT

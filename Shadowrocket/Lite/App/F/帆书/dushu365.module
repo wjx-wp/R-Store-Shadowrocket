@@ -1,0 +1,8 @@
+#!name=R-Store Lite | 帆书(樊登读书) - DUSHU365
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/F/帆书/dushu365.sgmodule
+
+[Rule]
+DOMAIN, popup.dushu365.com, REJECT

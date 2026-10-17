@@ -1,0 +1,9 @@
+#!name=R-Store Lite | 斗鱼直播 - DOUYU
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/D/斗鱼直播/douyu.sgmodule
+
+[Rule]
+DOMAIN, stun1.douyucdn.cn, REJECT
+DOMAIN, stun1.qvb.qcloud.com, REJECT

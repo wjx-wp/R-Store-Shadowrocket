@@ -1,0 +1,8 @@
+#!name=R-Store Lite | 360儿童卫士 - 360KIDS
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/0-9/360儿童卫士/360kids.sgmodule
+
+[Rule]
+DOMAIN, ad.life.360.cn, REJECT

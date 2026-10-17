@@ -1,0 +1,8 @@
+#!name=R-Store Lite | 网易LOFTER - LOFTER
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/W/网易Lofter/lofter.sgmodule
+
+[Rule]
+DOMAIN-SUFFIX, ad.lofter.com, REJECT

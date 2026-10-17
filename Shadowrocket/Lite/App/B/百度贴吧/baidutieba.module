@@ -1,0 +1,10 @@
+#!name=R-Store Lite | 百度贴吧 - BAIDUTIEBA
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/B/百度贴吧/baidutieba.sgmodule
+
+[Rule]
+DOMAIN, afd.baidu.com, REJECT
+DOMAIN, mobads.baidu.com, REJECT
+IP-CIDR, 180.76.76.200/32, REJECT

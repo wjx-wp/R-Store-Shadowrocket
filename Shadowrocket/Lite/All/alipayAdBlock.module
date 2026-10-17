@@ -1,0 +1,11 @@
+#!name=R-Store Lite | 支付宝小程序-广告拦截合集
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/All/alipayAdBlock.sgmodule
+
+[Rule]
+DOMAIN, abapi.hellobike.com, REJECT
+DOMAIN, apmgw.hellobike.com, REJECT
+DOMAIN, cdn.hellobike.com, REJECT
+DOMAIN, ip.hellobike.com, REJECT

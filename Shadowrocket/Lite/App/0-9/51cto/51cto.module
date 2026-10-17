@@ -1,0 +1,9 @@
+#!name=R-Store Lite | 51cto - 51CTO
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/0-9/51cto/51cto.sgmodule
+
+[Rule]
+DOMAIN, smartop-sdkapi-ipv6.jiguang.cn, REJECT
+DOMAIN, smartop-sdkapi.jiguang.cn, REJECT

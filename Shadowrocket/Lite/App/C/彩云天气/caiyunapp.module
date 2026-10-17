@@ -1,0 +1,9 @@
+#!name=R-Store Lite | 彩云天气 - CAIYUNAPP
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/C/彩云天气/caiyunapp.sgmodule
+
+[Rule]
+DOMAIN, ad.cyapi.cn, REJECT
+DOMAIN, gather.colorfulclouds.net, REJECT

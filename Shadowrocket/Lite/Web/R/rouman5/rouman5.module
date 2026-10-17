@@ -1,0 +1,10 @@
+#!name=R-Store Lite | rouman5
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/Web/R/rouman5/rouman5.sgmodule
+
+[Rule]
+DOMAIN-SUFFIX, bg4nxu2u5t.com, REJECT
+DOMAIN-SUFFIX, lkpmprksau.com, REJECT
+DOMAIN-SUFFIX, rou3.xyz, REJECT
