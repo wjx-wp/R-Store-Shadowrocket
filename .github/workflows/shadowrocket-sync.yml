@@ -1,0 +1,124 @@
+name: Sync R-Store to Shadowrocket
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 2,14 * * *"
+  push:
+    branches: [main]
+    paths:
+      - "scripts/shadowrocket_build.py"
+      - "tests/test_shadowrocket_build.py"
+      - ".github/workflows/shadowrocket-sync.yml"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: shadowrocket-sync-main
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    if: github.repository == 'wjx-wp/R-Store-Shadowrocket'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout own fork
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Validate converter before using upstream data
+        run: |
+          set -euo pipefail
+          python3 -m compileall -q scripts/shadowrocket_build.py tests/
+          python3 -m unittest discover -s tests -v
+
+      - name: Clone official upstream at fixed HEAD
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --depth=1 --single-branch --branch main \
+            https://github.com/zirawell/R-Store.git "$RUNNER_TEMP/rstore-upstream"
+          upstream_sha="$(git -C "$RUNNER_TEMP/rstore-upstream" rev-parse HEAD)"
+          [[ "$upstream_sha" =~ ^[0-9a-f]{40}$ ]]
+          echo "UPSTREAM_SHA=$upstream_sha" >> "$GITHUB_ENV"
+          echo "Upstream revision: $upstream_sha" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Build and validate standalone Shadowrocket modules
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 scripts/shadowrocket_build.py build \
+            --source "$RUNNER_TEMP/rstore-upstream/Rule/Surge/Adblock" \
+            --scripts "$RUNNER_TEMP/rstore-upstream/Res/Scripts/AntiAd" \
+            --out "$RUNNER_TEMP/shadowrocket-out" \
+            --sha "$UPSTREAM_SHA"
+          python3 scripts/shadowrocket_build.py check \
+            --out "$RUNNER_TEMP/shadowrocket-out"
+
+      - name: Risk gate
+        id: gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 scripts/shadowrocket_build.py gate \
+            --old Shadowrocket \
+            --new "$RUNNER_TEMP/shadowrocket-out" \
+            --github-output "$GITHUB_OUTPUT"
+          {
+            echo "## Conversion risk assessment"
+            echo '~~~'
+            cat "$RUNNER_TEMP/shadowrocket-out/decision.txt"
+            echo '~~~'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Auto-publish safe changes; open review for sensitive changes
+        if: steps.gate.outputs.decision != 'none'
+        shell: bash
+        env:
+          DECISION: ${{ steps.gate.outputs.decision }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p Shadowrocket
+          rsync -a --delete --exclude=decision.txt \
+            "$RUNNER_TEMP/shadowrocket-out/" Shadowrocket/
+          git add -A Shadowrocket
+          if git diff --cached --quiet; then
+            echo "No staged output changes."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          shortsha="$(printf '%s' "$UPSTREAM_SHA" | cut -c1-12)"
+          git commit -m "build(shadowrocket): sync upstream $shortsha"
+
+          if [[ "$DECISION" == "auto" ]]; then
+            git push origin HEAD:main
+            echo "Static-only update published to main." >> "$GITHUB_STEP_SUMMARY"
+          elif [[ "$DECISION" == "review" ]]; then
+            branch="sync-review-$shortsha"
+            if git ls-remote --exit-code --heads origin "$branch" >/dev/null 2>&1; then
+              echo "Review branch $branch already exists; skipped duplicate." >> "$GITHUB_STEP_SUMMARY"
+              exit 0
+            fi
+            git switch -c "$branch"
+            git push -u origin "$branch"
+            echo "Review branch: $branch" >> "$GITHUB_STEP_SUMMARY"
+            if ! gh pr create \
+              --repo "$GITHUB_REPOSITORY" \
+              --head "$branch" \
+              --base main \
+              --title "Review upstream Shadowrocket changes $shortsha" \
+              --body "Automated compile passed tests, but security gate detected upstream script changes, new MITM scope, new response mappings, or removals. Review Shadowrocket/manifest.json and module diffs before merging. No upstream JavaScript is executed by generated modules."; then
+              echo "::warning::Unable to open PR automatically. Review the published branch on GitHub and enable Actions permission to create pull requests if desired."
+              echo "Pull request creation requires repository Actions setting 'Allow GitHub Actions to create and approve pull requests'." >> "$GITHUB_STEP_SUMMARY"
+            fi
+          else
+            echo "::error::Unexpected gate decision: $DECISION"
+            exit 1
+          fi
