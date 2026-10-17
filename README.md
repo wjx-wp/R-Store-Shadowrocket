@@ -1,3 +1,17 @@
+# R-Store for Shadowrocket（小火箭自动适配）
+
+本 Fork 已增加 **Shadowrocket 去广告模块自动转换与定期同步**。原项目 [zirawell/R-Store](https://github.com/zirawell/R-Store) 的规则、版权及许可证均予保留。**不会改变你的小火箭 VMess 节点和订阅**。
+
+- **[Shadowrocket 安装教程与安全说明](SHADOWROCKET.md)**（推荐先看）
+- **[Lite 规则目录](Shadowrocket/Lite/App)**：只拦截域名/IP，不使用 HTTPS 解密、不执行 JavaScript（推荐）
+- **[完整网络规则目录](Shadowrocket/App)**：含可静态适配的 URL Rewrite / Map Local，不含上游 JS
+- **[转换清单与审核报告](Shadowrocket/manifest.json)**：每个模块 SHA-256、上游版本和遗漏说明
+- **[自动同步运行记录](https://github.com/wjx-wp/R-Store-Shadowrocket/actions)**：每日两次同步，敏感变化人工审核
+
+**注意：** 这不是 100% 功能移植。上游 JS、二进制响应处理等不会自动转换；生成模块通过 CI 静态检查，但没有逐个 App 的真机验证。以下保留原版 R-Store 说明，其 QuanX / Surge 链接仍指向原仓库；自动生成的 Shadowrocket 结果位于本 Fork 的 Shadowrocket 文件夹。
+
+---
+
 ![](https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Images/R-Store_Header.png)
 # R-Store
 
