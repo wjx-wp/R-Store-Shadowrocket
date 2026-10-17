@@ -107,7 +107,9 @@ def parse_maps(lines: list[str], rejected: list[str]) -> list[str]:
     for line in lines:
         m = fmt.fullmatch(line)
         if m and m.group(1).startswith(("^http", "http")) and m.group(3) in ("", "{}", "[]"):
-            out.append(line)
+            # Shadowrocket supports text/file/tiny-gif/base64, not Surge json.
+            # Keep the harmless inline JSON payload and convert its response type.
+            out.append(line.replace("data-type=json", "data-type=text"))
         else:
             rejected.append("unsupported/remote Map Local payload")
     return sorted(set(out))
