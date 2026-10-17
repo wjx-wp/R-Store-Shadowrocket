@@ -204,6 +204,10 @@ def validate_output(out: Path) -> dict:
     if len(files) < 25:
         raise ValueError("too few modules generated; refusing catastrophic publish")
     for file in files:
+        key = file.relative_to(out).as_posix()
+        meta = manifest["modules"].get(key)
+        if not meta or meta.get("sha256") != digest(file.read_bytes()):
+            raise ValueError(f"module SHA-256 checksum mismatch: {key}")
         if file.is_symlink():
             raise ValueError(f"symlink in output: {file}")
         data = file.read_text(encoding="utf-8")
@@ -211,6 +215,8 @@ def validate_output(out: Path) -> dict:
             raise ValueError(f"executable script in static output: {file}")
         if "hostname =" in data and "hostname = %APPEND% " not in data:
             raise ValueError(f"non-additive MITM: {file}")
+        if key.startswith("Lite/") and any(tag in data for tag in ("[MITM]", "[URL Rewrite]", "[Map Local]", "[Script]")):
+            raise ValueError(f"Lite module must only have [Rule] directives: {key}")
         allowed = set(SECTIONS)
         for sec in re.findall(r"^\[([^\]]+)\]$", data, re.M):
             if sec not in allowed:
@@ -246,7 +252,33 @@ def build(source: Path, scripts: Path, out: Path, sha: str) -> None:
             raise ValueError(f"duplicate destination: {dest_rel}")
         dest.write_text(converted, encoding="utf-8")
         info[dest_rel] = {"upstream": relative.as_posix(), "sha256": digest(converted.encode()),
-                          **stats}
+                          "variant": "network", **stats}
+        # Lite variant adds ONLY inert domain/IP blocking rules: no certificate,
+        # response interception, TLS decryption, remote script, or dynamic content.
+        lite_rules = normal_sections(converted).get("Rule", [])
+        if lite_rules:
+            lite_rel = "Lite/" + dest_rel
+            lite_dest = out / lite_rel
+            lite_dest.parent.mkdir(parents=True, exist_ok=True)
+            lite_name = next((line.split("=", 1)[1] for line in converted.splitlines()
+                              if line.startswith("#!name=")), relative.stem)
+            lite_name = lite_name.replace("R-Store | ", "R-Store Lite | ", 1)
+            lite_data = "\n".join([
+                f"#!name={lite_name}",
+                "#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.",
+                "#!author=zirawell (upstream) & wjx-wp (adaptation)",
+                "#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket",
+                f"# upstream: Rule/Surge/Adblock/{relative.as_posix()}",
+                "",
+                "[Rule]",
+                *lite_rules, "",
+            ])
+            lite_dest.write_text(lite_data, encoding="utf-8")
+            info[lite_rel] = {
+                "upstream": relative.as_posix(), "sha256": digest(lite_data.encode()),
+                "variant": "lite", "rules": len(lite_rules), "rewrites": 0, "maps": 0,
+                "mitm_hosts": 0, "scripts_omitted": stats["scripts_omitted"], "rejected": [],
+            }
     manifest = {
         "schema": 1,
         "source_repo": "zirawell/R-Store",
@@ -256,7 +288,7 @@ def build(source: Path, scripts: Path, out: Path, sha: str) -> None:
         "skipped_modules": skipped,
         "scripts_sha256": safe_script_hashes(scripts),
         "modules": info,
-        "note": "Network-only conversions; scripts are never executed or fetched by output",
+        "note": "Network and Lite variants; upstream scripts are never executed or fetched by generated modules",
     }
     (out / "manifest.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8"
@@ -289,6 +321,11 @@ def gate(old: Path, new: Path) -> tuple[str, list[str]]:
     removed = sorted(set(old_modules) - set(new_modules))
     if removed:
         reasons.append(f"deleted existing modules: {len(removed)}")
+    added = sorted(set(new_modules) - set(old_modules))
+    for path in added:
+        data = new_modules[path].read_text(encoding="utf-8")
+        if mitm_set(data) or map_set(data):
+            reasons.append(f"{path}: newly introduced HTTPS decryption or local response mapping")
     if old_manifest["scripts_sha256"] != new_manifest["scripts_sha256"]:
         reasons.append("upstream JavaScript contents changed: requires human audit")
     for path in sorted(set(old_modules) & set(new_modules)):
