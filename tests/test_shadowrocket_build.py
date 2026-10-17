@@ -1,4 +1,5 @@
 """Regression and security tests for the fail-closed compiler."""
+import hashlib
 import json
 import tempfile
 import unittest
@@ -13,6 +14,7 @@ from scripts.shadowrocket_build import (
     parse_mitm,
     parse_rewrites,
     parse_rules,
+    output_path,
     validate_output,
 )
 
@@ -110,12 +112,29 @@ hostname= %APPEND% api.example.com
                 + "\n"
             )
             file.write_text(content, encoding="utf-8")
-            modules[name] = {"sha256": "fixture"}
+            modules[name] = {"sha256": hashlib.sha256(content.encode()).hexdigest()}
         (root / "manifest.json").write_text(json.dumps({
             "generated_modules": 25,
             "modules": modules,
             "scripts_sha256": {"weibo.js": script_hash}
         }), encoding="utf-8")
+
+    def test_category_output_paths(self):
+        self.assertEqual(output_path(Path("Applet/Wechat/B/便利蜂/a.sgmodule")).as_posix(),
+                         "Applet/Wechat/B/便利蜂/a.module")
+        self.assertEqual(output_path(Path("Applet/Alipay/A/a.sgmodule")).as_posix(),
+                         "Applet/Alipay/A/a.module")
+        self.assertEqual(output_path(Path("Web/W/site.sgmodule")).as_posix(),
+                         "Web/W/site.module")
+
+    def test_invalid_checksum_rejected(self):
+        with TemporaryDirectory() as d:
+            folder = Path(d)
+            self.make_tree(folder)
+            module = folder / "App/T/test1.module"
+            module.write_text(module.read_text() + "tamper", encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "checksum"):
+                validate_output(folder)
 
     def test_gate_no_change(self):
         with TemporaryDirectory() as d:
