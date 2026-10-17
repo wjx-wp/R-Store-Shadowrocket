@@ -1,0 +1,41 @@
+name: Validate Shadowrocket Converter
+
+on:
+  push:
+    branches: [main, "sync-review-*"]
+    paths:
+      - "scripts/**"
+      - "tests/**"
+      - "Shadowrocket/**"
+      - ".github/workflows/**"
+  pull_request:
+    paths:
+      - "scripts/**"
+      - "tests/**"
+      - "Shadowrocket/**"
+      - ".github/workflows/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Python syntax
+        run: python3 -m compileall -q scripts/shadowrocket_build.py tests/
+      - name: Unit tests
+        run: python3 -m unittest discover -s tests -v
+      - name: Validate committed modules if present
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ -e Shadowrocket/manifest.json ]]; then
+            python3 scripts/shadowrocket_build.py check --out Shadowrocket
+          else
+            echo "No generated modules published yet; run Sync workflow."
+          fi
