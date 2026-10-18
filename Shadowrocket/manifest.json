@@ -1,5 +1,5 @@
 {
-  "generated_modules": 795,
+  "generated_modules": 796,
   "modules": {
     "All/alipayAdBlock.module": {
       "maps": 10,
@@ -19,7 +19,7 @@
       "variant": "network"
     },
     "All/allAdBlock.module": {
-      "maps": 962,
+      "maps": 963,
       "mitm_hosts": 0,
       "rejected": [
         "invalid/sensitive domain",
@@ -196,7 +196,7 @@
       "rewrites": 653,
       "rules": 1420,
       "scripts_omitted": 305,
-      "sha256": "1f6f69dcbe5db4544620e60207ff22d59cb948e4b6247f82a0b882594b87e834",
+      "sha256": "f8ce5de6a7ee0741af570f08c8e8abf347b6192e68e4f8b6ad35fdfa3ee319ff",
       "unsupported": {
         "Body Rewrite": 63,
         "Header Rewrite": 3,
@@ -387,7 +387,7 @@
       "variant": "network"
     },
     "All/wechatAdBlock.module": {
-      "maps": 161,
+      "maps": 162,
       "mitm_hosts": 0,
       "rejected": [
         "unsupported/non-blocking URL rewrite",
@@ -400,7 +400,7 @@
       "rewrites": 34,
       "rules": 19,
       "scripts_omitted": 25,
-      "sha256": "212e5ac29701f72ec6df11fca6c3201be9228f7e562bf75010122216a89b8e49",
+      "sha256": "f76a7e17b0b6fced4069e238e5ce2dc4a74dd0879282dacde3b52f063beb9863",
       "unsupported": {
         "Body Rewrite": 11,
         "Script": 25
@@ -7591,6 +7591,18 @@
       "upstream": "Applet/Wechat/J/京东购物/jd.sgmodule",
       "variant": "network"
     },
+    "Applet/Wechat/J/嘉会医疗/jiahui.module": {
+      "maps": 1,
+      "mitm_hosts": 1,
+      "rejected": [],
+      "rewrites": 0,
+      "rules": 0,
+      "scripts_omitted": 0,
+      "sha256": "509530ded1988f4c0b3e7540bfaae758ac1f8c7737be280a298e53694430a776",
+      "unsupported": {},
+      "upstream": "Applet/Wechat/J/嘉会医疗/jiahui.sgmodule",
+      "variant": "network"
+    },
     "Applet/Wechat/J/极兔快递/jtexpress.module": {
       "maps": 1,
       "mitm_hosts": 1,
@@ -10727,7 +10739,7 @@
       "unsupported": {}
     }
   },
-  "source_commit": "4256954d7832f9a2ae2184566f377f16797fd03e",
+  "source_commit": "b41120d9434c4382cbea97153573a0ab9daae321",
   "source_repo": "zirawell/R-Store",
-  "source_surge_modules": 682
+  "source_surge_modules": 683
 }
