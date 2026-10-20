@@ -2169,7 +2169,7 @@ IP-CIDR6, 2402:db40:5100:1011::5/128, REJECT
 ^https?:\/\/acs\.m\.shyhhema\.com\/h5\/mtop\.wdk\.fc\.recommend\.feeds data-type=text data="{}" status-code=200
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv data-type=text data="{}" status-code=200
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimusic\.common\.mobileservice\.startinit data-type=text data="{}" status-code=200
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.damai\.wireless\.home\.welcome data-type=text data="" status-code=200
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.damai\.wireless\.home\.(?>welcome|float) data-type=text data="" status-code=200
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.life\.popup\.get\/ data-type=text data="{}" status-code=200
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.gateway\.get data-type=text data="{}" status-code=200
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome data-type=text data="{}" status-code=200
@@ -2243,6 +2243,7 @@ IP-CIDR6, 2402:db40:5100:1011::5/128, REJECT
 ^https?:\/\/api\.huachenjie\.com\/run-front\/(ad|ai\/getAICategory|home\/sports\/getPopup) data-type=text data="{}" status-code=200
 ^https?:\/\/api\.indeedpower\.com\/v\d\/m\/edu\/module\/homepage_banner\/\?randomStr data-type=text data="{}" status-code=200
 ^https?:\/\/api\.intsig\.net\/user\/cs\/operating\/app\/get_startpic\/ data-type=text data="" status-code=200
+^https?:\/\/api\.jiahui\.com\/app-rest\/app\/notice\/getMiniAppNotice data-type=text data="{}" status-code=200
 ^https?:\/\/api\.k\.sohu\.com\/api\/news\/adsense data-type=text data="" status-code=200
 ^https?:\/\/api\.kuaidihelp\.com\/g_order_core\/v\d\/mina\/User\/getBannerList data-type=text data="{}" status-code=200
 ^https?:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v\d\/ecommerce-user\/get_shopping_info\? data-type=text data="{}" status-code=200

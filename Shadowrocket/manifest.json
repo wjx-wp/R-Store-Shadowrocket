@@ -1,5 +1,5 @@
 {
-  "generated_modules": 795,
+  "generated_modules": 796,
   "modules": {
     "All/alipayAdBlock.module": {
       "maps": 10,
@@ -19,7 +19,7 @@
       "variant": "network"
     },
     "All/allAdBlock.module": {
-      "maps": 962,
+      "maps": 963,
       "mitm_hosts": 0,
       "rejected": [
         "invalid/sensitive domain",
@@ -196,7 +196,7 @@
       "rewrites": 653,
       "rules": 1420,
       "scripts_omitted": 305,
-      "sha256": "1f6f69dcbe5db4544620e60207ff22d59cb948e4b6247f82a0b882594b87e834",
+      "sha256": "472e8918251082f52a686e68309a76e93efd1f94ed7f19e4eb383d28f537f56c",
       "unsupported": {
         "Body Rewrite": 63,
         "Header Rewrite": 3,
@@ -377,7 +377,7 @@
       "rewrites": 614,
       "rules": 1394,
       "scripts_omitted": 279,
-      "sha256": "2254b8db598f7d1f4c5f26c2a3ff98c72066760fdb8a9050a1557846e934a671",
+      "sha256": "5542c552bc28567d24fcb76722f9eb8db5a28dbb92f2852c385c44ca9e373715",
       "unsupported": {
         "Body Rewrite": 50,
         "Header Rewrite": 3,
@@ -387,7 +387,7 @@
       "variant": "network"
     },
     "All/wechatAdBlock.module": {
-      "maps": 161,
+      "maps": 162,
       "mitm_hosts": 0,
       "rejected": [
         "unsupported/non-blocking URL rewrite",
@@ -400,7 +400,7 @@
       "rewrites": 34,
       "rules": 19,
       "scripts_omitted": 25,
-      "sha256": "212e5ac29701f72ec6df11fca6c3201be9228f7e562bf75010122216a89b8e49",
+      "sha256": "f76a7e17b0b6fced4069e238e5ce2dc4a74dd0879282dacde3b52f063beb9863",
       "unsupported": {
         "Body Rewrite": 11,
         "Script": 25
@@ -1583,7 +1583,7 @@
       "rewrites": 2,
       "rules": 0,
       "scripts_omitted": 0,
-      "sha256": "42e1f4d671b07d2ef87db8a8772770b826b8262cbe938087f59d674ca077d2af",
+      "sha256": "ded00fbd28c12370e20485e1858aa5039c5a07a1e5a7c10f4472242824363f9f",
       "unsupported": {
         "Body Rewrite": 1
       },
@@ -7591,6 +7591,18 @@
       "upstream": "Applet/Wechat/J/京东购物/jd.sgmodule",
       "variant": "network"
     },
+    "Applet/Wechat/J/嘉会医疗/jiahui.module": {
+      "maps": 1,
+      "mitm_hosts": 1,
+      "rejected": [],
+      "rewrites": 0,
+      "rules": 0,
+      "scripts_omitted": 0,
+      "sha256": "509530ded1988f4c0b3e7540bfaae758ac1f8c7737be280a298e53694430a776",
+      "unsupported": {},
+      "upstream": "Applet/Wechat/J/嘉会医疗/jiahui.sgmodule",
+      "variant": "network"
+    },
     "Applet/Wechat/J/极兔快递/jtexpress.module": {
       "maps": 1,
       "mitm_hosts": 1,
@@ -10727,7 +10739,7 @@
       "unsupported": {}
     }
   },
-  "source_commit": "4256954d7832f9a2ae2184566f377f16797fd03e",
+  "source_commit": "7ecd64beac13845fd3913818d79d98bef3c72b49",
   "source_repo": "zirawell/R-Store",
-  "source_surge_modules": 682
+  "source_surge_modules": 683
 }
