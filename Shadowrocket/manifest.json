@@ -1,5 +1,5 @@
 {
-  "generated_modules": 795,
+  "generated_modules": 797,
   "modules": {
     "All/alipayAdBlock.module": {
       "maps": 10,
@@ -19,7 +19,7 @@
       "variant": "network"
     },
     "All/allAdBlock.module": {
-      "maps": 962,
+      "maps": 964,
       "mitm_hosts": 0,
       "rejected": [
         "invalid/sensitive domain",
@@ -196,7 +196,7 @@
       "rewrites": 653,
       "rules": 1420,
       "scripts_omitted": 305,
-      "sha256": "1f6f69dcbe5db4544620e60207ff22d59cb948e4b6247f82a0b882594b87e834",
+      "sha256": "c09b15c22df21fb023fe2e6a764f354fdfa7da91ed94a4a67e941434489d234e",
       "unsupported": {
         "Body Rewrite": 63,
         "Header Rewrite": 3,
@@ -206,7 +206,7 @@
       "variant": "network"
     },
     "All/appAdBlock.module": {
-      "maps": 795,
+      "maps": 796,
       "mitm_hosts": 0,
       "rejected": [
         "invalid/sensitive domain",
@@ -377,7 +377,7 @@
       "rewrites": 614,
       "rules": 1394,
       "scripts_omitted": 279,
-      "sha256": "2254b8db598f7d1f4c5f26c2a3ff98c72066760fdb8a9050a1557846e934a671",
+      "sha256": "42120b702508eae9e992c518b450fd71d95d624e58f4e09abcfd12cbc2fc76aa",
       "unsupported": {
         "Body Rewrite": 50,
         "Header Rewrite": 3,
@@ -387,7 +387,7 @@
       "variant": "network"
     },
     "All/wechatAdBlock.module": {
-      "maps": 161,
+      "maps": 162,
       "mitm_hosts": 0,
       "rejected": [
         "unsupported/non-blocking URL rewrite",
@@ -400,7 +400,7 @@
       "rewrites": 34,
       "rules": 19,
       "scripts_omitted": 25,
-      "sha256": "212e5ac29701f72ec6df11fca6c3201be9228f7e562bf75010122216a89b8e49",
+      "sha256": "f76a7e17b0b6fced4069e238e5ce2dc4a74dd0879282dacde3b52f063beb9863",
       "unsupported": {
         "Body Rewrite": 11,
         "Script": 25
@@ -1583,7 +1583,7 @@
       "rewrites": 2,
       "rules": 0,
       "scripts_omitted": 0,
-      "sha256": "42e1f4d671b07d2ef87db8a8772770b826b8262cbe938087f59d674ca077d2af",
+      "sha256": "ded00fbd28c12370e20485e1858aa5039c5a07a1e5a7c10f4472242824363f9f",
       "unsupported": {
         "Body Rewrite": 1
       },
@@ -4722,6 +4722,18 @@
       "upstream": "App/T/Taptap/taptap.sgmodule",
       "variant": "network"
     },
+    "App/T/ThaiAirways/tair.module": {
+      "maps": 1,
+      "mitm_hosts": 1,
+      "rejected": [],
+      "rewrites": 0,
+      "rules": 0,
+      "scripts_omitted": 0,
+      "sha256": "ae1c70610a49123f844f4d2f6590a773499998d78a7d5c88ac45433c3b6b566d",
+      "unsupported": {},
+      "upstream": "App/T/ThaiAirways/tair.sgmodule",
+      "variant": "network"
+    },
     "App/T/TopWidgets+/topwidgets+.module": {
       "maps": 0,
       "mitm_hosts": 1,
@@ -7589,6 +7601,18 @@
       "sha256": "464b4425d29dc8f9299d704c04c2aef0462126bd55915593489c9ab44d71806c",
       "unsupported": {},
       "upstream": "Applet/Wechat/J/京东购物/jd.sgmodule",
+      "variant": "network"
+    },
+    "Applet/Wechat/J/嘉会医疗/jiahui.module": {
+      "maps": 1,
+      "mitm_hosts": 1,
+      "rejected": [],
+      "rewrites": 0,
+      "rules": 0,
+      "scripts_omitted": 0,
+      "sha256": "509530ded1988f4c0b3e7540bfaae758ac1f8c7737be280a298e53694430a776",
+      "unsupported": {},
+      "upstream": "Applet/Wechat/J/嘉会医疗/jiahui.sgmodule",
       "variant": "network"
     },
     "Applet/Wechat/J/极兔快递/jtexpress.module": {
@@ -10727,7 +10751,7 @@
       "unsupported": {}
     }
   },
-  "source_commit": "4256954d7832f9a2ae2184566f377f16797fd03e",
+  "source_commit": "7c392a40a8ceb82977fb166fd93c46a2f95dbd10",
   "source_repo": "zirawell/R-Store",
-  "source_surge_modules": 682
+  "source_surge_modules": 684
 }

@@ -2097,7 +2097,7 @@ IP-CIDR6, 2402:db40:5100:1011::5/128, REJECT
 ^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.sg\.querysinglescene data-type=text data="{}" status-code=200
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv data-type=text data="{}" status-code=200
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimusic\.common\.mobileservice\.startinit data-type=text data="{}" status-code=200
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.damai\.wireless\.home\.welcome data-type=text data="" status-code=200
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.damai\.wireless\.home\.(?>welcome|float) data-type=text data="" status-code=200
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.life\.popup\.get\/ data-type=text data="{}" status-code=200
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.gateway\.get data-type=text data="{}" status-code=200
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome data-type=text data="{}" status-code=200
@@ -2780,6 +2780,7 @@ IP-CIDR6, 2402:db40:5100:1011::5/128, REJECT
 ^https?:\/\/www\.onstar\.com\.cn\/mssos\/sos\/social\/v\d\/community\/article\/page data-type=text data="{}" status-code=200
 ^https?:\/\/www\.shihuo\.cn\/app\d\/saveAppInfo data-type=text data="" status-code=200
 ^https?:\/\/www\.skyscanner\.com\/g\/explore-feed-service\/api\/explore data-type=text data="{}" status-code=200
+^https?:\/\/www\.thaiairways\.com\/bin\/banner\/notification data-type=text data="{}" status-code=200
 ^https?:\/\/www\.upwork\.com\/api\/v\d\/client-app-config\/platform\/ios\/app\/freelancer\/version data-type=text data="{}" status-code=200
 ^https?:\/\/www\.xiaohongshu\.com\/api\/marketing\/box\/trigger\? data-type=text data="{}" status-code=200
 ^https?:\/\/www\.xiaohongshu\.com\/api\/sns\/v\d+\/hey\/\w+\/hey_gallery data-type=text data="{}" status-code=200
