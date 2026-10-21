@@ -1471,6 +1471,7 @@ IP-CIDR6, 2402:db40:5100:1011::5/128, REJECT
 ^https?:\/\/3g\.csair\.com\/CSMBP\/personalCenter\/peronsalCenterAds\/getAdvertMcmsNew - reject
 ^https?:\/\/[\d\.]+:\d{5}\/\?cmd=indexes - reject
 ^https?:\/\/[a-z]*\.rsscc\.com\/[a-z]*\/adver - reject
+^https?:\/\/\w+\.juneyaoair\.com(\/server)?\/data\/index\/(?>queryPopUpWinPic|getLoadPic|getRecommendProduct|creditCardAd) - reject
 ^https?:\/\/\w+\.kakamobi\.cn\/api\/open\/v\d\/advert-sdk\/ - reject
 ^https?:\/\/\w+\.xiaohongshu\.com\/api\/sns\/v\d+(\/tag)?\/ads - reject
 ^https?:\/\/\w+\.ys7\.com\/api\/ads - reject
@@ -1746,7 +1747,6 @@ IP-CIDR6, 2402:db40:5100:1011::5/128, REJECT
 ^https?:\/\/hcz-member\.pingan\.com\.cn\/micro-api\/micro-cps-ceps-app\/box\/queryHomePagePopBox - reject
 ^https?:\/\/helper\.2bulu\.com(\/v\d)?\/advert - reject
 ^https?:\/\/helper\.2bulu\.com\/(?>greenPea\/queryTasks|proSpecial\/allData|saveSplashFrequencyStatistics|getPopInfo|getAppEntranceConfig|promote\/list|getSplash|outing\/reqFoundNewList|outing\/reqIndex) - reject
-^https?:\/\/hoapp\.juneyaoair\.com\/data\/index\/(?>queryPopUpWinPic|getLoadPic|getRecommendProduct|creditCardAd) - reject
 ^https?:\/\/home\.mi\.com\/cgi-op\/api\/v\d\/recommendation - reject
 ^https?:\/\/httpdns\.bilivideo\.com\/resolve\?host - reject
 ^https?:\/\/huichuan\.sm\.cn\/nativead - reject
@@ -2080,6 +2080,7 @@ IP-CIDR6, 2402:db40:5100:1011::5/128, REJECT
 ^https?:\/\/500px\.com\.cn\/community\/apk\/downloadApk data-type=text data="{}" status-code=200
 ^https?:\/\/7n\.bczcdn\.com\/launchad\/ data-type=text data="" status-code=200
 ^https?:\/\/[\d\.]+\/odin\/c\d\/(channel\/ads|skin\/config)\? data-type=text data="{}" status-code=200
+^https?:\/\/\w+\.juneyaoair\.com(\/server)?\/version data-type=text data="" status-code=200
 ^https?:\/\/\w+\.kingsoft-office-service\.com\/ad data-type=text data="" status-code=200
 ^https?:\/\/\w+\.ys7\.com\/api\/user\/tabList data-type=text data="{}" status-code=200
 ^https?:\/\/\w+\.ys7\.com\/v\d\/config\/service\/entrance\/bannerInfo data-type=text data="{}" status-code=200
@@ -2097,7 +2098,7 @@ IP-CIDR6, 2402:db40:5100:1011::5/128, REJECT
 ^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.sg\.querysinglescene data-type=text data="{}" status-code=200
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv data-type=text data="{}" status-code=200
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimusic\.common\.mobileservice\.startinit data-type=text data="{}" status-code=200
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.damai\.wireless\.home\.welcome data-type=text data="" status-code=200
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.damai\.wireless\.home\.(?>welcome|float) data-type=text data="" status-code=200
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.life\.popup\.get\/ data-type=text data="{}" status-code=200
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.gateway\.get data-type=text data="{}" status-code=200
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome data-type=text data="{}" status-code=200
@@ -2466,7 +2467,6 @@ IP-CIDR6, 2402:db40:5100:1011::5/128, REJECT
 ^https?:\/\/hfapp-service\.qweather\.net\/v\d\.\d\/app\/ad\/list data-type=text data="{}" status-code=200
 ^https?:\/\/hmbaby\.simshine\.cn\/admin\/filter\/advert\/getAdvertLists data-type=text data="{}" status-code=200
 ^https?:\/\/hmbaby\.simshine\.cn\/admin\/filter\/crowdFunding\/getNewProductData data-type=text data="{}" status-code=200
-^https?:\/\/hoapp\.juneyaoair\.com\/version data-type=text data="" status-code=200
 ^https?:\/\/home\.mi\.com\/cgi-op\/api\/v\d\/resource\/realtime\/openingBanner data-type=text data="{}" status-code=200
 ^https?:\/\/homefront\.qunar\.com\/front\/splash\/ad data-type=text data="{}" status-code=200
 ^https?:\/\/hweb-hotel\.huazhu\.com\/home\/queryRecommond data-type=text data="{}" status-code=200
@@ -2780,6 +2780,7 @@ IP-CIDR6, 2402:db40:5100:1011::5/128, REJECT
 ^https?:\/\/www\.onstar\.com\.cn\/mssos\/sos\/social\/v\d\/community\/article\/page data-type=text data="{}" status-code=200
 ^https?:\/\/www\.shihuo\.cn\/app\d\/saveAppInfo data-type=text data="" status-code=200
 ^https?:\/\/www\.skyscanner\.com\/g\/explore-feed-service\/api\/explore data-type=text data="{}" status-code=200
+^https?:\/\/www\.thaiairways\.com\/bin\/banner\/notification data-type=text data="{}" status-code=200
 ^https?:\/\/www\.upwork\.com\/api\/v\d\/client-app-config\/platform\/ios\/app\/freelancer\/version data-type=text data="{}" status-code=200
 ^https?:\/\/www\.xiaohongshu\.com\/api\/marketing\/box\/trigger\? data-type=text data="{}" status-code=200
 ^https?:\/\/www\.xiaohongshu\.com\/api\/sns\/v\d+\/hey\/\w+\/hey_gallery data-type=text data="{}" status-code=200

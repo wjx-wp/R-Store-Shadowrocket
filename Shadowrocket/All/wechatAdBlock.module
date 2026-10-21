@@ -78,6 +78,7 @@ DOMAIN-SUFFIX, wxsmsdy.video.qq.com, REJECT
 ^https?:\/\/api\.hellobike\.com\/api\?adx data-type=text data="{}" status-code=200
 ^https?:\/\/api\.hengdianfilm\.com\/\/cinema\/queryAvailableBannerInfo\/2\?cid= data-type=text data="{}" status-code=200
 ^https?:\/\/api\.hengdianfilm\.com\/\/cinema\/queryAvailableBannerInfo\/4\?cid= data-type=text data="{}" status-code=200
+^https?:\/\/api\.jiahui\.com\/app-rest\/app\/notice\/getMiniAppNotice data-type=text data="{}" status-code=200
 ^https?:\/\/api\.kuaidihelp\.com\/g_order_core\/v\d\/mina\/User\/getBannerList data-type=text data="{}" status-code=200
 ^https?:\/\/api\.m\.jd\.com\/\?loginType=11 data-type=text data="{}" status-code=200
 ^https?:\/\/api\.maoyan\.com\/sns\/common\/feed\/channel\/v\d\/list\.json data-type=text data="{}" status-code=200
