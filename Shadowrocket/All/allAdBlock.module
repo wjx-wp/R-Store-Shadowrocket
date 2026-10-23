@@ -1501,6 +1501,7 @@ IP-CIDR6, 2402:db40:5100:1011::5/128, REJECT
 ^https?:\/\/[a-z]*\.rsscc\.com\/[a-z]*\/adver - reject
 ^https?:\/\/\w+\.ems\.com\.cn\/[A-Za-z-]+\/advert - reject
 ^https?:\/\/\w+\.ems\.com\.cn\/mailAd$ - reject
+^https?:\/\/\w+\.juneyaoair\.com(\/server)?\/data\/index\/(?>queryPopUpWinPic|getLoadPic|getRecommendProduct|creditCardAd) - reject
 ^https?:\/\/\w+\.kakamobi\.cn\/api\/open\/v\d\/advert-sdk\/ - reject
 ^https?:\/\/\w+\.xiaohongshu\.com\/api\/sns\/v\d+(\/tag)?\/ads - reject
 ^https?:\/\/\w+\.ys7\.com\/api\/ads - reject
@@ -1795,7 +1796,6 @@ IP-CIDR6, 2402:db40:5100:1011::5/128, REJECT
 ^https?:\/\/hcz-member\.pingan\.com\.cn\/micro-api\/micro-cps-ceps-app\/box\/queryHomePagePopBox - reject
 ^https?:\/\/helper\.2bulu\.com(\/v\d)?\/advert - reject
 ^https?:\/\/helper\.2bulu\.com\/(?>greenPea\/queryTasks|proSpecial\/allData|saveSplashFrequencyStatistics|getPopInfo|getAppEntranceConfig|promote\/list|getSplash|outing\/reqFoundNewList|outing\/reqIndex) - reject
-^https?:\/\/hoapp\.juneyaoair\.com\/data\/index\/(?>queryPopUpWinPic|getLoadPic|getRecommendProduct|creditCardAd) - reject
 ^https?:\/\/home\.mi\.com\/cgi-op\/api\/v\d\/recommendation - reject
 ^https?:\/\/httpdns\.bilivideo\.com\/resolve\?host - reject
 ^https?:\/\/huichuan\.sm\.cn\/nativead - reject
@@ -2148,6 +2148,7 @@ IP-CIDR6, 2402:db40:5100:1011::5/128, REJECT
 ^https?:\/\/7n\.bczcdn\.com\/launchad\/ data-type=text data="" status-code=200
 ^https?:\/\/[\d\.]+\/odin\/c\d\/(channel\/ads|skin\/config)\? data-type=text data="{}" status-code=200
 ^https?:\/\/\w+\.ems\.com\.cn\/[A-Za-z-]+\/adPlatform data-type=text data="{}" status-code=200
+^https?:\/\/\w+\.juneyaoair\.com(\/server)?\/version data-type=text data="" status-code=200
 ^https?:\/\/\w+\.kingsoft-office-service\.com\/ad data-type=text data="" status-code=200
 ^https?:\/\/\w+\.sh\.wxgateway\.com\/xcxhomeapi\/((aggregator\/index)|(home\/(?>screen|banner|converge)))$ data-type=text data="{}" status-code=200
 ^https?:\/\/\w+\.youzan\.com\/wscshop\/shopad data-type=text data="{}" status-code=200
@@ -2169,7 +2170,7 @@ IP-CIDR6, 2402:db40:5100:1011::5/128, REJECT
 ^https?:\/\/acs\.m\.shyhhema\.com\/h5\/mtop\.wdk\.fc\.recommend\.feeds data-type=text data="{}" status-code=200
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv data-type=text data="{}" status-code=200
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimusic\.common\.mobileservice\.startinit data-type=text data="{}" status-code=200
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.damai\.wireless\.home\.welcome data-type=text data="" status-code=200
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.damai\.wireless\.home\.(?>welcome|float) data-type=text data="" status-code=200
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.life\.popup\.get\/ data-type=text data="{}" status-code=200
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.gateway\.get data-type=text data="{}" status-code=200
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome data-type=text data="{}" status-code=200
@@ -2243,6 +2244,7 @@ IP-CIDR6, 2402:db40:5100:1011::5/128, REJECT
 ^https?:\/\/api\.huachenjie\.com\/run-front\/(ad|ai\/getAICategory|home\/sports\/getPopup) data-type=text data="{}" status-code=200
 ^https?:\/\/api\.indeedpower\.com\/v\d\/m\/edu\/module\/homepage_banner\/\?randomStr data-type=text data="{}" status-code=200
 ^https?:\/\/api\.intsig\.net\/user\/cs\/operating\/app\/get_startpic\/ data-type=text data="" status-code=200
+^https?:\/\/api\.jiahui\.com\/app-rest\/app\/notice\/getMiniAppNotice data-type=text data="{}" status-code=200
 ^https?:\/\/api\.k\.sohu\.com\/api\/news\/adsense data-type=text data="" status-code=200
 ^https?:\/\/api\.kuaidihelp\.com\/g_order_core\/v\d\/mina\/User\/getBannerList data-type=text data="{}" status-code=200
 ^https?:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v\d\/ecommerce-user\/get_shopping_info\? data-type=text data="{}" status-code=200
@@ -2590,7 +2592,6 @@ IP-CIDR6, 2402:db40:5100:1011::5/128, REJECT
 ^https?:\/\/hfapp-service\.qweather\.net\/v\d\.\d\/app\/ad\/list data-type=text data="{}" status-code=200
 ^https?:\/\/hmbaby\.simshine\.cn\/admin\/filter\/advert\/getAdvertLists data-type=text data="{}" status-code=200
 ^https?:\/\/hmbaby\.simshine\.cn\/admin\/filter\/crowdFunding\/getNewProductData data-type=text data="{}" status-code=200
-^https?:\/\/hoapp\.juneyaoair\.com\/version data-type=text data="" status-code=200
 ^https?:\/\/home\.mi\.com\/cgi-op\/api\/v\d\/resource\/realtime\/openingBanner data-type=text data="{}" status-code=200
 ^https?:\/\/homefront\.qunar\.com\/front\/splash\/ad data-type=text data="{}" status-code=200
 ^https?:\/\/htwkop\.xiaojukeji\.com\/gateway\?api=cms\.htw\.delivery data-type=text data="{}" status-code=200
@@ -2851,6 +2852,7 @@ IP-CIDR6, 2402:db40:5100:1011::5/128, REJECT
 ^https?:\/\/restapi\.iyunmai\.com\/behaviour\/ios\/recommend data-type=text data="{}" status-code=200
 ^https?:\/\/restapi\.iyunmai\.com\/fellow-service\/ios\/popUp data-type=text data="{}" status-code=200
 ^https?:\/\/rms\.meituan\.com\/api\/v\d\/rmsmina\/c\/queryWechatAdvertisement data-type=text data="{}" status-code=200
+^https?:\/\/rms\.meituan\.com\/api\/v\d\/rmsmina\/c\/selectpopuptoshow data-type=text data="{}" status-code=200
 ^https?:\/\/router-app-api\.jdcloud\.com\/v\d\/board\/routerAppSplash data-type=text data="" status-code=200
 ^https?:\/\/rr[\w-]+\.googlevideo\.com\/initplayback\? data-type=text data="{}" status-code=200
 ^https?:\/\/rsb\.pingan\.com\.cn\/brcp\/bds\/cust\/ygfz\/up data-type=text data="{}" status-code=200
@@ -2987,6 +2989,7 @@ IP-CIDR6, 2402:db40:5100:1011::5/128, REJECT
 ^https?:\/\/www\.onstar\.com\.cn\/mssos\/sos\/social\/v\d\/community\/article\/page data-type=text data="{}" status-code=200
 ^https?:\/\/www\.shihuo\.cn\/app\d\/saveAppInfo data-type=text data="" status-code=200
 ^https?:\/\/www\.skyscanner\.com\/g\/explore-feed-service\/api\/explore data-type=text data="{}" status-code=200
+^https?:\/\/www\.thaiairways\.com\/bin\/banner\/notification data-type=text data="{}" status-code=200
 ^https?:\/\/www\.upwork\.com\/api\/v\d\/client-app-config\/platform\/ios\/app\/freelancer\/version data-type=text data="{}" status-code=200
 ^https?:\/\/www\.xiaohongshu\.com\/api\/marketing\/box\/trigger\? data-type=text data="{}" status-code=200
 ^https?:\/\/www\.xiaohongshu\.com\/api\/sns\/v\d+\/hey\/\w+\/hey_gallery data-type=text data="{}" status-code=200
