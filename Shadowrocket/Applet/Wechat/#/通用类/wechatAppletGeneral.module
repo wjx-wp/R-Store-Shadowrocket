@@ -15,6 +15,7 @@ DOMAIN-SUFFIX, wxsmsdy.video.qq.com, REJECT
 [Map Local]
 ^https?:\/\/mp\.weixin\.qq\.com\/wapad\/getaddata\?action=getad data-type=text data="" status-code=200
 ^https?:\/\/mp\.weixin\.qq\.com\/wapad\/reportaddata\?action=exposure_report data-type=text data="" status-code=200
+^https?:\/\/rms\.meituan\.com\/api\/v\d\/rmsmina\/c\/selectpopuptoshow data-type=text data="{}" status-code=200
 
 [MITM]
 hostname = %APPEND% miniapp.qmai.cn, mp.weixin.qq.com, rms.meituan.com, webapi.qmai.cn
