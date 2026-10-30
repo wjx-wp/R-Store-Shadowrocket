@@ -128,6 +128,7 @@ DOMAIN, apiinit.amap.com, REJECT
 DOMAIN, apis.alenable.com, REJECT
 DOMAIN, apm-api.huazhu.com, REJECT
 DOMAIN, apm-native.xiaohongshu.com, REJECT
+DOMAIN, apm.abchina.com.cn, REJECT
 DOMAIN, apm.gotokeep.com, REJECT
 DOMAIN, apm.pinduoduo.com, REJECT
 DOMAIN, apmplus.volces.com, REJECT
@@ -327,8 +328,10 @@ DOMAIN, mobads-pre-config.cdn.bcebos.com, REJECT
 DOMAIN, mobads.baidu.com, REJECT
 DOMAIN, mobiledc.stable.alipay.net, REJECT
 DOMAIN, mobilelog.kugou.com, REJECT
+DOMAIN, mobs.dl.bankcomm.com, REJECT
 DOMAIN, mon.zijieapi.com, REJECT
 DOMAIN, mon11-misc.fqnovel.com, REJECT
+DOMAIN, monitor.bankcomm.cn, REJECT
 DOMAIN, monitor.music.qq.com, REJECT
 DOMAIN, mqtt.zhihu.com, REJECT
 DOMAIN, msmp.abchina.com.cn, REJECT

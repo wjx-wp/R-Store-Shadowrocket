@@ -6,6 +6,10 @@
 # IMPORTANT: No upstream JavaScript is executed by this module.
 # Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
 
+[Rule]
+DOMAIN, mobs.dl.bankcomm.com, REJECT
+DOMAIN, monitor.bankcomm.cn, REJECT
+
 [URL Rewrite]
 ^https?:\/\/download1\.bankcomm\.com\/_cdn\/mobs\/home\/oss\/pub\/file\/file\/public\/config\/pageConfig - reject
 ^https?:\/\/download1\.bankcomm\.com\/mobs6-inner\/offline\/static\/releaseConf - reject

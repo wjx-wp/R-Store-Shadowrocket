@@ -1,0 +1,9 @@
+#!name=R-Store Lite | 交通银行 - BANKCOMM
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/J/交通银行/bankcomm.sgmodule
+
+[Rule]
+DOMAIN, mobs.dl.bankcomm.com, REJECT
+DOMAIN, monitor.bankcomm.cn, REJECT

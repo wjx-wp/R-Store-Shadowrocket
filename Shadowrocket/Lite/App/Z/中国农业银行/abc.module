@@ -5,6 +5,7 @@
 # upstream: Rule/Surge/Adblock/App/Z/中国农业银行/abc.sgmodule
 
 [Rule]
+DOMAIN, apm.abchina.com.cn, REJECT
 DOMAIN, firefly.abchina.com.cn, REJECT
 DOMAIN, imc.abchina.com.cn, REJECT
 DOMAIN, msmp.abchina.com.cn, REJECT

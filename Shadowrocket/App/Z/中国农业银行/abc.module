@@ -7,6 +7,7 @@
 # Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
 
 [Rule]
+DOMAIN, apm.abchina.com.cn, REJECT
 DOMAIN, firefly.abchina.com.cn, REJECT
 DOMAIN, imc.abchina.com.cn, REJECT
 DOMAIN, msmp.abchina.com.cn, REJECT
@@ -15,4 +16,4 @@ DOMAIN, msmp.abchina.com.cn, REJECT
 ^https?:\/\/mall\.abchina\.com\.cn\/pips\/EbizccmClientServer\/PIPSPopupAdvertisement data-type=text data="{}" status-code=200
 
 [MITM]
-hostname = %APPEND% mall.abchina.com.cn, mobilepaas.abchina.com.cn
+hostname = %APPEND% mall.abchina.com.cn
