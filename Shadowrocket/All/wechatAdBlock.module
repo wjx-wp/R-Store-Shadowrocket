@@ -78,6 +78,7 @@ DOMAIN-SUFFIX, wxsmsdy.video.qq.com, REJECT
 ^https?:\/\/api\.hellobike\.com\/api\?adx data-type=text data="{}" status-code=200
 ^https?:\/\/api\.hengdianfilm\.com\/\/cinema\/queryAvailableBannerInfo\/2\?cid= data-type=text data="{}" status-code=200
 ^https?:\/\/api\.hengdianfilm\.com\/\/cinema\/queryAvailableBannerInfo\/4\?cid= data-type=text data="{}" status-code=200
+^https?:\/\/api\.jiahui\.com\/app-rest\/app\/notice\/getMiniAppNotice data-type=text data="{}" status-code=200
 ^https?:\/\/api\.kuaidihelp\.com\/g_order_core\/v\d\/mina\/User\/getBannerList data-type=text data="{}" status-code=200
 ^https?:\/\/api\.m\.jd\.com\/\?loginType=11 data-type=text data="{}" status-code=200
 ^https?:\/\/api\.maoyan\.com\/sns\/common\/feed\/channel\/v\d\/list\.json data-type=text data="{}" status-code=200
@@ -158,7 +159,7 @@ DOMAIN-SUFFIX, wxsmsdy.video.qq.com, REJECT
 ^https?:\/\/newton\.gumingnc\.com\/newton-buyer\/newton\/buyer\/(ump|touch|external\/front) data-type=text data="{}" status-code=200
 ^https?:\/\/npay\.meituan\.com\/conch\/flow\/mypage-wallet-info data-type=text data="{}" status-code=200
 ^https?:\/\/npay\.meituan\.com\/conch\/walletv\d\/wechat-pop-window data-type=text data="{}" status-code=200
-^https?:\/\/ocrifs\.ejoy\.sinopec\.com\/advertitfs\/advert\/findAdvertInfo data-type=text data="" status-code=200
+^https?:\/\/ocrifs\.ejoy\.sinopec\.com\/advertitfs\/advert data-type=text data="" status-code=200
 ^https?:\/\/pan\.baidu\.com\/buy\/ad\/ data-type=text data="" status-code=200
 ^https?:\/\/passenger\.t3go\.cn\/(solution\-|common\-)?(passenger\-)?(activity\-|app\-)?api\/notoken\/(trip\/)?api\/(home\/|common\/)?(v\d\/)?(ad\/getNegativescreen|solution\/passenger\/open\/getHomeMenu|leftmenu|getHomeInfoGlobal) data-type=text data="{}" status-code=200
 ^https?:\/\/passenger\.t3go\.cn\/passenger-activity-api\/notoken\/api\/v\d\/resource\/getSource data-type=text data="{}" status-code=200
@@ -171,6 +172,7 @@ DOMAIN-SUFFIX, wxsmsdy.video.qq.com, REJECT
 ^https?:\/\/res\.hongyibo\.com\.cn\/os\/gs\/resapi\/activity data-type=text data="{}" status-code=200
 ^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/custom_v\d\/wxapp data-type=text data="{}" status-code=200
 ^https?:\/\/res\.pizzahut\.com\.cn\/CRM data-type=text data="{}" status-code=200
+^https?:\/\/rms\.meituan\.com\/api\/v\d\/rmsmina\/c\/selectpopuptoshow data-type=text data="{}" status-code=200
 ^https?:\/\/s\.jiediankeji\.com\/adv data-type=text data="{}" status-code=200
 ^https?:\/\/search-yxapp\.feiniu\.com\/recommend\/general\/FreshRecBuyAgain data-type=text data="{}" status-code=200
 ^https?:\/\/search-yxapp\.feiniu\.com\/recommend\/memberIndexGoodsList data-type=text data="{}" status-code=200
