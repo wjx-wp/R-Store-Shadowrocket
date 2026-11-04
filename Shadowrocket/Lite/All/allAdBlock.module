@@ -136,6 +136,7 @@ DOMAIN, apiinit.amap.com, REJECT
 DOMAIN, apis.alenable.com, REJECT
 DOMAIN, apm-api.huazhu.com, REJECT
 DOMAIN, apm-native.xiaohongshu.com, REJECT
+DOMAIN, apm.abchina.com.cn, REJECT
 DOMAIN, apm.gotokeep.com, REJECT
 DOMAIN, apm.pinduoduo.com, REJECT
 DOMAIN, apmgw.hellobike.com, REJECT
