@@ -8,6 +8,9 @@
 
 [Rule]
 DOMAIN, ad-track.fliggy.com, REJECT
+DOMAIN, o.alicdn.com, REJECT
+DOMAIN, pigeon.alicdn.com, REJECT
+IP-CIDR, 203.119.238.25/32, REJECT
 IP-CIDR, 59.82.113.8/32, REJECT
 
 [URL Rewrite]
