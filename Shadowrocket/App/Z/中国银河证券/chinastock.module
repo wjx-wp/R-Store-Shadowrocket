@@ -1,0 +1,13 @@
+#!name=R-Store | 中国银河证券 - CHINASTOCK
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/Z/中国银河证券/chinastock.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Map Local]
+^https?:\/\/cdns\.chinastock\.com\.cn\/cdn\/omc\/app\/app\/(startup|\w+_pop) data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% cdns.chinastock.com.cn
