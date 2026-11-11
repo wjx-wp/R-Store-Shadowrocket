@@ -1,8 +1,8 @@
 {
-  "generated_modules": 795,
+  "generated_modules": 801,
   "modules": {
     "All/alipayAdBlock.module": {
-      "maps": 10,
+      "maps": 11,
       "mitm_hosts": 9,
       "rejected": [
         "unsupported/remote Map Local payload"
@@ -10,7 +10,7 @@
       "rewrites": 7,
       "rules": 4,
       "scripts_omitted": 1,
-      "sha256": "3c3e18d2443d3741ef9d49b008f38037271d66c789b1069fa06e70c3fb9da753",
+      "sha256": "ddaa82459be93f9a8d158c4a89db104f471f9cace835a945783a31394136b145",
       "unsupported": {
         "Body Rewrite": 1,
         "Script": 1
@@ -19,7 +19,7 @@
       "variant": "network"
     },
     "All/allAdBlock.module": {
-      "maps": 962,
+      "maps": 971,
       "mitm_hosts": 0,
       "rejected": [
         "invalid/sensitive domain",
@@ -194,11 +194,11 @@
         "MITM list exceeds 100 hosts; omitted"
       ],
       "rewrites": 653,
-      "rules": 1420,
+      "rules": 1426,
       "scripts_omitted": 305,
-      "sha256": "1f6f69dcbe5db4544620e60207ff22d59cb948e4b6247f82a0b882594b87e834",
+      "sha256": "a81ca6e1d5b0b2e48922768e0ecdb98a82441c77de9d9b82cac5cbcdf1604a41",
       "unsupported": {
-        "Body Rewrite": 63,
+        "Body Rewrite": 64,
         "Header Rewrite": 3,
         "Script": 305
       },
@@ -206,7 +206,7 @@
       "variant": "network"
     },
     "All/appAdBlock.module": {
-      "maps": 795,
+      "maps": 799,
       "mitm_hosts": 0,
       "rejected": [
         "invalid/sensitive domain",
@@ -375,11 +375,11 @@
         "MITM list exceeds 100 hosts; omitted"
       ],
       "rewrites": 614,
-      "rules": 1394,
+      "rules": 1400,
       "scripts_omitted": 279,
-      "sha256": "2254b8db598f7d1f4c5f26c2a3ff98c72066760fdb8a9050a1557846e934a671",
+      "sha256": "c28470b7b8b9be63fc6ead285a0255e3c2ba6b3d6a7da0f8c713200d3cc2e50a",
       "unsupported": {
-        "Body Rewrite": 50,
+        "Body Rewrite": 51,
         "Header Rewrite": 3,
         "Script": 279
       },
@@ -387,7 +387,7 @@
       "variant": "network"
     },
     "All/wechatAdBlock.module": {
-      "maps": 161,
+      "maps": 165,
       "mitm_hosts": 0,
       "rejected": [
         "unsupported/non-blocking URL rewrite",
@@ -400,7 +400,7 @@
       "rewrites": 34,
       "rules": 19,
       "scripts_omitted": 25,
-      "sha256": "212e5ac29701f72ec6df11fca6c3201be9228f7e562bf75010122216a89b8e49",
+      "sha256": "ebd3a27596fcbf34c25f3fc6a9f9a17698bf055c6e624a68cde65fa718852af1",
       "unsupported": {
         "Body Rewrite": 11,
         "Script": 25
@@ -1174,6 +1174,18 @@
       "upstream": "App/C/chatgpt/chatgpt.sgmodule",
       "variant": "network"
     },
+    "App/C/choice/choice.module": {
+      "maps": 2,
+      "mitm_hosts": 2,
+      "rejected": [],
+      "rewrites": 0,
+      "rules": 0,
+      "scripts_omitted": 0,
+      "sha256": "418517dd9eb5242330598a98cee64566c3492abde662e1da092ea54bb21725ba",
+      "unsupported": {},
+      "upstream": "App/C/choice/choice.sgmodule",
+      "variant": "network"
+    },
     "App/C/csdn/csdn.module": {
       "maps": 0,
       "mitm_hosts": 2,
@@ -1466,16 +1478,16 @@
       "upstream": "App/D/到梦空间/5idream.sgmodule",
       "variant": "network"
     },
-    "App/D/动卡空间/ecitic.module": {
+    "App/D/动卡空间/eciticcc.module": {
       "maps": 2,
       "mitm_hosts": 2,
       "rejected": [],
       "rewrites": 0,
       "rules": 0,
       "scripts_omitted": 0,
-      "sha256": "41b887c197f8c7e5cbde5ac88836f012035475b5dcdce31f2203a9cf6c45fc75",
+      "sha256": "c33a790572e9f93b1d18bf4b31fbba7ab6691fa4921fb18f0fb129c1472883f5",
       "unsupported": {},
-      "upstream": "App/D/动卡空间/ecitic.sgmodule",
+      "upstream": "App/D/动卡空间/eciticcc.sgmodule",
       "variant": "network"
     },
     "App/D/叮咚买菜/ddxq.module": {
@@ -1583,7 +1595,7 @@
       "rewrites": 2,
       "rules": 0,
       "scripts_omitted": 0,
-      "sha256": "42e1f4d671b07d2ef87db8a8772770b826b8262cbe938087f59d674ca077d2af",
+      "sha256": "ded00fbd28c12370e20485e1858aa5039c5a07a1e5a7c10f4472242824363f9f",
       "unsupported": {
         "Body Rewrite": 1
       },
@@ -1918,9 +1930,9 @@
       "mitm_hosts": 1,
       "rejected": [],
       "rewrites": 4,
-      "rules": 2,
+      "rules": 5,
       "scripts_omitted": 2,
-      "sha256": "350250e83ef0df6161e35bb0b4f95e05141b7c5103885024fa65723941ce8626",
+      "sha256": "00a088bad04b3ac897afae4fbfa7ffdf59acbae16671d3e71b87057335942950",
       "unsupported": {
         "Body Rewrite": 1,
         "Script": 2
@@ -2641,13 +2653,14 @@
     },
     "App/J/吉祥航空/juneyaoair.module": {
       "maps": 1,
-      "mitm_hosts": 1,
+      "mitm_hosts": 3,
       "rejected": [],
       "rewrites": 1,
       "rules": 0,
       "scripts_omitted": 1,
-      "sha256": "09bf080eb09069c570024c25ba2792adcfd1bb5390618d95a93d64684cea7c92",
+      "sha256": "28e08e0eadc034b627b44d4bbb617e27b250c938b135fc6f85e6a7948f440a5c",
       "unsupported": {
+        "Body Rewrite": 1,
         "Script": 1
       },
       "upstream": "App/J/吉祥航空/juneyaoair.sgmodule",
@@ -4722,6 +4735,18 @@
       "upstream": "App/T/Taptap/taptap.sgmodule",
       "variant": "network"
     },
+    "App/T/ThaiAirways/tair.module": {
+      "maps": 1,
+      "mitm_hosts": 1,
+      "rejected": [],
+      "rewrites": 0,
+      "rules": 0,
+      "scripts_omitted": 0,
+      "sha256": "ae1c70610a49123f844f4d2f6590a773499998d78a7d5c88ac45433c3b6b566d",
+      "unsupported": {},
+      "upstream": "App/T/ThaiAirways/tair.sgmodule",
+      "variant": "network"
+    },
     "App/T/TopWidgets+/topwidgets+.module": {
       "maps": 0,
       "mitm_hosts": 1,
@@ -5471,12 +5496,14 @@
     },
     "App/X/兴业银行手机银行/cib.module": {
       "maps": 2,
-      "mitm_hosts": 1,
-      "rejected": [],
+      "mitm_hosts": 0,
+      "rejected": [
+        "invalid/sensitive MITM hostname"
+      ],
       "rewrites": 0,
-      "rules": 0,
+      "rules": 2,
       "scripts_omitted": 0,
-      "sha256": "07441da1dfddbfca4b3be9323e00690e48ac062b2ec7575ed0f79f135dec0d66",
+      "sha256": "9754f942fb6a77a3e7e05feba2d6f44199a7f7bc556c2a216b2b05334e0a4a98",
       "unsupported": {},
       "upstream": "App/X/兴业银行手机银行/cib.sgmodule",
       "variant": "network"
@@ -6463,6 +6490,20 @@
       "upstream": "App/Z/ZeppLife/mifit.sgmodule",
       "variant": "network"
     },
+    "App/Z/中信银行/ecitic.module": {
+      "maps": 1,
+      "mitm_hosts": 2,
+      "rejected": [],
+      "rewrites": 0,
+      "rules": 0,
+      "scripts_omitted": 1,
+      "sha256": "584866442cb99df98b64d84e86ac50bf0ab707513b25e25624c1bfe43d1cfc89",
+      "unsupported": {
+        "Script": 1
+      },
+      "upstream": "App/Z/中信银行/ecitic.sgmodule",
+      "variant": "network"
+    },
     "App/Z/中关村在线/zol.module": {
       "maps": 1,
       "mitm_hosts": 1,
@@ -6504,15 +6545,13 @@
     },
     "App/Z/中国农业银行/abc.module": {
       "maps": 1,
-      "mitm_hosts": 2,
+      "mitm_hosts": 1,
       "rejected": [],
       "rewrites": 0,
-      "rules": 3,
-      "scripts_omitted": 1,
-      "sha256": "efa2e614e3b0b12f6df7e1ef2a7bffc7d9b17d8cde4a18c8d1a14aa0eb30d583",
-      "unsupported": {
-        "Script": 1
-      },
+      "rules": 4,
+      "scripts_omitted": 0,
+      "sha256": "aafb0083a9803b85f2cc5824eea93762682a8f6447a79f7d8087c83a3d44d891",
+      "unsupported": {},
       "upstream": "App/Z/中国农业银行/abc.sgmodule",
       "variant": "network"
     },
@@ -6620,6 +6659,18 @@
       "sha256": "8fd2bf43e1c561803b58f3eddc3a168ec5dbce359f8556f14bd307d0704dca40",
       "unsupported": {},
       "upstream": "App/Z/中国联通/10010.sgmodule",
+      "variant": "network"
+    },
+    "App/Z/中国银河证券/chinastock.module": {
+      "maps": 1,
+      "mitm_hosts": 1,
+      "rejected": [],
+      "rewrites": 0,
+      "rules": 0,
+      "scripts_omitted": 0,
+      "sha256": "0a4291798a79efe224ed000fbf0d080d6b42236e7cee78b8a252501d4d865264",
+      "unsupported": {},
+      "upstream": "App/Z/中国银河证券/chinastock.sgmodule",
       "variant": "network"
     },
     "App/Z/中国银行/boc.module": {
@@ -6759,7 +6810,7 @@
       "variant": "network"
     },
     "App/Z/掌上生活/cmbcc.module": {
-      "maps": 6,
+      "maps": 5,
       "mitm_hosts": 4,
       "rejected": [
         "invalid/sensitive MITM hostname",
@@ -6769,7 +6820,7 @@
       "rewrites": 5,
       "rules": 1,
       "scripts_omitted": 0,
-      "sha256": "c9c9f1e98ebe6be30879dc65a83194d2085389cc9c3f10bfe730c8e36db177b1",
+      "sha256": "a181b7321d42ef501afdd9ac7c947db0b8c43e1ba6ca6c1a5cbc9929335d61a6",
       "unsupported": {
         "Body Rewrite": 1
       },
@@ -6999,13 +7050,13 @@
       "variant": "network"
     },
     "Applet/Alipay/H/哈啰/hellobike.module": {
-      "maps": 2,
+      "maps": 3,
       "mitm_hosts": 1,
       "rejected": [],
       "rewrites": 5,
       "rules": 4,
       "scripts_omitted": 0,
-      "sha256": "90e0f610e63f9eca0cd8f8c585edaf3dfff6092decca14dee9bff77db01b672c",
+      "sha256": "7a68a5787d70fc7334d4963aabbde4e75dd263f699d65d5f24294d640e4ceba4",
       "unsupported": {},
       "upstream": "Applet/Alipay/H/哈啰/hellobike.sgmodule",
       "variant": "network"
@@ -7051,13 +7102,13 @@
       "variant": "network"
     },
     "Applet/Wechat/#/通用类/wechatAppletGeneral.module": {
-      "maps": 2,
-      "mitm_hosts": 4,
+      "maps": 4,
+      "mitm_hosts": 5,
       "rejected": [],
       "rewrites": 1,
       "rules": 1,
       "scripts_omitted": 1,
-      "sha256": "11f831899ab24218eec847bcee57f921977dd2548ad9470707abc6a5e5bce4a9",
+      "sha256": "53481f8a8c20d821cb561a247e64483863ad92fba2e03f87b5c4ea1fbcdb70dd",
       "unsupported": {
         "Body Rewrite": 1,
         "Script": 1
@@ -7589,6 +7640,18 @@
       "sha256": "464b4425d29dc8f9299d704c04c2aef0462126bd55915593489c9ab44d71806c",
       "unsupported": {},
       "upstream": "Applet/Wechat/J/京东购物/jd.sgmodule",
+      "variant": "network"
+    },
+    "Applet/Wechat/J/嘉会医疗/jiahui.module": {
+      "maps": 1,
+      "mitm_hosts": 1,
+      "rejected": [],
+      "rewrites": 0,
+      "rules": 0,
+      "scripts_omitted": 0,
+      "sha256": "509530ded1988f4c0b3e7540bfaae758ac1f8c7737be280a298e53694430a776",
+      "unsupported": {},
+      "upstream": "Applet/Wechat/J/嘉会医疗/jiahui.sgmodule",
       "variant": "network"
     },
     "Applet/Wechat/J/极兔快递/jtexpress.module": {
@@ -8340,13 +8403,13 @@
       "variant": "network"
     },
     "Applet/Wechat/Y/易捷加油/ejoy.module": {
-      "maps": 3,
+      "maps": 4,
       "mitm_hosts": 3,
       "rejected": [],
       "rewrites": 0,
       "rules": 0,
       "scripts_omitted": 0,
-      "sha256": "bef1f4f0a6abad13fc321c7018a12bf39f4094a66bc77aed385db1d1f97dc30f",
+      "sha256": "2d7e619db1d9bac56b64aa1ed82247c84c271c8ca2189d297fd9316e9607614d",
       "unsupported": {},
       "upstream": "Applet/Wechat/Y/易捷加油/ejoy.sgmodule",
       "variant": "network"
@@ -8465,9 +8528,9 @@
       "mitm_hosts": 0,
       "rejected": [],
       "rewrites": 0,
-      "rules": 1420,
+      "rules": 1426,
       "scripts_omitted": 305,
-      "sha256": "5ab48437cfa1913b61514f41083d5c36658686cffc4e56401dee46ee39acd345",
+      "sha256": "c0aa9d3bde6ad818eebf6cd1bb78414fcc26d634ddf4d3131f645fa27a0c2a52",
       "upstream": "All/allAdBlock.sgmodule",
       "variant": "lite"
     },
@@ -8476,9 +8539,9 @@
       "mitm_hosts": 0,
       "rejected": [],
       "rewrites": 0,
-      "rules": 1394,
+      "rules": 1400,
       "scripts_omitted": 279,
-      "sha256": "944350b69f005ba5114028d57be9d8c07bc3492e048dd94b68fbf7e7e82887c5",
+      "sha256": "04f2bd49338b0cc2380ab537d51b6f8163e83b114add1ef68e2ee937193efbb6",
       "upstream": "All/appAdBlock.sgmodule",
       "variant": "lite"
     },
@@ -8839,9 +8902,9 @@
       "mitm_hosts": 0,
       "rejected": [],
       "rewrites": 0,
-      "rules": 2,
+      "rules": 5,
       "scripts_omitted": 2,
-      "sha256": "8618c468340fd4dd7b3013b3b8a6428c4cc0b75b665d1fcf5bbe0078642dbbb8",
+      "sha256": "e025a185599494367f4e528f1d92179f338b70fc54a7016cc00bc2de198b414b",
       "upstream": "App/F/飞猪旅行/fliggy.sgmodule",
       "variant": "lite"
     },
@@ -9692,6 +9755,17 @@
       "upstream": "App/X/下厨房/xiachufang.sgmodule",
       "variant": "lite"
     },
+    "Lite/App/X/兴业银行手机银行/cib.module": {
+      "maps": 0,
+      "mitm_hosts": 0,
+      "rejected": [],
+      "rewrites": 0,
+      "rules": 2,
+      "scripts_omitted": 0,
+      "sha256": "1c3964f98fe9911a326faaae8d2aa2e54e7fa25803e13febc7e0a335c37d28f6",
+      "upstream": "App/X/兴业银行手机银行/cib.sgmodule",
+      "variant": "lite"
+    },
     "Lite/App/X/喜马拉雅/xmly.module": {
       "maps": 0,
       "mitm_hosts": 0,
@@ -9906,9 +9980,9 @@
       "mitm_hosts": 0,
       "rejected": [],
       "rewrites": 0,
-      "rules": 3,
-      "scripts_omitted": 1,
-      "sha256": "9a6779d8e5750addd170f11adf3a3ab6569c3af9dc3069b08d12738bc25459fc",
+      "rules": 4,
+      "scripts_omitted": 0,
+      "sha256": "973152dc8684086563e671838098106ec9d487b2314bc091735fd497bf0302b6",
       "upstream": "App/Z/中国农业银行/abc.sgmodule",
       "variant": "lite"
     },
@@ -10282,6 +10356,7 @@
     "douyu.js": "47eec8e13b7aef1e717b97ce04750485af2316fd641e44e88cca8a41a87208ba",
     "duitang.js": "d1a2e5e1d3d48a110859e55442b72dec0367c36737fa3c5bfd98df9737bed600",
     "dushu365.js": "28a4aea629f4892edab04b51276e0649d39b67ee5d76dc9daf85483427cef914",
+    "ecitic.js": "4c43bc1724bce706e0e44cf6143aeaddf14a3d2146586dba70b3b3f2812469ce",
     "eleme.js": "bc62b16285a2ce25aaf8caa484e7741cd9f9a660ca1b020414524f20b5c83e46",
     "fliggy.js": "050efdf95b8050816050f614fef98052944c27bfe1c8d07857ea9b552786c66f",
     "flyert.js": "9f7b49651ad956ae5fd7a17ad120c486c4f228ae2f7cfab21fcb4fccedfe2d98",
@@ -10294,7 +10369,7 @@
     "ithome.js": "8b7c048624495f4d183804a32a77410ce4d81fda5512c61bca01156333df518e",
     "javdb.js": "484a76ab8862287a67537b4ebf762c3a586cd863089c1cadcb7fecef1fd3e5b5",
     "jd.js": "ddf9ec8ab97d5e5a5e1bc171c0301350ba42f41b9dcd129c166c6a192ecb7957",
-    "juneyaoair.js": "c87409de97f51741609a19a4b73874c27f61dd528543d2fed798c211b57c1054",
+    "juneyaoair.js": "2828f11f76d3b68058edb3df62eec8355e508f5f6b04a4dbcbeb3e38e2509f2f",
     "keep.js": "d8884245f321915eeade4afadc8470d52d4e99264acbd0b8a6bb3e179ab22ebb",
     "kkmh.js": "cccb4b5af50ad985bbe30fb47b086db5526acdae3bbe69b0018ee5ac87f13914",
     "ltsst.js": "c2844cbc8187756d25026a826ceb84b548322b931d3b77df8c171798f4e7052c",
@@ -10727,7 +10802,7 @@
       "unsupported": {}
     }
   },
-  "source_commit": "4256954d7832f9a2ae2184566f377f16797fd03e",
+  "source_commit": "f2cbe7ad342ccbfcbfb9996b65d0af7631ff1e28",
   "source_repo": "zirawell/R-Store",
-  "source_surge_modules": 682
+  "source_surge_modules": 687
 }
