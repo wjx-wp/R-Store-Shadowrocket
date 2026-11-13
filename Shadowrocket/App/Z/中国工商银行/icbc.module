@@ -7,4 +7,5 @@
 # Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
 
 [Rule]
+DOMAIN, mobileapm.icbc.com.cn, REJECT
 DOMAIN, pageviewp.icbc.com.cn, REJECT

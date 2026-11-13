@@ -23,6 +23,7 @@ DOMAIN, ip.hellobike.com, REJECT
 
 [Map Local]
 ^https?:\/\/api\.hellobike\.com\/api\?applet\.homepage\.medal\.activity data-type=text data="{}" status-code=200
+^https?:\/\/api\.hellobike\.com\/api\?homepage\.hitch\.awareness data-type=text data="{}" status-code=200
 ^https?:\/\/api\.hellobike\.com\/api\?homepage\.newWelfare\.alipay data-type=text data="{}" status-code=200
 ^https?:\/\/creditcardapp\.bankcomm\.com\/cnsvPmpaAliCardWeb\/page\/getGuidePageAds data-type=text data="{}" status-code=200
 ^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads data-type=text data="{}" status-code=200
