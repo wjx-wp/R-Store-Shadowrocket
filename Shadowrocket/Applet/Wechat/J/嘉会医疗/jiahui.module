@@ -1,0 +1,13 @@
+#!name=R-Store | jiahui
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/Applet/Wechat/J/嘉会医疗/jiahui.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Map Local]
+^https?:\/\/api\.jiahui\.com\/app-rest\/app\/notice\/getMiniAppNotice data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% api.jiahui.com

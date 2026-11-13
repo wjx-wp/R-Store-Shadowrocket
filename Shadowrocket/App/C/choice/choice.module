@@ -1,0 +1,15 @@
+#!name=R-Store | choice - CHOICE
+#!desc=Shadowrocket network-only port; upstream JS deliberately omitted; not device-verified
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/C/choice/choice.sgmodule
+# IMPORTANT: No upstream JavaScript is executed by this module.
+# Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
+
+[Map Local]
+^https?:\/\/\w+\.eastmoney\.com\/ads\/ data-type=text data="{}" status-code=200
+^https?:\/\/\w+\.eastmoney\.com\/busservice\/api\/api\/Config\/GetUpNoticeInfo data-type=text data="{}" status-code=200
+^https?:\/\/innovactivity\.eastmoney\.com\/api\/app\/activity\/start data-type=text data="{}" status-code=200
+
+[MITM]
+hostname = %APPEND% choicegw.eastmoney.com, choicegw2.eastmoney.com, innovactivity.eastmoney.com
