@@ -136,6 +136,7 @@ DOMAIN, apiinit.amap.com, REJECT
 DOMAIN, apis.alenable.com, REJECT
 DOMAIN, apm-api.huazhu.com, REJECT
 DOMAIN, apm-native.xiaohongshu.com, REJECT
+DOMAIN, apm.abchina.com.cn, REJECT
 DOMAIN, apm.gotokeep.com, REJECT
 DOMAIN, apm.pinduoduo.com, REJECT
 DOMAIN, apmgw.hellobike.com, REJECT
@@ -231,7 +232,6 @@ DOMAIN, flowplus.meituan.net, REJECT
 DOMAIN, fp-it.fengkongcloud.com, REJECT
 DOMAIN, free-aos-cdn-image.amap.com, REJECT
 DOMAIN, g1.163.com, REJECT
-DOMAIN, g1.tagtic.cn, REJECT
 DOMAIN, g3.letv.com, REJECT
 DOMAIN, gather.colorfulclouds.net, REJECT
 DOMAIN, gdfp.gifshow.com, REJECT
@@ -310,7 +310,6 @@ DOMAIN, livewebbs2pcdn.msstatic.com, REJECT
 DOMAIN, log-verify.mob.com, REJECT
 DOMAIN, log.17gwx.com, REJECT
 DOMAIN, log.cmbchina.com, REJECT
-DOMAIN, log.tagtic.cn, REJECT
 DOMAIN, log.web.kugou.com, REJECT
 DOMAIN, log.ycapp.yiche.com, REJECT
 DOMAIN, logs-bigdata.yeehaw.com.cn, REJECT
@@ -325,6 +324,7 @@ DOMAIN, mall-dsp2.qinlinkeji.com, REJECT
 DOMAIN, mallapi2.qinlinkeji.com, REJECT
 DOMAIN, mars.jd.com, REJECT
 DOMAIN, mazu.m.qq.com, REJECT
+DOMAIN, mb.cdn-static.abchina.com.cn, REJECT
 DOMAIN, mbads.paas.cmbchina.com, REJECT
 DOMAIN, mc.tencentmusic.com, REJECT
 DOMAIN, mcs.snssdk.com, REJECT
@@ -342,6 +342,7 @@ DOMAIN, mobad.ijinshan.com, REJECT
 DOMAIN, mobads-logs.baidu.com, REJECT
 DOMAIN, mobads-pre-config.cdn.bcebos.com, REJECT
 DOMAIN, mobads.baidu.com, REJECT
+DOMAIN, mobileapm.icbc.com.cn, REJECT
 DOMAIN, mobiledc.stable.alipay.net, REJECT
 DOMAIN, mobilelog.kugou.com, REJECT
 DOMAIN, mon.zijieapi.com, REJECT
@@ -358,6 +359,7 @@ DOMAIN, nadvideo2.baidu.com, REJECT
 DOMAIN, news.ssp.qq.com, REJECT
 DOMAIN, nex.163.com, REJECT
 DOMAIN, nsclick.baidu.com, REJECT
+DOMAIN, o.alicdn.com, REJECT
 DOMAIN, o2o-ad-log-gateway.alibaba.com, REJECT
 DOMAIN, ocsp.pki.goog, REJECT
 DOMAIN, open-pixon.ads-pixiv.net, REJECT
@@ -367,6 +369,7 @@ DOMAIN, optimus-ads.amap.com, REJECT
 DOMAIN, pageviewp.icbc.com.cn, REJECT
 DOMAIN, perf.m.jd.com, REJECT
 DOMAIN, pgdt.gtimg.cn, REJECT
+DOMAIN, pigeon.alicdn.com, REJECT
 DOMAIN, pl.cp31.ott.cibntv.net, REJECT
 DOMAIN, polaris.zijieapi.com, REJECT
 DOMAIN, popup.dushu365.com, REJECT
@@ -375,6 +378,7 @@ DOMAIN, pre-acs.youku.com, REJECT
 DOMAIN, pro.dajuhl.com, REJECT
 DOMAIN, ptom.caohua.com, REJECT
 DOMAIN, push.chsi.com.cn, REJECT
+DOMAIN, qdzx.cib.com.cn, REJECT
 DOMAIN, qzonestyle.gtimg.cn, REJECT
 DOMAIN, qzs.qq.com, REJECT
 DOMAIN, r.dianping.com, REJECT
@@ -548,6 +552,7 @@ DOMAIN-KEYWORD, logs.amap.com, REJECT
 DOMAIN-KEYWORD, logwebs.kugou.com, REJECT
 DOMAIN-KEYWORD, mapi.m.jd.com, REJECT
 DOMAIN-KEYWORD, medicine.lanjiyin.com.cn, REJECT
+DOMAIN-KEYWORD, mob.cib.com.cn, REJECT
 DOMAIN-KEYWORD, mpos-pic.helipay.com, REJECT
 DOMAIN-KEYWORD, nbcollect.kugou.com, REJECT
 DOMAIN-KEYWORD, nbcollectretry.kugou.com, REJECT
@@ -1232,6 +1237,7 @@ DOMAIN-SUFFIX, syndication.twitter.com, REJECT
 DOMAIN-SUFFIX, t.sj.qq.com, REJECT
 DOMAIN-SUFFIX, t7z.cupid.iqiyi.com, REJECT
 DOMAIN-SUFFIX, ta.qq.com, REJECT
+DOMAIN-SUFFIX, tagtic.cn, REJECT
 DOMAIN-SUFFIX, tajs.qq.com, REJECT
 DOMAIN-SUFFIX, tappx.com, REJECT
 DOMAIN-SUFFIX, tb060x.corp.youdao.com, REJECT
@@ -1392,6 +1398,7 @@ IP-CIDR, 203.107.1.0/24, REJECT
 IP-CIDR, 203.107.63.154/32, REJECT
 IP-CIDR, 203.119.212.22/32, REJECT
 IP-CIDR, 203.119.238.164/32, REJECT
+IP-CIDR, 203.119.238.25/32, REJECT
 IP-CIDR, 203.119.238.63/32, REJECT
 IP-CIDR, 210.13.85.204/32, REJECT
 IP-CIDR, 43.160.156.164/32, REJECT
