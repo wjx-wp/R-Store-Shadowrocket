@@ -1,0 +1,9 @@
+#!name=R-Store Lite | choice - CHOICE
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/C/choice/choice.sgmodule
+
+[Rule]
+DOMAIN, emapm.eastmoney.com, REJECT
+DOMAIN, swdlcdn.eastmoney.com, REJECT

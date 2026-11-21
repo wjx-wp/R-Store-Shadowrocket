@@ -7,10 +7,10 @@
 # Enable only the App modules you need. Requires HTTPS MITM for URL Rewrite / Map Local.
 
 [URL Rewrite]
-^https?:\/\/hoapp\.juneyaoair\.com\/data\/index\/(?>queryPopUpWinPic|getLoadPic|getRecommendProduct|creditCardAd) - reject
+^https?:\/\/\w+\.juneyaoair\.com(\/server)?\/data\/index\/(?>queryPopUpWinPic|getLoadPic|getRecommendProduct|creditCardAd) - reject
 
 [Map Local]
-^https?:\/\/hoapp\.juneyaoair\.com\/version data-type=text data="" status-code=200
+^https?:\/\/\w+\.juneyaoair\.com(\/server)?\/version data-type=text data="" status-code=200
 
 [MITM]
-hostname = %APPEND% hoapp.juneyaoair.com
+hostname = %APPEND% hoapp.juneyaoair.com, m.juneyaoair.com, shopping.juneyaoair.com
