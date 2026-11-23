@@ -1,0 +1,9 @@
+#!name=R-Store Lite | 兴业银行手机银行 - CIB
+#!desc=Domain/IP reject only. No JavaScript, HTTPS decryption, or VPN changes.
+#!author=zirawell (upstream) & wjx-wp (adaptation)
+#!homepage=https://github.com/wjx-wp/R-Store-Shadowrocket
+# upstream: Rule/Surge/Adblock/App/X/兴业银行手机银行/cib.sgmodule
+
+[Rule]
+DOMAIN, qdzx.cib.com.cn, REJECT
+DOMAIN-KEYWORD, mob.cib.com.cn, REJECT
