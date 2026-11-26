@@ -9,9 +9,3 @@
 [Rule]
 DOMAIN, adm.10jqka.com.cn, REJECT
 DOMAIN, stat.10jqka.com.cn, REJECT
-
-[URL Rewrite]
-^https?:\/\/iphone\.ac\.qq\.com\/.*\/Support\/(?>getSystemConf|bootScreen) - reject
-
-[MITM]
-hostname = %APPEND% iphone.ac.qq.com
