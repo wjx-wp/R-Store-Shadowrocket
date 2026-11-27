@@ -12,6 +12,7 @@ DOMAIN, cdn.ynuf.aliapp.org, REJECT
 DOMAIN, h-adashx.ut.ele.me, REJECT
 DOMAIN, highway-tb.ele.me, REJECT
 DOMAIN, wgo.mmstat.com, REJECT
+DOMAIN, zconfig.elemecdn.com, REJECT
 DOMAIN-KEYWORD, baichuan.taobao.com, REJECT
 DOMAIN-KEYWORD, o2o-ad-dev.oss-cn, REJECT
 IP-CIDR, 203.119.212.22/32, REJECT
