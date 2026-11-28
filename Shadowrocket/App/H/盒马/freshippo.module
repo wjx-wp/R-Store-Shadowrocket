@@ -33,4 +33,4 @@ IP-CIDR, 59.82.34.255/32, REJECT
 ^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.sg\.querysinglescene data-type=text data="{}" status-code=200
 
 [MITM]
-hostname = %APPEND% acs-m.freshippo.com, acs.m.taobao.com, amdc.m.taobao.com
+hostname = %APPEND% acs-m.freshippo.com, acs.m.taobao.com, amdc.m.taobao.com, trade-acs.m.taobao.com

@@ -49,7 +49,6 @@ DOMAIN, et.tanx.com, REJECT
 DOMAIN, feed-image.baidu.com, REJECT
 DOMAIN, feedback-c.zijieapi.com, REJECT
 DOMAIN, g1.163.com, REJECT
-DOMAIN, g1.tagtic.cn, REJECT
 DOMAIN, gdfp.gifshow.com, REJECT
 DOMAIN, hdns.ksyun.com, REJECT
 DOMAIN, hmma.baidu.com, REJECT
@@ -65,7 +64,6 @@ DOMAIN, init.supersonicads.com, REJECT
 DOMAIN, lbs.netease.im, REJECT
 DOMAIN, livep.l.t002.ottcn.com, REJECT
 DOMAIN, log-verify.mob.com, REJECT
-DOMAIN, log.tagtic.cn, REJECT
 DOMAIN, mazu.m.qq.com, REJECT
 DOMAIN, mcs.snssdk.com, REJECT
 DOMAIN, mobads-logs.baidu.com, REJECT
@@ -446,6 +444,7 @@ DOMAIN-SUFFIX, staticadm.leju.sina.com.cn, REJECT
 DOMAIN-SUFFIX, strip.alicdn.com, REJECT
 DOMAIN-SUFFIX, t.sj.qq.com, REJECT
 DOMAIN-SUFFIX, ta.qq.com, REJECT
+DOMAIN-SUFFIX, tagtic.cn, REJECT
 DOMAIN-SUFFIX, tajs.qq.com, REJECT
 DOMAIN-SUFFIX, tcss.qq.com, REJECT
 DOMAIN-SUFFIX, tec73.com, REJECT
